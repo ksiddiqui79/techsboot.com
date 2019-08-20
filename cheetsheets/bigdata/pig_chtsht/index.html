@@ -115,7 +115,8 @@
             <!-- Main title -->
 
             <!-- <a class="navbar-brand" href="../../..">Kawish Siddiqui</a>   -->
-            <a class="navbar-brand" href="../../.."><div id="sitename"></div><script> document.getElementById("sitename").innerHTML = window.location.hostname </script></a>
+            <a class="navbar-brand" href="../../.."><div id="sitename"></div>
+				<script> document.getElementById("sitename").innerHTML = window.location.hostname.substr(0, window.location.hostname.indexOf('.')).toUpperCase(); </script></a>
         </div>
 
         <!-- Expanded navigation -->
