@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- BEGIN Kawish's Custom metadata block -->
+<!-- Google AdSense -->
+
+      
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5546856204176740",
+    enable_page_level_ads: true
+  });
+</script>
+      
+
+<!-- Google Analytics -->
+
+	  
+        
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+   
+    ga('create', 'UA-143819065-1', 'kawishsiddiqui.com');
+    ga('send', 'pageview');
+    </script>
+	  
+
+<!-- Metadata -->
+
+    <!-- meta description -->
+    
+     <meta name="description" content="Amazon Redshift System Object Persistence Utility.">
+    
+	
+    <!-- meta author -->
+    
+    <!-- meta keywords -->
+    
+     <meta name="keywords" content="utility, vacuum, analyze, data lake, datalake, formation, case study, shell, bash, sh, split, size, console, aws, files, tips, cheat, shell command, bash command, script, shell script, sql, teradata, redshift, vba, database, data warehouse, etl, custom, big data">
+    
+
+    
+    <meta name="robots" content="index, follow">	
+
+
+      
+        <title>Amazon Redshift System Object Persistence Utility</title>
+      
+
+<!-- END Kawish's Custom metadata block -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="../..">
+    <link rel="../../img/favicon.png">
+
+
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
+    <link href="../../css/highlight.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            <a class="navbar-brand" href="../..">Kawish Siddiqui</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">About Me</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shell/Bash <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../sh/split_datafile/">Split data file</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">VBA <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../vba/vba_concatif/">ConcatIF Function</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teradata <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../teradata/td_date_diff/">Date Diff Function</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../teradata/td_turnoff_fallback/">Turn off FallBackSetting in Teradata</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">AWS <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../aws/dl_form_aws/">DataLake Formation in AWS</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Redshift <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../encrypt_decrypt_udf_using_pyaes/">Redshift Encryption UDF</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../RedshiftQMRActvtMon/">Redshift QMR Notification Utility</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../Vacclyze/">Redshift Vacuum Analyze</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">System Table Persistence</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../second_level/">Second Level</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cheat Sheets <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+                        
+                            
+ 
+    <li class="dropdown-submenu"> 
+    <a tabindex="-1" href="">Big Data</a>
+
+<!--
+    <li class="dropdown">
+		<a tabindex="-1" href="" class="dropdown-toggle" data-toggle="dropdown">Big Data <b class="caret"></b></a>
+-->
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../cheetsheets/bigdata/hadoop_chtsht/">Hadoop</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../cheetsheets/bigdata/pig_chtsht/">PIG</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../cheetsheets/bigdata/htrn_chtsht/">Hortron</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../cheetsheets/bigdata/casestudies/">Case Studies</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorials <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../tutorial/rs_aod/">Redshift</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../event/reinvent/awsri_2018.md">AWS re-Invent 2018</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    
+					   
+					
+				<img class="navbar-brand" src="http://www.cutercounter.com/hit.php?id=gqfcck&nd=8&style=148" alt="free counter" border="0"> 
+				<!-- Start of CuterCounter Code -->
+				
+            </ul>
+        </div>
+    </div>
+</div>
+   <div class="container">
+        
+        
+        <div class="col-md-3"><div id="toc" class="bs-sidebar hidden-print affix well" role="complementary" overflow="auto">
+<!-- BEGIN Ad -->
+
+<script async src='https://cse.google.com/cse.js?cx=partner-pub-5546856204176740:2677115170'></script><div class="gcse-searchbox-only"></div>
+      
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- kawishsiddiqui TOC -->
+            <ins class="adsbygoogle"
+                 style="border:none;display:inline-block;width:250px;height:150px"
+                 data-ad-client="ca-pub-5546856204176740"
+                 data-ad-slot="1250189729"
+			 > </ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+      
+
+<!-- END Ad -->
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#amazon-redshift-system-object-persistence-utility">Amazon Redshift System Object Persistence Utility</a></li>
+            <li class="second-level"><a href="#deploying">Deploying</a></li>
+                
+            <li class="second-level"><a href="#manual-setup-actions-optional-if-you-are-using-the-above-lambda-function">Manual Setup Actions (optional if you are using the above Lambda function):</a></li>
+                
+                <li class="third-level"><a href="#creating-the-history-schema">Creating the HISTORY Schema:</a></li>
+                <li class="third-level"><a href="#creating-the-history-tables">Creating the History Tables:</a></li>
+                <li class="third-level"><a href="#creating-the-views-to-join-the-historical-and-current-information">Creating the Views to Join the Historical and Current Information:</a></li>
+            <li class="second-level"><a href="#populating-the-history-tables">Populating the History Tables:</a></li>
+                
+                <li class="third-level"><a href="#querying-the-views-in-the-history-schema">Querying the Views in the History Schema:</a></li>
+            <li class="second-level"><a href="#long-term-archival-of-system-table-data">Long term archival of System Table data</a></li>
+                
+            <li class="second-level"><a href="#other-considerations">Other Considerations:</a></li>
+                
+    </ul>
+</div>
+
+<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style" style="right:20px; bottom:20px;">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_linkedin"></a>
+    <a class="a2a_button_whatsapp"></a>
+    <a class="a2a_button_email"></a>
+    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<script>
+	var toc_h = document.getElementById("toc").style.height; // $("#toc").height();
+	document.getElementById("share").style.top = toc_h + "px";
+</script></div>
+        <div class="col-md-9" role="main"><!-- BEGIN Ad -->
+
+      
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block;height:150px"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-5546856204176740"
+     data-ad-slot="5536919095"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+      
+
+<!-- END Ad -->
+
+
+
+
+<p>Article Credit: <a href="https://github.com/awslabs">awslabs</a> | Source Repository: <a href="https://github.com/awslabs/amazon-redshift-utils/tree/master/src/SystemTablePersistence">SystemTablePersistence</a></p>
+<h1 id="amazon-redshift-system-object-persistence-utility">Amazon Redshift System Object Persistence Utility</h1>
+<p>Amazon Redshift, like most databases, contains monitoring and diagnostic information in the form of internal tables and views that can be queried to understand system behaviour better. Redshift system tables and views, numbering over 100, have a system-controlled retention that is variable but tends to be less than a week for common Redshift use-cases.</p>
+<p>This <a href="https://docs.aws.amazon.com/redshift/latest/dg/c_types-of-system-tables-and-views.html">link</a> outlines the most important tables and views for diagnostic performance information.</p>
+<ul>
+<li>The <strong>stl_</strong> prefix denotes system table logs. stl_ tables contain logs about operations that happened on the cluster in the past few days.</li>
+<li>The <strong>stv_</strong> prefix denotes system table snapshots. stv_ tables contain a snapshot of the current state of the cluster.</li>
+<li>The <strong>svl_</strong> prefix denotes system view logs. svl_ views join some number of system tables to provide more descriptive info.</li>
+<li>The <strong>svv_</strong> prefix denotes system view snapshots. Like the svl_ views, the svv_ views join some system tables to provide more descriptive info.</li>
+</ul>
+<p>To persist the tables for a longer amount of time, this project provides an example implementation to create, populate, and use five of the most common objects that we see requiring long term retention. This mix of tables and views will highlight some of the edge cases users will encounter when applying tuning techniques techniques to their own list of tables.</p>
+<h2 id="deploying">Deploying</h2>
+<p>The <a href="https://github.com/awslabs/amazon-redshift-utils/tree/master/src/RedshiftAutomation">Redshift Automation project</a> can be used to host and run this utility, plus others including table analysis and vacuum, and can be setup with a one-click deployment to AWS Lambda. </p>
+<p>We have provided the following AWS SAM templates so that you can deploy this function as stand-alone, without the other functions from the wider RedshiftAutomation modules (please note that we currently only support deploying into VPC):</p>
+<table>
+<thead>
+<tr>
+<th>Region</th>
+<th>Template</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ap-northeast-1</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-1#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-ap-northeast-1.amazonaws.com/awslabs-code-ap-northeast-1/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>ap-northeast-2</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-2#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-ap-northeast-2.amazonaws.com/awslabs-code-ap-northeast-2/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>ap-south-1</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=ap-south-1#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-ap-south-1.amazonaws.com/awslabs-code-ap-south-1/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>ap-southeast-1</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-ap-southeast-1.amazonaws.com/awslabs-code-ap-southeast-1/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>ap-southeast-2</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-2#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-ap-southeast-2.amazonaws.com/awslabs-code-ap-southeast-2/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>ca-central-1</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=ca-central-1#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-ca-central-1.amazonaws.com/awslabs-code-ca-central-1/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>eu-central-1</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-eu-central-1.amazonaws.com/awslabs-code-eu-central-1/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>eu-west-1</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-eu-west-1.amazonaws.com/awslabs-code-eu-west-1/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>eu-west-2</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=eu-west-2#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-eu-west-2.amazonaws.com/awslabs-code-eu-west-2/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>sa-east-1</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=sa-east-1#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-sa-east-1.amazonaws.com/awslabs-code-sa-east-1/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>us-east-1</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3.amazonaws.com/awslabs-code-us-east-1/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>us-east-2</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-us-east-2.amazonaws.com/awslabs-code-us-east-2/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>us-west-1</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-us-west-1.amazonaws.com/awslabs-code-us-west-1/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>us-west-2</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-us-west-2.amazonaws.com/awslabs-code-us-west-2/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+</tbody>
+</table>
+<p>We’ve also run across some customers who already have an EC2 host for cron/scheduling related activities. If you wish to use ec2 or other runners with cron, then the Redshift Automation command line provides an option to run this application:</p>
+<pre><code>./ra --utility SystemTablePersistence --config s3://mybucket/prefix/config.json
+</code></pre>
+
+<h2 id="manual-setup-actions-optional-if-you-are-using-the-above-lambda-function">Manual Setup Actions (optional if you are using the above Lambda function):</h2>
+<h3 id="creating-the-history-schema">Creating the HISTORY Schema:</h3>
+<p>Creating a separate schema is a convenient way to sequester the history tables and views away from other objects. Any preferred schema name can be used; a case-insensitive search-and-replace of &ldquo;HISTORY&rdquo; will correctly update all the schema references in the included SQL.</p>
+<pre><code>CREATE SCHEMA IF NOT EXISTS history;
+</code></pre>
+
+<h3 id="creating-the-history-tables">Creating the History Tables:</h3>
+<p>The persisted data will be stored in direct-attached storage tables in Redshift. For the tables, the <code>CREATE TABLE {tablename} LIKE</code> technique is an easy way to inherit the column names, datatypes, encoding, and table distribution from system tables. For system views, an Internet search on the view name (for example: <code>SVL_QUERY_SUMMARY</code>) will direct the user to the Redshift documentation which includes the column-level description. This table will frequently copy-and-paste well into a spreadsheet program, allow for easy extraction of the column name and data type information.</p>
+<p>History tables are created in the <code>HISTORY</code> schema, and will be verified on each run of the table persistence system. You can view the table creation statements in <a href="https://raw.githubusercontent.com/awslabs/amazon-redshift-utils/master/src/SystemTablePersistence/lib/history_table_creation.sql"><code>history_table_creation.sql</code></a>.</p>
+<h3 id="creating-the-views-to-join-the-historical-and-current-information">Creating the Views to Join the Historical and Current Information:</h3>
+<p>The views return data from both the current system objects and the historical tables. The anti-join pattern is used to accomplish the deduplication of rows.</p>
+<pre><code>CREATE OR REPLACE VIEW history.all_stl_load_errors AS
+(
+SELECT le.*  FROM stl_load_errors le
+UNION ALL
+SELECT h.* FROM stl_load_errors le
+RIGHT OUTER JOIN history.hist_stl_load_errors h ON (le.query = h.query AND le.starttime = h.starttime)
+WHERE le.query IS NULL
+);
+
+CREATE OR REPLACE VIEW history.all_stl_query AS
+(
+SELECT q.* FROM stl_query q
+UNION ALL
+SELECT h.* FROM stl_query q
+RIGHT OUTER JOIN history.hist_stl_query h ON (q.query = h.query AND q.starttime = h.starttime)
+WHERE q.query IS NULL
+);
+
+CREATE OR REPLACE VIEW history.all_stl_wlm_query AS
+(
+SELECT wq.* FROM stl_wlm_query wq
+UNION ALL
+SELECT h.* FROM stl_wlm_query wq
+RIGHT OUTER JOIN history.hist_stl_wlm_query h ON (wq.query = h.query AND wq.service_class_start_time = h.service_class_start_time)
+WHERE wq.query IS NULL
+);
+
+CREATE OR REPLACE VIEW history.all_stl_explain AS
+(
+SELECT e.* FROM stl_explain e
+UNION ALL
+SELECT h.* FROM stl_explain e
+RIGHT OUTER JOIN history.hist_stl_explain h ON (e.query = h.query AND e.userid = h.userid AND e.nodeid = h.nodeid AND e.parentid = h.parentid AND e.plannode = h.plannode)
+WHERE e.query IS NULL
+);
+
+CREATE OR REPLACE VIEW history.all_svl_query_summary AS
+(
+SELECT qs.* FROM svl_query_summary qs
+UNION ALL
+SELECT h.* FROM svl_query_summary qs
+RIGHT OUTER JOIN history.hist_svl_query_summary h ON (qs.query = h.query AND qs.userid = h.userid AND qs.stm = h.stm AND qs.seg = h.seg AND qs.step = h.step AND qs.maxtime = h.maxtime AND qs.label = h.label)
+WHERE qs.query IS NULL
+);
+</code></pre>
+
+<h2 id="populating-the-history-tables">Populating the History Tables:</h2>
+<p>This can be done Daily or on a User-Selected Frequency (we recommend populating the history tables daily).</p>
+<p>This utility will insert only the new rows using the model as described above, with an anti-join:</p>
+<pre><code>INSERT INTO history.hist_stl_load_errors (
+  SELECT le.* FROM stl_load_errors le, (SELECT NVL(MAX(starttime),'01/01/1902'::TIMESTAMP) AS max_starttime FROM history.hist_stl_load_errors) h WHERE le.starttime &gt; h.max_starttime);
+</code></pre>
+
+<p>You can view the statements that will be run by the utility in <a href="https://raw.githubusercontent.com/awslabs/amazon-redshift-utils/master/src/SystemTablePersistence/lib/history_table_config.json"><code>history_table_config.json</code></a>;</p>
+<h3 id="querying-the-views-in-the-history-schema">Querying the Views in the History Schema:</h3>
+<p>The history schema views can be queried in exactly the same way that users have interacted with the existing system objects.</p>
+<pre><code>SELECT * FROM history.all_stl_load_errors WHERE UPPER(err_reason) LIKE '%DELIMITER NOT FOUND%';
+SELECT * FROM history.all_stl_query WHERE query = 1121;
+SELECT COUNT(*) FROM history.all_stl_wlm_query WHERE service_class = 6;
+SELECT * FROM history.all_stl_explain WHERE query = 1121 ORDER BY nodeid;
+SELECT * FROM history.all_svl_query_summary WHERE bytes &gt; 1000000;
+</code></pre>
+
+<h2 id="long-term-archival-of-system-table-data">Long term archival of System Table data</h2>
+<p>If required, this utility can archive data from the internal HISTORY tables to Amazon S3. Add the following configuration values to your configuration file:</p>
+<pre><code>&quot;s3_unload_location&quot;:&quot;s3://mybucket/prefix/redshift/systables/archive&quot;
+&quot;s3_unload_role_arn&quot;:&quot;arn:aws:iam::&lt;acct&gt;:role/&lt;role name&gt;&quot;
+</code></pre>
+
+<p>Please note that the <code>s3_unload_role_arn</code> should be linked to the Redshift cluster to enable S3 access <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/copy-unload-iam-role.html">as outlined here</a>.</p>
+<p>The structure of the exported data will make it suitable for querying via the AWS Glue Data Catalog. Both the cluster-name and the datetime of data export will be configured as partitions. The structure of the data in the exported location will be:</p>
+<ul>
+<li><code>Configured output location</code><ul>
+<li><code>&lt;table name&gt;</code> - such as <code>hist_svl_query_summary</code>, <code>hist_stl_explain</code><ul>
+<li><code>cluster=&lt;your cluster name&gt;</code><ul>
+<li><code>datetime=&lt;exported date time information&gt;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>For example: 
+<img alt="image" src="https://github.com/awslabs/amazon-redshift-utils/raw/master/src/SystemTablePersistence/exported_s3_structure.png" /></p>
+<p>All exported data is quoted, compressed csv data.</p>
+<h2 id="other-considerations">Other Considerations:</h2>
+<p>As with any table in Redshift, it&rsquo;s a best practice to analyze (even just a handful of columns) on a weekly basis. This will help inform the query planner of the attributes of the table. Users may also want to enhance the performance of the history views by adding sort keys to the underlying history tables. It is recommended to consider columns used in the filter condition on the associated view for good sort key candidates.</p></div>
+        
+        
+    </div>
+
+   <footer class="col-md-12 text-center">
+ 
+        <hr>
+        <p>
+        <small>[ &copy; <script> document.write("<a href='" + window.location.href +"'>" + window.location.hostname + "</a> ] "); </script> <br></small>
+		
+        
+
+        
+        
+    </footer>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>var base_url = "../.."</script>
+    
+    <script src="../../js/base.js"></script>
+    <script src="../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
