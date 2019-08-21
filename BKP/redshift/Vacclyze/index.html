@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- BEGIN Kawish's Custom metadata block -->
+<!-- Google AdSense -->
+
+      
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5546856204176740",
+    enable_page_level_ads: true
+  });
+</script>
+      
+
+<!-- Google Analytics -->
+
+	  
+        
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+   
+    ga('create', 'UA-143819065-1', 'kawishsiddiqui.com');
+    ga('send', 'pageview');
+    </script>
+	  
+
+<!-- Metadata -->
+
+    <!-- meta description -->
+    
+     <meta name="description" content="Analyze & Vacuum Schema Utility.">
+    
+	
+    <!-- meta author -->
+    
+    <!-- meta keywords -->
+    
+     <meta name="keywords" content="wlm, workload, monitoring, rule, qmr, encrypt, decryption, decrypt, encryption, udf, amazon, function, utility, vacuum, analyze, data lake, datalake, formation, case study, shell, bash, sh, split, size, console, aws, files, tips, cheat, shell command, bash command, script, shell script, sql, teradata, redshift, vba, database, data warehouse, etl, custom, big data">
+    
+
+    
+    <meta name="robots" content="index, follow">	
+
+
+      
+        <title>Analyze & Vacuum Schema Utility</title>
+      
+
+<!-- END Kawish's Custom metadata block -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" href="../..">
+    <link rel="../../img/favicon.png">
+
+
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
+    <link href="../../css/highlight.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            <!-- <a class="navbar-brand" href="../..">Kawish Siddiqui</a>   -->
+            <a class="navbar-brand" href="../.."><div id="sitename"></div>
+				<script> document.getElementById("sitename").innerHTML = window.location.hostname.substr(0, window.location.hostname.indexOf('.')).toUpperCase(); </script></a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">About Me</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shell/Bash <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../sh/split_datafile/">Split data file</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">VBA <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../vba/vba_concatif/">ConcatIF Function</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teradata <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../teradata/td_date_diff/">Date Diff Function</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../teradata/td_turnoff_fallback/">Turn off FallBackSetting in Teradata</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">AWS <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../aws/dl_form_aws/">DataLake Formation in AWS</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Redshift <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../encrypt_decrypt_udf_using_pyaes/">Redshift Encryption UDF</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../RedshiftQMRActvtMon/">Redshift QMR Notification Utility</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Redshift Vacuum Analyze</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../awslabs_SystemTablePersistence/">System Table Persistence</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../second_level/">Second Level</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cheat Sheets <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+                        
+                            
+ 
+    <li class="dropdown-submenu"> 
+    <a tabindex="-1" href="">Big Data</a>
+
+<!--
+    <li class="dropdown">
+		<a tabindex="-1" href="" class="dropdown-toggle" data-toggle="dropdown">Big Data <b class="caret"></b></a>
+-->
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../cheetsheets/bigdata/hadoop_chtsht/">Hadoop</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../cheetsheets/bigdata/pig_chtsht/">PIG</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../cheetsheets/bigdata/htrn_chtsht/">Hortron</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../cheetsheets/bigdata/casestudies/">Case Studies</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorials <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../tutorial/rs_aod/">Redshift</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../event/reinvent/awsri_2018.md">AWS re-Invent 2018</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    
+					   
+					
+				<img class="navbar-brand" src="http://www.cutercounter.com/hit.php?id=gqfcck&nd=8&style=148" alt="free counter" border="0"> 
+				<!-- Start of CuterCounter Code -->
+				
+            </ul>
+        </div>
+    </div>
+</div>
+   <div class="container">
+        
+        
+        <div class="col-md-3"><div id="toc" class="bs-sidebar hidden-print affix well" role="complementary" overflow="auto">
+<!-- BEGIN Ad -->
+
+<script async src='https://cse.google.com/cse.js?cx=partner-pub-5546856204176740:2677115170'></script><div class="gcse-searchbox-only"></div>
+      
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- kawishsiddiqui TOC -->
+            <ins class="adsbygoogle"
+                 style="border:none;display:inline-block;width:250px;height:150px"
+                 data-ad-client="ca-pub-5546856204176740"
+                 data-ad-slot="1250189729"
+			 > </ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+      
+
+<!-- END Ad -->
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#analyze-vacuum-schema-utility">Analyze &amp; Vacuum Schema Utility</a></li>
+            <li class="second-level"><a href="#vacuum">Vacuum</a></li>
+                
+                <li class="third-level"><a href="#phase-1">Phase 1:</a></li>
+                <li class="third-level"><a href="#phase-2">Phase 2:</a></li>
+            <li class="second-level"><a href="#analyze">Analyze</a></li>
+                
+                <li class="third-level"><a href="#phase-1_1">Phase 1:</a></li>
+                <li class="third-level"><a href="#phase-2_1">Phase 2:</a></li>
+            <li class="second-level"><a href="#summary-of-parameters">Summary of Parameters:</a></li>
+                
+                <li class="third-level"><a href="#parameter-guidance">Parameter Guidance</a></li>
+                <li class="third-level"><a href="#schema-name">Schema Name</a></li>
+            <li class="second-level"><a href="#sample-usage">Sample Usage</a></li>
+                
+            <li class="second-level"><a href="#install-notes">Install Notes</a></li>
+                
+            <li class="second-level"><a href="#limitations">Limitations</a></li>
+                
+    </ul>
+</div>
+
+<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_default_style" style="right:20px; bottom:20px;">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_linkedin"></a>
+    <a class="a2a_button_whatsapp"></a>
+    <a class="a2a_button_email"></a>
+    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<script>
+	var toc_h = document.getElementById("toc").style.height; // $("#toc").height();
+	document.getElementById("share").style.top = toc_h + "px";
+</script></div>
+        <div class="col-md-9" role="main"><!-- BEGIN Ad -->
+
+      
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block;height:150px"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-5546856204176740"
+     data-ad-slot="5536919095"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+      
+
+<!-- END Ad -->
+
+
+
+
+<h1 id="analyze-vacuum-schema-utility">Analyze &amp; Vacuum Schema Utility</h1>
+<p>In order to get the best performance from your Redshift Database, you must ensure that database tables regularly analyzed and vacuumed. For more information , please read the below Redshift documentation,</p>
+<p>http://docs.aws.amazon.com/redshift/latest/dg/t_Reclaiming_storage_space202.html
+http://docs.aws.amazon.com/redshift/latest/dg/t_Analyzing_tables.html</p>
+<p>Whenever you insert, delete, or update (In Redshift update = delete + insert) a significant number of rows, you should run a VACUUM command and then an ANALYZE command. 
+In Redshift, the data blocks are immutable, i.e. when rows are DELETED or UPDATED against a table they are simply logically deleted (flagged for deletion), but not physically removed from disk. This causes the rows to continue consuming disk space and those blocks are scanned when a query scans the table. The result of this, table storage space is increased and degraded performance due to otherwise avoidable disk IO during scans. A vacuum recovers the space from deleted rows and restores the sort order. </p>
+<p>To avoid resource intensive VACUUM operation, you can load the data in sort key order, or design your table maintain data for a rolling time period, using time series tables. </p>
+<p>If your table has a large unsorted region (which can’t be vacuumed), a deep copy is much faster than a vacuum. You can use the Column Encoding Utility from our open source GitHub project https://github.com/awslabs/amazon-redshift-utils to perform a deep copy. The Column Encoding Utility takes care of the compression analysis, column encoding and deep copy.</p>
+<p>The ANALYZE command updates the statistics metadata, which enables the query optimizer to generate more accurate query plans. COPY automatically updates statistics after loading an empty table, so your statistics should be up to date. </p>
+<p>The Redshift ‘Analyze Vacuum Utility’ gives you the ability to automate VACUUM and ANALYZE operations. When run, it will VACUUM or ANALYZE an entire schema or individual tables. </p>
+<p>This Utility Analyzes and Vacuums table(s) in a Redshift Database schema, based on certain parameters like unsorted, stats off and size of the table and system alerts from <code>stl_explain</code> &amp; <code>stl_alert_event_log</code>. By turning on/off &lsquo;&ndash;analyze-flag’ and  &lsquo;&ndash;vacuum-flag&rsquo; parameters, you can run it as  &lsquo;vacuum-only&rsquo; or  &lsquo;analyze-only&rsquo; utility. This script can be scheduled to run VACUUM and ANALYZE as part of regular maintenance/housekeeping activities, when there are fewer database activities.</p>
+<h2 id="vacuum">Vacuum</h2>
+<p>This script runs vacuum in two phases,</p>
+<h3 id="phase-1">Phase 1:</h3>
+<p>Identify and run vacuum based on the alerts recorded in <code>stl_alert_event_log</code>. <code>stl_alert_event_log</code>, records an alert when the query optimizer identifies conditions that might indicate performance issues. We can use the <code>stl_alert_event_log</code> table to identify the top 25 tables that need vacuum. The script uses SQL to get the list of tables and number of alerts, which indicate that vacuum is required.</p>
+<p>Variables affecting this phase:</p>
+<ul>
+<li><code>goback_no_of_days</code>: To control number days to look back from CURRENT_DATE</li>
+</ul>
+<h3 id="phase-2">Phase 2:</h3>
+<p>Identify and run vacuum based on certain thresholds related to table statistics (Like unsorted &gt; 10% and Stats Off &gt; 10% and limited to specific table sizes.</p>
+<p>Variables affecting this phase:</p>
+<ul>
+<li><code>stats_off_pct</code>: To control the threshold of statistics inaccuracy</li>
+<li><code>min_unsorted_pct</code>: To control the lower limit of unsorted blocks</li>
+<li><code>max_unsorted_pct</code>: To control the upper limit of unsorted blocks (preventing vacuum on super large tables)</li>
+<li><code>max_tbl_size_mb</code>: To control when a table is too large to be vacuumed by this utility</li>
+</ul>
+<h2 id="analyze">Analyze</h2>
+<p>This script runs Analyze in two phases:</p>
+<h3 id="phase-1_1">Phase 1:</h3>
+<p>Run ANALYZE based on the alerts recorded in <code>stl_explain</code> &amp; <code>stl_alert_event_log</code>. </p>
+<h3 id="phase-2_1">Phase 2:</h3>
+<p>Run ANALYZE based the <code>stats_off</code> metric in <code>svv_table_info</code>. If table has a <code>stats_off_pct</code> &gt; 10%, then the script runs ANALYZE command to update the statistics.</p>
+<h2 id="summary-of-parameters">Summary of Parameters:</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter</th>
+<th align="center">Mandatory</th>
+<th align="left">Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">&ndash;db</td>
+<td align="center">Yes</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&ndash;db-user</td>
+<td align="center">Yes</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&ndash;db-pwd</td>
+<td align="center">Yes</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&ndash;db-host</td>
+<td align="center">Yes</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&ndash;db-port</td>
+<td align="center">No</td>
+<td align="left">5439</td>
+</tr>
+<tr>
+<td align="left">&ndash;db-conn-opts</td>
+<td align="center">No</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&ndash;schema-name</td>
+<td align="center">No</td>
+<td align="left">Public</td>
+</tr>
+<tr>
+<td align="left">&ndash;table-name</td>
+<td align="center">No</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&ndash;output-file</td>
+<td align="center">Yes</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&ndash;debug</td>
+<td align="center">No</td>
+<td align="left">False</td>
+</tr>
+<tr>
+<td align="left">&ndash;slot-count</td>
+<td align="center">No</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">&ndash;ignore-errors</td>
+<td align="center">No</td>
+<td align="left">False</td>
+</tr>
+<tr>
+<td align="left">&ndash;query_group</td>
+<td align="center">No</td>
+<td align="left">None</td>
+</tr>
+<tr>
+<td align="left">&ndash;analyze-flag</td>
+<td align="center">No</td>
+<td align="left">False</td>
+</tr>
+<tr>
+<td align="left">&ndash;vacuum-flag</td>
+<td align="center">No</td>
+<td align="left">False</td>
+</tr>
+<tr>
+<td align="left">&ndash;vacuum-parameter</td>
+<td align="center">No</td>
+<td align="left">FULL</td>
+</tr>
+<tr>
+<td align="left">&ndash;min-unsorted-pct</td>
+<td align="center">No</td>
+<td align="left">0.05</td>
+</tr>
+<tr>
+<td align="left">&ndash;max-unsorted-pct</td>
+<td align="center">No</td>
+<td align="left">0.5</td>
+</tr>
+<tr>
+<td align="left">&ndash;stats-off-pct</td>
+<td align="center">No</td>
+<td align="left">0.1</td>
+</tr>
+<tr>
+<td align="left">&ndash;stats-threshold</td>
+<td align="center">No</td>
+<td align="left">0.1</td>
+</tr>
+<tr>
+<td align="left">&ndash;max-table-size-mb</td>
+<td align="center">No</td>
+<td align="left">700*1024</td>
+</tr>
+<tr>
+<td align="left">&ndash;predicate-cols</td>
+<td align="center">No</td>
+<td align="left">False</td>
+</tr>
+</tbody>
+</table>
+<p>The above parameter values depend on the cluster type, table size, available system resources and available ‘Time window’ etc. The default values provided here are based on ds2.8xlarge, 8 node cluster. It may take some trial and error to come up with correct parameter values to vacuum and analyze your table(s). If table size is greater than certain size (<code>max_table_size_mb</code>) and has a large unsorted region (<code>max_unsorted_pct</code>), consider performing a deep copy, which will be much faster than a vacuum.</p>
+<p>As VACUUM &amp; ANALYZE operations are resource intensive, you should ensure that this will not adversely impact other database operations running on your cluster. AWS has thoroughly tested this software on a variety of systems, but cannot be responsible for the impact of running the utility against your database.</p>
+<h3 id="parameter-guidance">Parameter Guidance</h3>
+<h3 id="schema-name">Schema Name</h3>
+<p>The utility will accept a valid schema name, or alternative a regular expression pattern which will be used to match to all schemas in the database. This uses Posix regular expression syntax. You can use <code>(.*)</code> to match all schemas. </p>
+<h4 id="slot-count">Slot Count</h4>
+<p>Sets the number of query slots a query will use.</p>
+<p>Workload management (WLM) reserves slots in a service class according to the concurrency level set for the queue (for example, if concurrency level is set to 5, then the service class has 5 slots). WLM allocates the available memory for a service class equally to each slot. For more information, see Implementing Workload Management.</p>
+<p>For operations where performance is heavily affected by the amount of memory allocated, such as Vacuum, increasing the value of wlm_query_slot_count can improve performance. In particular, for slow Vacuum commands, inspect the corresponding record in the <code>SVV_VACUUM_SUMMARY</code> view. If you see high values (close to or higher than 100) for <code>sort_partitions</code> and <code>merge_increments</code> in the <code>SVV_VACUUM_SUMMARY</code> view, consider increasing the value for <code>wlm_query_slot_count</code> the next time you run Vacuum against that table.</p>
+<p>Increasing the value of wlm_query_slot_count limits the number of concurrent queries that can be run.</p>
+<p>Note:</p>
+<p>If the value of <code>wlm_query_slot_count</code> is larger than the number of available slots (concurrency level) for the queue targeted by the user, the utilty will fail. If you encounter an error, decrease <code>wlm_query_slot_count</code> to an allowable value.</p>
+<h4 id="analyze-flag">analyze-flag</h4>
+<p>Flag to turn ON/OFF ANALYZE functionality (True or False). If you want run the script to only perform ANALYZE on a schema or table, set this value ‘False’ : Default = ‘False’.</p>
+<h4 id="vacuum-flag">vacuum-flag</h4>
+<p>Flag to turn ON/OFF VACUUM functionality (True or False). If you want run the script to only perform VACUUM on a schema or table, set this value ‘False’ : Default = ‘False’.</p>
+<h4 id="vacuum-parameter">vacuum-parameter</h4>
+<p>Specify vacuum parameters [ <code>FULL | SORT ONLY | DELETE ONLY | REINDEX</code> ] Default = FULL</p>
+<h4 id="min-unsorted-pct">min-unsorted-pct</h4>
+<p>Minimum unsorted percentage (%) to consider a table for vacuum: Default = 5%.</p>
+<h4 id="max-unsorted-pct">max-unsorted-pct</h4>
+<p>Maximum unsorted percentage(%) to consider a table for vacuum : Default = 50%.</p>
+<h4 id="stats-off-pct">stats-off-pct</h4>
+<p>Minimum stats off percentage(%) to consider a table for analyze : Default = 10%</p>
+<h4 id="max-table-size-mb">max-table-size-mb</h4>
+<p>Maximum table size 700GB in MB : Default = 700*1024 MB</p>
+<h4 id="predicate-cols">predicate-cols</h4>
+<p>Analyze predicate columns only. Default = False</p>
+<h2 id="sample-usage">Sample Usage</h2>
+<pre><code>python analyze-vacuum-schema.py  --db &lt;&gt; --db-user &lt;&gt; --db-pwd &lt;&gt; --db-port 8192 --db-host aaa.us-west-2.redshift.amazonaws.com --schema-name public  --table-name customer_v6 --output-file /Users/test.log --debug True  --ignore-errors False --slot-count 2 --min-unsorted-pct 5 --max-unsorted-pct 50 --stats-off-pct 10 --max-table-size-mb 700*1024
+</code></pre>
+
+<h2 id="install-notes">Install Notes</h2>
+<pre><code>sudo easy_install pip  
+sudo pip install 
+</code></pre>
+
+<h2 id="limitations">Limitations</h2>
+<ol>
+<li>Script runs all VACUUM commands sequentially. Currently in Redshift multiple concurrent vacuum operations are not supported. </li>
+<li>Script runs all ANALYZE commands sequentially not concurrently.</li>
+<li>Does not support column level ANALYZE. </li>
+<li>Multiple schemas are not supported.</li>
+<li>Skew factor is not considered.</li>
+</ol></div>
+        
+        
+    </div>
+
+   <footer class="col-md-12 text-center">
+ 
+        <hr>
+        <p>
+        <small>[ &copy; <script> document.write("<a href='" + window.location.href +"'>" + window.location.hostname + "</a> ] "); </script> <br></small>
+		
+        
+
+        
+        
+    </footer>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>var base_url = "../.."</script>
+    
+    <script src="../../js/base.js"></script>
+    <script src="../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
