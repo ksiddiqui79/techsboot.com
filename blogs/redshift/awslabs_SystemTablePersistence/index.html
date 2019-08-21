@@ -44,14 +44,14 @@
 
     <!-- meta description -->
     
-     <meta name="description" content="A Data lake contains all data, both raw sources over extended periods of time as well as any processed data.">
+     <meta name="description" content="Amazon Redshift System Object Persistence Utility.">
     
 	
     <!-- meta author -->
     
     <!-- meta keywords -->
     
-     <meta name="keywords" content="data lake, datalake, formation, case study, shell, bash, sh, split, size, console, aws, files, tips, cheat, shell command, bash command, script, shell script, sql, teradata, redshift, vba, database, data warehouse, etl, custom, big data">
+     <meta name="keywords" content="utility, vacuum, analyze, data lake, datalake, formation, case study, shell, bash, sh, split, size, console, aws, files, tips, cheat, shell command, bash command, script, shell script, sql, teradata, redshift, vba, database, data warehouse, etl, custom, big data">
     
 
     
@@ -59,7 +59,7 @@
 
 
       
-        <title>DataLake Formation in AWS - Kawish Siddiqui</title>
+        <title>Amazon Redshift System Object Persistence Utility</title>
       
 
 <!-- END Kawish's Custom metadata block -->
@@ -68,7 +68,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="A Data lake contains all data, both raw sources over extended periods of time as well as any processed data.">
+        <meta name="description" content="Amazon Redshift System Object Persistence Utility.">
       
       
       
@@ -96,7 +96,7 @@
     
     
       
-        <title>DataLake Formation in AWS - Kawish Siddiqui</title>
+        <title>Amazon Redshift System Object Persistence Utility</title>
       
     
     
@@ -168,7 +168,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#datalake-formation-in-aws" tabindex="1" class="md-skip">
+      <a href="#amazon-redshift-system-object-persistence-utility" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -195,7 +195,7 @@
             </span>			
             <span class="md-header-nav__topic">
               
-                DataLake Formation in AWS - Kawish Siddiqui
+                Amazon Redshift System Object Persistence Utility
               
             </span>
           
@@ -516,12 +516,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
     
     <label class="md-nav__link" for="nav-2-4">
       AWS
@@ -532,6 +530,80 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aws/dl_form_aws/" title="DataLake Formation in AWS" class="md-nav__link">
+      DataLake Formation in AWS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5" checked>
+    
+    <label class="md-nav__link" for="nav-2-5">
+      Redshift
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        Redshift
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../encrypt_decrypt_udf_using_pyaes/" title="Redshift Encryption UDF" class="md-nav__link">
+      Redshift Encryption UDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../RedshiftQMRActvtMon/" title="Redshift QMR Notification Utility" class="md-nav__link">
+      Redshift QMR Notification Utility
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Vacclyze/" title="Redshift Vacuum Analyze" class="md-nav__link">
+      Redshift Vacuum Analyze
+    </a>
+  </li>
+
         
           
           
@@ -548,11 +620,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        DataLake Formation in AWS
+        System Table Persistence
       </label>
     
-    <a href="./" title="DataLake Formation in AWS" class="md-nav__link md-nav__link--active">
-      DataLake Formation in AWS
+    <a href="./" title="System Table Persistence" class="md-nav__link md-nav__link--active">
+      System Table Persistence
     </a>
     
       
@@ -560,7 +632,7 @@
 
 
    <div class="a2a_kit">
-       <a class="a2a_button_facebook_like" data-action="recommend" data-href="https://kawishsiddiqui.com/" data-layout="box_count" data-width="55"></a>
+       <a id="fblike" class="a2a_button_facebook_like" data-action="recommend" data-href="https://kawishsiddiqui.com/" data-layout="box_count" data-width="55"></a>
    </div>
    <script async src="https://static.addtoany.com/menu/page.js"></script>
 
@@ -588,99 +660,77 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#high-level-data-lake-architecture" title="High Level Data Lake Architecture" class="md-nav__link">
-    High Level Data Lake Architecture
+  <a href="#deploying" title="Deploying" class="md-nav__link">
+    Deploying
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#building-a-data-lake-from-a-relational-data-store" title="Building a Data Lake from a Relational Data Store" class="md-nav__link">
-    Building a Data Lake from a Relational Data Store
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hydrating-the-data-lake" title="Hydrating the Data Lake" class="md-nav__link">
-    Hydrating the Data Lake
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-glue-data-catalog-of-tier-1-bucket-for-processing" title="Creating Glue Data Catalog of Tier-1 Bucket for processing" class="md-nav__link">
-    Creating Glue Data Catalog of Tier-1 Bucket for processing
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#glue-etl-job-for-tier-2-data" title="Glue ETL Job for Tier-2 Data" class="md-nav__link">
-    Glue ETL Job for Tier-2 Data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compaction-etl-job" title="Compaction ETL Job" class="md-nav__link">
-    Compaction ETL Job
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#detailed-data-lake-formation-architecture" title="Detailed Data Lake Formation Architecture" class="md-nav__link">
-    Detailed Data Lake Formation Architecture
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#detailed-elt-pipeline" title="Detailed ELT Pipeline" class="md-nav__link">
-    Detailed ELT Pipeline
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices-and-performance-considerations" title="Best Practices and Performance Considerations" class="md-nav__link">
-    Best Practices and Performance Considerations
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#assumptions-additional-considerations" title="Assumptions &amp; Additional Considerations" class="md-nav__link">
-    Assumptions &amp; Additional Considerations
+  <a href="#manual-setup-actions-optional-if-you-are-using-the-above-lambda-function" title="Manual Setup Actions (optional if you are using the above Lambda function):" class="md-nav__link">
+    Manual Setup Actions (optional if you are using the above Lambda function):
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#consistency-and-ordering" title="Consistency and Ordering" class="md-nav__link">
-    Consistency and Ordering
+  <a href="#creating-the-history-schema" title="Creating the HISTORY Schema:" class="md-nav__link">
+    Creating the HISTORY Schema:
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#idempotence" title="Idempotence" class="md-nav__link">
-    Idempotence
+  <a href="#creating-the-history-tables" title="Creating the History Tables:" class="md-nav__link">
+    Creating the History Tables:
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#performance-tuning-the-dms" title="Performance Tuning the DMS" class="md-nav__link">
-    Performance Tuning the DMS
+  <a href="#creating-the-views-to-join-the-historical-and-current-information" title="Creating the Views to Join the Historical and Current Information:" class="md-nav__link">
+    Creating the Views to Join the Historical and Current Information:
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#populating-the-history-tables" title="Populating the History Tables:" class="md-nav__link">
+    Populating the History Tables:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#querying-the-views-in-the-history-schema" title="Querying the Views in the History Schema:" class="md-nav__link">
+    Querying the Views in the History Schema:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#long-term-archival-of-system-table-data" title="Long term archival of System Table data" class="md-nav__link">
+    Long term archival of System Table data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-considerations" title="Other Considerations:" class="md-nav__link">
+    Other Considerations:
+  </a>
   
 </li>
       
@@ -692,78 +742,6 @@
   
 </nav>
     
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
-    
-    <label class="md-nav__link" for="nav-2-5">
-      Redshift
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-2-5">
-        Redshift
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../redshift/encrypt_decrypt_udf_using_pyaes/" title="Redshift Encryption UDF" class="md-nav__link">
-      Redshift Encryption UDF
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../redshift/RedshiftQMRActvtMon/" title="Redshift QMR Notification Utility" class="md-nav__link">
-      Redshift QMR Notification Utility
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../redshift/Vacclyze/" title="Redshift Vacuum Analyze" class="md-nav__link">
-      Redshift Vacuum Analyze
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../redshift/awslabs_SystemTablePersistence/" title="System Table Persistence" class="md-nav__link">
-      System Table Persistence
-    </a>
   </li>
 
         
@@ -1020,7 +998,7 @@
 
 
    <div class="a2a_kit">
-       <a class="a2a_button_facebook_like" data-action="recommend" data-href="https://kawishsiddiqui.com/" data-layout="box_count" data-width="55"></a>
+       <a id="fblike" class="a2a_button_facebook_like" data-action="recommend" data-href="https://kawishsiddiqui.com/" data-layout="box_count" data-width="55"></a>
    </div>
    <script async src="https://static.addtoany.com/menu/page.js"></script>
 
@@ -1048,99 +1026,77 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#high-level-data-lake-architecture" title="High Level Data Lake Architecture" class="md-nav__link">
-    High Level Data Lake Architecture
+  <a href="#deploying" title="Deploying" class="md-nav__link">
+    Deploying
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#building-a-data-lake-from-a-relational-data-store" title="Building a Data Lake from a Relational Data Store" class="md-nav__link">
-    Building a Data Lake from a Relational Data Store
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hydrating-the-data-lake" title="Hydrating the Data Lake" class="md-nav__link">
-    Hydrating the Data Lake
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-glue-data-catalog-of-tier-1-bucket-for-processing" title="Creating Glue Data Catalog of Tier-1 Bucket for processing" class="md-nav__link">
-    Creating Glue Data Catalog of Tier-1 Bucket for processing
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#glue-etl-job-for-tier-2-data" title="Glue ETL Job for Tier-2 Data" class="md-nav__link">
-    Glue ETL Job for Tier-2 Data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compaction-etl-job" title="Compaction ETL Job" class="md-nav__link">
-    Compaction ETL Job
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#detailed-data-lake-formation-architecture" title="Detailed Data Lake Formation Architecture" class="md-nav__link">
-    Detailed Data Lake Formation Architecture
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#detailed-elt-pipeline" title="Detailed ELT Pipeline" class="md-nav__link">
-    Detailed ELT Pipeline
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices-and-performance-considerations" title="Best Practices and Performance Considerations" class="md-nav__link">
-    Best Practices and Performance Considerations
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#assumptions-additional-considerations" title="Assumptions &amp; Additional Considerations" class="md-nav__link">
-    Assumptions &amp; Additional Considerations
+  <a href="#manual-setup-actions-optional-if-you-are-using-the-above-lambda-function" title="Manual Setup Actions (optional if you are using the above Lambda function):" class="md-nav__link">
+    Manual Setup Actions (optional if you are using the above Lambda function):
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#consistency-and-ordering" title="Consistency and Ordering" class="md-nav__link">
-    Consistency and Ordering
+  <a href="#creating-the-history-schema" title="Creating the HISTORY Schema:" class="md-nav__link">
+    Creating the HISTORY Schema:
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#idempotence" title="Idempotence" class="md-nav__link">
-    Idempotence
+  <a href="#creating-the-history-tables" title="Creating the History Tables:" class="md-nav__link">
+    Creating the History Tables:
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#performance-tuning-the-dms" title="Performance Tuning the DMS" class="md-nav__link">
-    Performance Tuning the DMS
+  <a href="#creating-the-views-to-join-the-historical-and-current-information" title="Creating the Views to Join the Historical and Current Information:" class="md-nav__link">
+    Creating the Views to Join the Historical and Current Information:
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#populating-the-history-tables" title="Populating the History Tables:" class="md-nav__link">
+    Populating the History Tables:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#querying-the-views-in-the-history-schema" title="Querying the Views in the History Schema:" class="md-nav__link">
+    Querying the Views in the History Schema:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#long-term-archival-of-system-table-data" title="Long term archival of System Table data" class="md-nav__link">
+    Long term archival of System Table data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-considerations" title="Other Considerations:" class="md-nav__link">
+    Other Considerations:
+  </a>
   
 </li>
       
@@ -1178,112 +1134,189 @@
 				
 				<!-- END Ad -->
 				
-                <div class="admonition important">
-<p class="admonition-title">Disclaimer:</p>
-<p><div id="disclaimer"> </div>
-<p id="credit"></p></p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Important</p>
-<p>This code must not be used for production use as is. This sample is developed only to educate the users in using some of the features of the AWS in developing a ETL Pipeline using AWS Glue and other services. This is my personal github location and is maintained solely by me.
- This is not the official AWS Open source repository.</p>
-</div>
-<h1 id="datalake-formation-in-aws">DataLake Formation in AWS</h1>
-<p>A Data lake contains all data, both raw sources over extended periods of time as well as any processed data. They enable users across multiple business units to refine, explore and enrich data on their terms. Also, enables multiple data access patterns across a shared infrastructure: batch, interactive, online, search, in-memory and other processing engines.</p>
-<p>AWS Glue provides a serverless Spark-based data processing service. Glue is based on open source frameworks like Apache Spark and the Hive Metastore. This allows our users to go beyond the traditional ETL use cases into more data prep and data processing spanning data exploration, data science, and ofcourse data prep for analytics. 
-Glue helps users do three things – Discover and understand their data by cataloguing it into a central metadata Catalog, offering libraries and tools to efficiently develop their data prep code, and then run it at scale on a serverless, full managed environment. </p>
-<p>The backbone storage service for Data Lake best suited is AWS S3. The native features of S3 are exactly what you want from a Data Lake - Replication across AZ’s for high availability and durability, Massively parallel, scalable (Storage scales independent of compute) and Low storage cost.</p>
-<h2 id="high-level-data-lake-architecture">High Level Data Lake Architecture</h2>
-<p><img alt="" src="https://github.com/dhawalkp/datalake/raw/master/High_Level_architecture_DataLake.png" /></p>
-<h2 id="building-a-data-lake-from-a-relational-data-store">Building a Data Lake from a Relational Data Store</h2>
-<p>This repository contains the sample reference implementation to create data lake from Relational Database services as one of the sources.</p>
+                <p>Article Credit: <a href="https://github.com/awslabs">awslabs</a> | Source Repository: <a href="https://github.com/awslabs/amazon-redshift-utils/tree/master/src/SystemTablePersistence">SystemTablePersistence</a></p>
+<h1 id="amazon-redshift-system-object-persistence-utility">Amazon Redshift System Object Persistence Utility</h1>
+<p>Amazon Redshift, like most databases, contains monitoring and diagnostic information in the form of internal tables and views that can be queried to understand system behaviour better. Redshift system tables and views, numbering over 100, have a system-controlled retention that is variable but tends to be less than a week for common Redshift use-cases.</p>
+<p>This <a href="https://docs.aws.amazon.com/redshift/latest/dg/c_types-of-system-tables-and-views.html">link</a> outlines the most important tables and views for diagnostic performance information.</p>
 <ul>
-<li>
-<p>Source RDS Customer Table Schema can be created by crawler through AWS Glue Crawlers</p>
+<li>The <strong>stl_</strong> prefix denotes system table logs. stl_ tables contain logs about operations that happened on the cluster in the past few days.</li>
+<li>The <strong>stv_</strong> prefix denotes system table snapshots. stv_ tables contain a snapshot of the current state of the cluster.</li>
+<li>The <strong>svl_</strong> prefix denotes system view logs. svl_ views join some number of system tables to provide more descriptive info.</li>
+<li>The <strong>svv_</strong> prefix denotes system view snapshots. Like the svl_ views, the svv_ views join some system tables to provide more descriptive info.</li>
+</ul>
+<p>To persist the tables for a longer amount of time, this project provides an example implementation to create, populate, and use five of the most common objects that we see requiring long term retention. This mix of tables and views will highlight some of the edge cases users will encounter when applying tuning techniques techniques to their own list of tables.</p>
+<h2 id="deploying">Deploying</h2>
+<p>The <a href="https://github.com/awslabs/amazon-redshift-utils/tree/master/src/RedshiftAutomation">Redshift Automation project</a> can be used to host and run this utility, plus others including table analysis and vacuum, and can be setup with a one-click deployment to AWS Lambda. </p>
+<p>We have provided the following AWS SAM templates so that you can deploy this function as stand-alone, without the other functions from the wider RedshiftAutomation modules (please note that we currently only support deploying into VPC):</p>
+<table>
+<thead>
+<tr>
+<th>Region</th>
+<th>Template</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ap-northeast-1</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-1#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-ap-northeast-1.amazonaws.com/awslabs-code-ap-northeast-1/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>ap-northeast-2</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=ap-northeast-2#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-ap-northeast-2.amazonaws.com/awslabs-code-ap-northeast-2/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>ap-south-1</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=ap-south-1#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-ap-south-1.amazonaws.com/awslabs-code-ap-south-1/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>ap-southeast-1</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-ap-southeast-1.amazonaws.com/awslabs-code-ap-southeast-1/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>ap-southeast-2</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-2#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-ap-southeast-2.amazonaws.com/awslabs-code-ap-southeast-2/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>ca-central-1</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=ca-central-1#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-ca-central-1.amazonaws.com/awslabs-code-ca-central-1/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>eu-central-1</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-eu-central-1.amazonaws.com/awslabs-code-eu-central-1/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>eu-west-1</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-eu-west-1.amazonaws.com/awslabs-code-eu-west-1/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>eu-west-2</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=eu-west-2#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-eu-west-2.amazonaws.com/awslabs-code-eu-west-2/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>sa-east-1</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=sa-east-1#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-sa-east-1.amazonaws.com/awslabs-code-sa-east-1/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>us-east-1</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3.amazonaws.com/awslabs-code-us-east-1/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>us-east-2</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-2#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-us-east-2.amazonaws.com/awslabs-code-us-east-2/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>us-west-1</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-us-west-1.amazonaws.com/awslabs-code-us-west-1/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+<tr>
+<td>us-west-2</td>
+<td><a href="https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=RedshiftAutomationSystemTablePersistence&amp;templateURL=https://s3-us-west-2.amazonaws.com/awslabs-code-us-west-2/LambdaRedshiftRunner/deploy-systable-standalone.yaml"><img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a></td>
+</tr>
+</tbody>
+</table>
+<p>We’ve also run across some customers who already have an EC2 host for cron/scheduling related activities. If you wish to use ec2 or other runners with cron, then the Redshift Automation command line provides an option to run this application:</p>
+<pre><code>./ra --utility SystemTablePersistence --config s3://mybucket/prefix/config.json
+</code></pre>
+
+<h2 id="manual-setup-actions-optional-if-you-are-using-the-above-lambda-function">Manual Setup Actions (optional if you are using the above Lambda function):</h2>
+<h3 id="creating-the-history-schema">Creating the HISTORY Schema:</h3>
+<p>Creating a separate schema is a convenient way to sequester the history tables and views away from other objects. Any preferred schema name can be used; a case-insensitive search-and-replace of &ldquo;HISTORY&rdquo; will correctly update all the schema references in the included SQL.</p>
+<pre><code>CREATE SCHEMA IF NOT EXISTS history;
+</code></pre>
+
+<h3 id="creating-the-history-tables">Creating the History Tables:</h3>
+<p>The persisted data will be stored in direct-attached storage tables in Redshift. For the tables, the <code>CREATE TABLE {tablename} LIKE</code> technique is an easy way to inherit the column names, datatypes, encoding, and table distribution from system tables. For system views, an Internet search on the view name (for example: <code>SVL_QUERY_SUMMARY</code>) will direct the user to the Redshift documentation which includes the column-level description. This table will frequently copy-and-paste well into a spreadsheet program, allow for easy extraction of the column name and data type information.</p>
+<p>History tables are created in the <code>HISTORY</code> schema, and will be verified on each run of the table persistence system. You can view the table creation statements in <a href="https://raw.githubusercontent.com/awslabs/amazon-redshift-utils/master/src/SystemTablePersistence/lib/history_table_creation.sql"><code>history_table_creation.sql</code></a>.</p>
+<h3 id="creating-the-views-to-join-the-historical-and-current-information">Creating the Views to Join the Historical and Current Information:</h3>
+<p>The views return data from both the current system objects and the historical tables. The anti-join pattern is used to accomplish the deduplication of rows.</p>
+<pre><code>CREATE OR REPLACE VIEW history.all_stl_load_errors AS
+(
+SELECT le.*  FROM stl_load_errors le
+UNION ALL
+SELECT h.* FROM stl_load_errors le
+RIGHT OUTER JOIN history.hist_stl_load_errors h ON (le.query = h.query AND le.starttime = h.starttime)
+WHERE le.query IS NULL
+);
+
+CREATE OR REPLACE VIEW history.all_stl_query AS
+(
+SELECT q.* FROM stl_query q
+UNION ALL
+SELECT h.* FROM stl_query q
+RIGHT OUTER JOIN history.hist_stl_query h ON (q.query = h.query AND q.starttime = h.starttime)
+WHERE q.query IS NULL
+);
+
+CREATE OR REPLACE VIEW history.all_stl_wlm_query AS
+(
+SELECT wq.* FROM stl_wlm_query wq
+UNION ALL
+SELECT h.* FROM stl_wlm_query wq
+RIGHT OUTER JOIN history.hist_stl_wlm_query h ON (wq.query = h.query AND wq.service_class_start_time = h.service_class_start_time)
+WHERE wq.query IS NULL
+);
+
+CREATE OR REPLACE VIEW history.all_stl_explain AS
+(
+SELECT e.* FROM stl_explain e
+UNION ALL
+SELECT h.* FROM stl_explain e
+RIGHT OUTER JOIN history.hist_stl_explain h ON (e.query = h.query AND e.userid = h.userid AND e.nodeid = h.nodeid AND e.parentid = h.parentid AND e.plannode = h.plannode)
+WHERE e.query IS NULL
+);
+
+CREATE OR REPLACE VIEW history.all_svl_query_summary AS
+(
+SELECT qs.* FROM svl_query_summary qs
+UNION ALL
+SELECT h.* FROM svl_query_summary qs
+RIGHT OUTER JOIN history.hist_svl_query_summary h ON (qs.query = h.query AND qs.userid = h.userid AND qs.stm = h.stm AND qs.seg = h.seg AND qs.step = h.step AND qs.maxtime = h.maxtime AND qs.label = h.label)
+WHERE qs.query IS NULL
+);
+</code></pre>
+
+<h2 id="populating-the-history-tables">Populating the History Tables:</h2>
+<p>This can be done Daily or on a User-Selected Frequency (we recommend populating the history tables daily).</p>
+<p>This utility will insert only the new rows using the model as described above, with an anti-join:</p>
+<pre><code>INSERT INTO history.hist_stl_load_errors (
+  SELECT le.* FROM stl_load_errors le, (SELECT NVL(MAX(starttime),'01/01/1902'::TIMESTAMP) AS max_starttime FROM history.hist_stl_load_errors) h WHERE le.starttime &gt; h.max_starttime);
+</code></pre>
+
+<p>You can view the statements that will be run by the utility in <a href="https://raw.githubusercontent.com/awslabs/amazon-redshift-utils/master/src/SystemTablePersistence/lib/history_table_config.json"><code>history_table_config.json</code></a>;</p>
+<h3 id="querying-the-views-in-the-history-schema">Querying the Views in the History Schema:</h3>
+<p>The history schema views can be queried in exactly the same way that users have interacted with the existing system objects.</p>
+<pre><code>SELECT * FROM history.all_stl_load_errors WHERE UPPER(err_reason) LIKE '%DELIMITER NOT FOUND%';
+SELECT * FROM history.all_stl_query WHERE query = 1121;
+SELECT COUNT(*) FROM history.all_stl_wlm_query WHERE service_class = 6;
+SELECT * FROM history.all_stl_explain WHERE query = 1121 ORDER BY nodeid;
+SELECT * FROM history.all_svl_query_summary WHERE bytes &gt; 1000000;
+</code></pre>
+
+<h2 id="long-term-archival-of-system-table-data">Long term archival of System Table data</h2>
+<p>If required, this utility can archive data from the internal HISTORY tables to Amazon S3. Add the following configuration values to your configuration file:</p>
+<pre><code>&quot;s3_unload_location&quot;:&quot;s3://mybucket/prefix/redshift/systables/archive&quot;
+&quot;s3_unload_role_arn&quot;:&quot;arn:aws:iam::&lt;acct&gt;:role/&lt;role name&gt;&quot;
+</code></pre>
+
+<p>Please note that the <code>s3_unload_role_arn</code> should be linked to the Redshift cluster to enable S3 access <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/copy-unload-iam-role.html">as outlined here</a>.</p>
+<p>The structure of the exported data will make it suitable for querying via the AWS Glue Data Catalog. Both the cluster-name and the datetime of data export will be configured as partitions. The structure of the data in the exported location will be:</p>
+<ul>
+<li><code>Configured output location</code><ul>
+<li><code>&lt;table name&gt;</code> - such as <code>hist_svl_query_summary</code>, <code>hist_stl_explain</code><ul>
+<li><code>cluster=&lt;your cluster name&gt;</code><ul>
+<li><code>datetime=&lt;exported date time information&gt;</code></li>
+</ul>
 </li>
-<li>
-<p>Sample Full Log Customer record format generated by DMS:
-The sample cdc log file is in data/Tier-1/Customer/Full/ folder structure </p>
-</li>
-<li>
-<p>Sample CDC Log Customer Record format generated by DMS 
-The sample cdc log file is in repo folder - &ldquo;/data/Tier-1/Customer/CDC/YYYY/MM/DD&rdquo; folder structure assuming the data are initially partitioned based on the day</p>
+</ul>
 </li>
 </ul>
-<p>Please notice the additional OP column in CDC log file added by DMS to tag the type of change.</p>
-<p>The implementation consists of </p>
-<h2 id="hydrating-the-data-lake">Hydrating the Data Lake</h2>
-<ul>
-<li>AWS RDS backed by Oracle DB engine integrating with AWS DMS service generating Full and CDC Log files and storing the files on Tier-1 S3 Bucket. Alternatively, the Tier-1 bucket can be hydrated by periodic export process that dumps all the changes as well.</li>
-<li>The Tier-1 bucket in this example is partitioned based on year/month/day/hour</li>
-</ul>
-<h2 id="creating-glue-data-catalog-of-tier-1-bucket-for-processing">Creating Glue Data Catalog of Tier-1 Bucket for processing</h2>
-<ul>
-<li>AWS Glue Crawlers needs to be configured in order to process CDC and Full Log files in the tier-1 bucket and create data catalog for both. In this case, the Tier-1 Database in Glue will consist of 2 tables i.e. CDC and Full</li>
-</ul>
-<h2 id="glue-etl-job-for-tier-2-data">Glue ETL Job for Tier-2 Data</h2>
-<ul>
-<li>Tier-2 ETL job will re-partition based on required keys and hydrate the tier-2 buckets in S3 with S3 Objects based on the partition keys. The script is available in this repo with name - /scripts/DMS_CDC_Tier2_Repartitioning_CustomerID.py and /scripts/DMS_FullLog_Tier2_Repartitioning_CustomerID.py</li>
-<li>The Tier-2 S3 bucket will eventually have Partitions consisting of multiple versions of S3 Objects for same key.</li>
-</ul>
-<h2 id="compaction-etl-job">Compaction ETL Job</h2>
-<ul>
-<li>The Compaction job i.e. /scripts/Compaction.py basically deletes the older versions of Objects for all the partitions in tier-2 bucket. In this example, the script uses the last modified time stamp of S3 Object to build the compaction logic. Please refer to additional considerations section below in this documentation for alternative approaches to preserve the consistency.</li>
-</ul>
-<h2 id="detailed-data-lake-formation-architecture">Detailed Data Lake Formation Architecture</h2>
-<p><img alt="" src="https://github.com/dhawalkp/datalake/raw/master/Data_Pipeline_Architecture.png" /></p>
-<h2 id="detailed-elt-pipeline">Detailed ELT Pipeline</h2>
-<p><img alt="" src="https://github.com/dhawalkp/datalake/raw/master/Compaction.png" /></p>
-<h2 id="best-practices-and-performance-considerations">Best Practices and Performance Considerations</h2>
-<ul>
-<li>
-<p>One of the key design decisions in making the solution performant will be the selection of appropriate partition keys for target S3 buckets. Please read <a href="https://aws.amazon.com/blogs/big-data/work-with-partitioned-data-in-aws-glue/">Working with Partitioned Data in AWS Glue</a>. Partitioning the Source and Target Buckets via Relevant Partition Keys and making use of it in avoiding cross partition joins or full scans.</p>
 </li>
-<li>
-<p>Use Parquet or ORC and S3 Paths for formatting and organizing the data as per partition keys with Compression like Snappy/Gzip formats</p>
-</li>
-<li>Use Glue DynamicFrames and make use of PushDownPRedicates based on Partitions to improve/reduce on GETs/PUTs to S3</li>
-<li>Use applyMapping wherever possible to restrict the columns</li>
-<li>In Writing the dynamic frames into partitioned sinks, try to use additional Partitionkeys option so that you can directly write it from DynamicFrame instead of doing intermediate conversion into Spark DataFrame.</li>
-<li>Use Compaction Technique periodically to delete the old objects for the same key.</li>
-<li>DMS CDC/Full Load files contains timestamp in the name and should be used to process the data based on this. Care must be taken to make sure multiple CDC Records for same key are not processed in parallel to avoid Data Consistency issues during CDC records consolidation phase.</li>
 </ul>
-<h2 id="assumptions-additional-considerations">Assumptions &amp; Additional Considerations</h2>
-<h3 id="consistency-and-ordering">Consistency and Ordering</h3>
-<ul>
-<li>
-<p>Multiple changes on the same record can appear in a CDC file generated by AWS DMS.Though, CDC guarantees the files delivered to S3 are in order. The transaction integrity can be maintained as long as you follow the ordering of changes in the file and across sequence of files. The recommendation will be to also have Modification Time Stamp embedded in the source table so that the consistency can be maintained. The Alternative approach to not having modification time stamp in the source table will be to implement pre-tier-1 ETL job that transforms the CDC records and add a synthetic sequence number.</p>
-</li>
-<li>
-<p>Since S3 updates are eventual consistent, a mechanism needs to be developed to make sure the data being queried are not being mutated at the same time. You have to employ the use of temporary scratch location and then compact in tier-3 bucket for example.</p>
-</li>
-<li>There may be delays in S3 Upserts and so reliance on S3 Object Last Modified Time may cause inconsistent results. An alternative approach could be to use the DMS CDC logtimestamp or Update Time Stamp column (if present) of the original data and add as meta data in S3 Object and use that for compaction job.</li>
-</ul>
-<h3 id="idempotence">Idempotence</h3>
-<ul>
-<li>The ETL job should be aware of idempotence requirements. Since CDC Records presents the latest copy of entire record, the idempotence should not be a concern for ETL job in this case.</li>
-</ul>
-<h3 id="performance-tuning-the-dms">Performance Tuning the DMS</h3>
-<ul>
-<li>The solution must be aware of the performance tuning and limits of DMS service as mentioned <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_BestPractices.html">here</a> </li>
-</ul>
-<script>
-    var git_user = "dhawalkp";
-    var git_tree = ""
-    var git_repo_name = "datalake";
-    var git_repo_path = git_user + "/datalake";
-//
-// Disclaimer Code
-    var disc_line = "<i>Information on this page is based on the article published by ";
-    disc_line = disc_line + "<a href='https://github.com/" + git_user + "'>" + git_user + "</a>"
-    disc_line = disc_line + " at ";
-    disc_line = disc_line + " <a href='https://github.com/" + git_repo_path + "'>" + git_repo_name + "</a> ";
-    disc_line = disc_line + " and not owned or represented by [";
-    disc_line = disc_line + "<a href='" + window.location.hostname +"'>" + window.location.hostname + "</a> ] ";
-    disc_line = disc_line + "or this article is true and accurate to the best of the authors' knowledge. ";
-    disc_line = disc_line + "Information on this site should be verified and tested before usage at your own effort and risk and <b>should not be considered as Official sources by any mean through this website.<b></i>";
-    document.getElementById("disclaimer").innerHTML = disc_line;    
- </script>
+<p>For example: 
+<img alt="image" src="https://github.com/awslabs/amazon-redshift-utils/raw/master/src/SystemTablePersistence/exported_s3_structure.png" /></p>
+<p>All exported data is quoted, compressed csv data.</p>
+<h2 id="other-considerations">Other Considerations:</h2>
+<p>As with any table in Redshift, it&rsquo;s a best practice to analyze (even just a handful of columns) on a weekly basis. This will help inform the query planner of the attributes of the table. Users may also want to enhance the performance of the history views by adding sort keys to the underlying history tables. It is recommended to consider columns used in the filter condition on the associated view for good sort key candidates.</p>
                 
                   
                 

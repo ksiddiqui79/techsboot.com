@@ -44,7 +44,7 @@
 
     <!-- meta description -->
     
-     <meta name="description" content="Amazon Redshift WLM Query Monitoring Rule (QMR) Action Notification Utility.">
+     <meta name="description" content="Analyze & Vacuum Schema Utility.">
     
 	
     <!-- meta author -->
@@ -59,7 +59,7 @@
 
 
       
-        <title>Amazon Redshift WLM Query Monitoring Rule (QMR) Action Notification Utility</title>
+        <title>Analyze & Vacuum Schema Utility</title>
       
 
 <!-- END Kawish's Custom metadata block -->
@@ -68,7 +68,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="Amazon Redshift WLM Query Monitoring Rule (QMR) Action Notification Utility.">
+        <meta name="description" content="Analyze & Vacuum Schema Utility.">
       
       
       
@@ -96,7 +96,7 @@
     
     
       
-        <title>Amazon Redshift WLM Query Monitoring Rule (QMR) Action Notification Utility</title>
+        <title>Analyze & Vacuum Schema Utility</title>
       
     
     
@@ -168,7 +168,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#amazon-redshift-wlm-query-monitoring-rule-qmr-action-notification-utility" tabindex="1" class="md-skip">
+      <a href="#analyze-vacuum-schema-utility" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -195,7 +195,7 @@
             </span>			
             <span class="md-header-nav__topic">
               
-                Amazon Redshift WLM Query Monitoring Rule (QMR) Action Notification Utility
+                Analyze & Vacuum Schema Utility
               
             </span>
           
@@ -585,6 +585,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../RedshiftQMRActvtMon/" title="Redshift QMR Notification Utility" class="md-nav__link">
+      Redshift QMR Notification Utility
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -596,11 +608,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Redshift QMR Notification Utility
+        Redshift Vacuum Analyze
       </label>
     
-    <a href="./" title="Redshift QMR Notification Utility" class="md-nav__link md-nav__link--active">
-      Redshift QMR Notification Utility
+    <a href="./" title="Redshift Vacuum Analyze" class="md-nav__link md-nav__link--active">
+      Redshift Vacuum Analyze
     </a>
     
       
@@ -608,7 +620,7 @@
 
 
    <div class="a2a_kit">
-       <a class="a2a_button_facebook_like" data-action="recommend" data-href="https://kawishsiddiqui.com/" data-layout="box_count" data-width="55"></a>
+       <a id="fblike" class="a2a_button_facebook_like" data-action="recommend" data-href="https://kawishsiddiqui.com/" data-layout="box_count" data-width="55"></a>
    </div>
    <script async src="https://static.addtoany.com/menu/page.js"></script>
 
@@ -636,119 +648,173 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#goals" title="Goals" class="md-nav__link">
-    Goals
+  <a href="#vacuum" title="Vacuum" class="md-nav__link">
+    Vacuum
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1" title="Phase 1:" class="md-nav__link">
+    Phase 1:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2" title="Phase 2:" class="md-nav__link">
+    Phase 2:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analyze" title="Analyze" class="md-nav__link">
+    Analyze
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1_1" title="Phase 1:" class="md-nav__link">
+    Phase 1:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2_1" title="Phase 2:" class="md-nav__link">
+    Phase 2:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-parameters" title="Summary of Parameters:" class="md-nav__link">
+    Summary of Parameters:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameter-guidance" title="Parameter Guidance" class="md-nav__link">
+    Parameter Guidance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schema-name" title="Schema Name" class="md-nav__link">
+    Schema Name
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slot-count" title="Slot Count" class="md-nav__link">
+    Slot Count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyze-flag" title="analyze-flag" class="md-nav__link">
+    analyze-flag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vacuum-flag" title="vacuum-flag" class="md-nav__link">
+    vacuum-flag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vacuum-parameter" title="vacuum-parameter" class="md-nav__link">
+    vacuum-parameter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min-unsorted-pct" title="min-unsorted-pct" class="md-nav__link">
+    min-unsorted-pct
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max-unsorted-pct" title="max-unsorted-pct" class="md-nav__link">
+    max-unsorted-pct
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stats-off-pct" title="stats-off-pct" class="md-nav__link">
+    stats-off-pct
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max-table-size-mb" title="max-table-size-mb" class="md-nav__link">
+    max-table-size-mb
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predicate-cols" title="predicate-cols" class="md-nav__link">
+    predicate-cols
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-usage" title="Sample Usage" class="md-nav__link">
+    Sample Usage
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation-notes" title="Installation Notes:" class="md-nav__link">
-    Installation Notes:
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#install-notes" title="Install Notes" class="md-nav__link">
+    Install Notes
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#installation-from-cloudformation-template" title="Installation from CloudFormation Template:" class="md-nav__link">
-    Installation from CloudFormation Template:
+      
+        <li class="md-nav__item">
+  <a href="#limitations" title="Limitations" class="md-nav__link">
+    Limitations
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-navigate-to-the-qmrnotificationutilitys-directory-within-the-amazon-redshift-utils-project" title="1. Navigate to the QMRNotificationUtility's directory within the amazon-redshift-utils project:" class="md-nav__link">
-    1. Navigate to the QMRNotificationUtility's directory within the amazon-redshift-utils project:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-copy-the-zipped-python-deployment-package-for-the-lambda-function-to-a-location-of-your-choosing-in-s3" title="2. Copy the zipped python Deployment Package for the Lambda function to a location of your choosing in S3:" class="md-nav__link">
-    2. Copy the zipped python Deployment Package for the Lambda function to a location of your choosing in S3:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-gather-the-necessary-identifiers-noted-in-the-prerequistes-section-above" title="3. Gather the necessary identifiers noted in the prerequistes section above:" class="md-nav__link">
-    3. Gather the necessary identifiers noted in the prerequistes section above:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-create-the-lambda-function" title="4. Create the Lambda Function" class="md-nav__link">
-    4. Create the Lambda Function
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-verify-creation-is-complete" title="5. Verify creation is complete" class="md-nav__link">
-    5. Verify creation is complete
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-add-an-encrypted-password" title="6. Add an encrypted password" class="md-nav__link">
-    6. Add an encrypted password
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-update-your-cloudformation-stack" title="7. Update your CloudFormation stack" class="md-nav__link">
-    7. Update your CloudFormation stack
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-verify-the-modification-is-complete" title="8. Verify the modification is complete" class="md-nav__link">
-    8. Verify the modification is complete
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#9-check-the-inbox-of-the-email-address-you-included-for-snsemailparameter" title="9. Check the inbox of the email address you included for SNSEmailParameter." class="md-nav__link">
-    9. Check the inbox of the email address you included for SNSEmailParameter.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#10-verify-the-email-address-receives-an-email-notification-within-5-minutes" title="10. Verify the email address receives an email notification within 5 minutes" class="md-nav__link">
-    10. Verify the email address receives an email notification within 5 minutes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rebuilding-lambda-function" title="Rebuilding Lambda Function" class="md-nav__link">
-    Rebuilding Lambda Function
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -760,18 +826,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Vacclyze/" title="Redshift Vacuum Analyze" class="md-nav__link">
-      Redshift Vacuum Analyze
-    </a>
   </li>
 
         
@@ -1040,7 +1094,7 @@
 
 
    <div class="a2a_kit">
-       <a class="a2a_button_facebook_like" data-action="recommend" data-href="https://kawishsiddiqui.com/" data-layout="box_count" data-width="55"></a>
+       <a id="fblike" class="a2a_button_facebook_like" data-action="recommend" data-href="https://kawishsiddiqui.com/" data-layout="box_count" data-width="55"></a>
    </div>
    <script async src="https://static.addtoany.com/menu/page.js"></script>
 
@@ -1068,119 +1122,173 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#goals" title="Goals" class="md-nav__link">
-    Goals
+  <a href="#vacuum" title="Vacuum" class="md-nav__link">
+    Vacuum
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1" title="Phase 1:" class="md-nav__link">
+    Phase 1:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2" title="Phase 2:" class="md-nav__link">
+    Phase 2:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analyze" title="Analyze" class="md-nav__link">
+    Analyze
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-1_1" title="Phase 1:" class="md-nav__link">
+    Phase 1:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2_1" title="Phase 2:" class="md-nav__link">
+    Phase 2:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-parameters" title="Summary of Parameters:" class="md-nav__link">
+    Summary of Parameters:
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameter-guidance" title="Parameter Guidance" class="md-nav__link">
+    Parameter Guidance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schema-name" title="Schema Name" class="md-nav__link">
+    Schema Name
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slot-count" title="Slot Count" class="md-nav__link">
+    Slot Count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyze-flag" title="analyze-flag" class="md-nav__link">
+    analyze-flag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vacuum-flag" title="vacuum-flag" class="md-nav__link">
+    vacuum-flag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vacuum-parameter" title="vacuum-parameter" class="md-nav__link">
+    vacuum-parameter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min-unsorted-pct" title="min-unsorted-pct" class="md-nav__link">
+    min-unsorted-pct
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max-unsorted-pct" title="max-unsorted-pct" class="md-nav__link">
+    max-unsorted-pct
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stats-off-pct" title="stats-off-pct" class="md-nav__link">
+    stats-off-pct
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max-table-size-mb" title="max-table-size-mb" class="md-nav__link">
+    max-table-size-mb
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predicate-cols" title="predicate-cols" class="md-nav__link">
+    predicate-cols
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-usage" title="Sample Usage" class="md-nav__link">
+    Sample Usage
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation-notes" title="Installation Notes:" class="md-nav__link">
-    Installation Notes:
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#install-notes" title="Install Notes" class="md-nav__link">
+    Install Notes
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#installation-from-cloudformation-template" title="Installation from CloudFormation Template:" class="md-nav__link">
-    Installation from CloudFormation Template:
+      
+        <li class="md-nav__item">
+  <a href="#limitations" title="Limitations" class="md-nav__link">
+    Limitations
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-navigate-to-the-qmrnotificationutilitys-directory-within-the-amazon-redshift-utils-project" title="1. Navigate to the QMRNotificationUtility's directory within the amazon-redshift-utils project:" class="md-nav__link">
-    1. Navigate to the QMRNotificationUtility's directory within the amazon-redshift-utils project:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-copy-the-zipped-python-deployment-package-for-the-lambda-function-to-a-location-of-your-choosing-in-s3" title="2. Copy the zipped python Deployment Package for the Lambda function to a location of your choosing in S3:" class="md-nav__link">
-    2. Copy the zipped python Deployment Package for the Lambda function to a location of your choosing in S3:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-gather-the-necessary-identifiers-noted-in-the-prerequistes-section-above" title="3. Gather the necessary identifiers noted in the prerequistes section above:" class="md-nav__link">
-    3. Gather the necessary identifiers noted in the prerequistes section above:
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-create-the-lambda-function" title="4. Create the Lambda Function" class="md-nav__link">
-    4. Create the Lambda Function
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-verify-creation-is-complete" title="5. Verify creation is complete" class="md-nav__link">
-    5. Verify creation is complete
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-add-an-encrypted-password" title="6. Add an encrypted password" class="md-nav__link">
-    6. Add an encrypted password
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-update-your-cloudformation-stack" title="7. Update your CloudFormation stack" class="md-nav__link">
-    7. Update your CloudFormation stack
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-verify-the-modification-is-complete" title="8. Verify the modification is complete" class="md-nav__link">
-    8. Verify the modification is complete
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#9-check-the-inbox-of-the-email-address-you-included-for-snsemailparameter" title="9. Check the inbox of the email address you included for SNSEmailParameter." class="md-nav__link">
-    9. Check the inbox of the email address you included for SNSEmailParameter.
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#10-verify-the-email-address-receives-an-email-notification-within-5-minutes" title="10. Verify the email address receives an email notification within 5 minutes" class="md-nav__link">
-    10. Verify the email address receives an email notification within 5 minutes
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rebuilding-lambda-function" title="Rebuilding Lambda Function" class="md-nav__link">
-    Rebuilding Lambda Function
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1218,157 +1326,207 @@
 				
 				<!-- END Ad -->
 				
-                <h1 id="amazon-redshift-wlm-query-monitoring-rule-qmr-action-notification-utility">Amazon Redshift WLM Query Monitoring Rule (QMR) Action Notification Utility</h1>
-<h2 id="goals">Goals</h2>
-<p>This utility uses a scheduled Lambda function to pull records from the QMR action system log table (<code>stl_wlm_rule_action</code>) and publish them to an SNS topic. This utility can be used to send periodic notifications based on the WLM query monitoring rule actions taken for your unique workload and rules configuration.</p>
-<p>In Amazon Redshift workload management (WLM), query monitoring rules define metrics-based performance boundaries for WLM queues and specify what action to take when a query goes beyond those boundaries. For example, for a queue dedicated to short running queries, you might create a rule that aborts queries that run for more than 60 seconds. To track poorly designed queries, you might have another rule that logs queries that contain nested loops.  The rule actions are captured in <code>stl_wlm_rule_action</code> system table. For more information about Redshift workload management (WLM) query monitoring rules and how to configure it, please refer to Redshift <a href="http://docs.aws.amazon.com/redshift/latest/mgmt/workload-mgmt-config.html">Documentation</a></p>
-<p>The utility periodically scans <code>stl_wlm_rule_action.actions</code> (log/hop/abort) recorded by WLM query monitoring rules and sends the records as SNS notifications. In summary, a Lambda function is invoked on a scheduled interval, connects to your Redshift cluster, reads events from <code>stl_wlm_rule_action</code> and publishes them to an SNS topic as a JSON string.</p>
-<h2 id="installation-notes">Installation Notes:</h2>
-<h3 id="prerequisites">Prerequisites</h3>
-<p>This utility requires the following items:</p>
+                <h1 id="analyze-vacuum-schema-utility">Analyze &amp; Vacuum Schema Utility</h1>
+<p>In order to get the best performance from your Redshift Database, you must ensure that database tables regularly analyzed and vacuumed. For more information , please read the below Redshift documentation,</p>
+<p>http://docs.aws.amazon.com/redshift/latest/dg/t_Reclaiming_storage_space202.html
+http://docs.aws.amazon.com/redshift/latest/dg/t_Analyzing_tables.html</p>
+<p>Whenever you insert, delete, or update (In Redshift update = delete + insert) a significant number of rows, you should run a VACUUM command and then an ANALYZE command. 
+In Redshift, the data blocks are immutable, i.e. when rows are DELETED or UPDATED against a table they are simply logically deleted (flagged for deletion), but not physically removed from disk. This causes the rows to continue consuming disk space and those blocks are scanned when a query scans the table. The result of this, table storage space is increased and degraded performance due to otherwise avoidable disk IO during scans. A vacuum recovers the space from deleted rows and restores the sort order. </p>
+<p>To avoid resource intensive VACUUM operation, you can load the data in sort key order, or design your table maintain data for a rolling time period, using time series tables. </p>
+<p>If your table has a large unsorted region (which can’t be vacuumed), a deep copy is much faster than a vacuum. You can use the Column Encoding Utility from our open source GitHub project https://github.com/awslabs/amazon-redshift-utils to perform a deep copy. The Column Encoding Utility takes care of the compression analysis, column encoding and deep copy.</p>
+<p>The ANALYZE command updates the statistics metadata, which enables the query optimizer to generate more accurate query plans. COPY automatically updates statistics after loading an empty table, so your statistics should be up to date. </p>
+<p>The Redshift ‘Analyze Vacuum Utility’ gives you the ability to automate VACUUM and ANALYZE operations. When run, it will VACUUM or ANALYZE an entire schema or individual tables. </p>
+<p>This Utility Analyzes and Vacuums table(s) in a Redshift Database schema, based on certain parameters like unsorted, stats off and size of the table and system alerts from <code>stl_explain</code> &amp; <code>stl_alert_event_log</code>. By turning on/off &lsquo;&ndash;analyze-flag’ and  &lsquo;&ndash;vacuum-flag&rsquo; parameters, you can run it as  &lsquo;vacuum-only&rsquo; or  &lsquo;analyze-only&rsquo; utility. This script can be scheduled to run VACUUM and ANALYZE as part of regular maintenance/housekeeping activities, when there are fewer database activities.</p>
+<h2 id="vacuum">Vacuum</h2>
+<p>This script runs vacuum in two phases,</p>
+<h3 id="phase-1">Phase 1:</h3>
+<p>Identify and run vacuum based on the alerts recorded in <code>stl_alert_event_log</code>. <code>stl_alert_event_log</code>, records an alert when the query optimizer identifies conditions that might indicate performance issues. We can use the <code>stl_alert_event_log</code> table to identify the top 25 tables that need vacuum. The script uses SQL to get the list of tables and number of alerts, which indicate that vacuum is required.</p>
+<p>Variables affecting this phase:</p>
 <ul>
-<li>
-<p>VPC: A VPC which currently contains your Amazon Redshift resource and will contain this utility&rsquo;s Lambda function. <strong><em>NOTE: VPC ID</em></strong></p>
-</li>
-<li>
-<p>Private Subnets with NAT route: At least two private subnets within that VPC with private routes to the target Amazon Redshift cluster. You should have a NAT Gateway to give access to the Internet for those subnets&rsquo; routing tables. You cannot use public subnets. You can read more information on this Lambda requirement here: <a href="https://aws.amazon.com/blogs/aws/new-access-resources-in-a-vpc-from-your-lambda-functions/">AWS blog</a>. <strong><em>NOTE: Subnet IDs</em></strong></p>
-</li>
-<li>
-<p>Security Group: A VPC security group which allows the Lambda function access to your Amazon Redshift cluster on the port specified for SQL connections. <strong><em>NOTE: VPC Security Group ID</em></strong></p>
-</li>
-<li>
-<p>An Amazon Redshift cluster in the above VPC. <strong><em>NOTE: Amazon Redshift cluster&rsquo;s Endpoint, Port, Database</em></strong></p>
-</li>
-<li>
-<p>Database user credentials for an Amazon Redshift user with access to <a href="http://docs.aws.amazon.com/redshift/latest/dg/r_STL_WLM_RULE_ACTION.html"><code>STL_WLM_RULE_ACTION</code></a>. A superuser will be able to see all rows in this table, and a non-privileged user will be able to see only their own rows. More on visibility here: <a href="http://docs.aws.amazon.com/redshift/latest/dg/c_visibility-of-data.html">Visibility of Data in System Tables and Views</a>. <strong><em>NOTE: Amazon Redshift cluster&rsquo;s user name and password</em></strong></p>
-</li>
-<li>
-<p>An active WLM configuration with QMR enabled (<a href="http://docs.aws.amazon.com/redshift/latest/mgmt/workload-mgmt-config.html">Documentation</a>).</p>
-</li>
-<li>
-<p>Access to an IAM user with privileges to create and modify the necessary CloudFormation, KMS, IAM, SNS, and CloudWatch Events resources.</p>
-</li>
-<li>
-<p>A locally cloned amazon-redshift-utils project containing this utility and AWS CLI and/or AWS Console access. </p>
-</li>
+<li><code>goback_no_of_days</code>: To control number days to look back from CURRENT_DATE</li>
 </ul>
-<h3 id="installation-from-cloudformation-template">Installation from CloudFormation Template:</h3>
-<p>The quickest way to get up and running with the QMRNotificationUtility is by leveraging the packaged CloudFormation template and the AWS CLI.</p>
-<h4 id="1-navigate-to-the-qmrnotificationutilitys-directory-within-the-amazon-redshift-utils-project">1. Navigate to the QMRNotificationUtility&rsquo;s directory within the amazon-redshift-utils project:</h4>
-<pre><code>git clone/pull amazon-redshift-utils
-cd amazon-redshift-utils/src/QMRNotificationUtility
-</code></pre>
-
-<h4 id="2-copy-the-zipped-python-deployment-package-for-the-lambda-function-to-a-location-of-your-choosing-in-s3">2. Copy the zipped python Deployment Package for the Lambda function to a location of your choosing in S3:</h4>
-<pre><code class="bash">aws s3 cp ./lambda/dist/qmr-action-notification-utility-1.4.zip s3://yourbucket/qmr-action-notification-utility-1.4.zip
-</code></pre>
-
-<h4 id="3-gather-the-necessary-identifiers-noted-in-the-prerequistes-section-above">3. Gather the necessary identifiers noted in the prerequistes section above:</h4>
+<h3 id="phase-2">Phase 2:</h3>
+<p>Identify and run vacuum based on certain thresholds related to table statistics (Like unsorted &gt; 10% and Stats Off &gt; 10% and limited to specific table sizes.</p>
+<p>Variables affecting this phase:</p>
 <ul>
-<li>VPC ID</li>
-<li>Subnet ID(s)</li>
-<li>Security Group ID(s)</li>
-<li>Cluster Endpoint</li>
-<li>Cluster Port</li>
-<li>Cluster Database</li>
-<li>Cluster Credentials (Username and Password)</li>
-<li>Bucket to host the Lambda Deployment Package</li>
-<li>Email address to be notified of WLM actions</li>
+<li><code>stats_off_pct</code>: To control the threshold of statistics inaccuracy</li>
+<li><code>min_unsorted_pct</code>: To control the lower limit of unsorted blocks</li>
+<li><code>max_unsorted_pct</code>: To control the upper limit of unsorted blocks (preventing vacuum on super large tables)</li>
+<li><code>max_tbl_size_mb</code>: To control when a table is too large to be vacuumed by this utility</li>
 </ul>
-<h4 id="4-create-the-lambda-function">4. Create the Lambda Function</h4>
-<p>Use the AWS CLI to create a stack containing the necessary dependencies and Lambda function:</p>
-<pre><code class="bash">aws cloudformation create-stack \
---stack-name qmr-action-notification-utility \
---template-body file://./cloudformation/qmr-action-notification-utility.yaml \
---parameters \
-  ParameterKey=S3Bucket,ParameterValue=yourbucket \
-  ParameterKey=S3Key,ParameterValue=qmr-action-notification-utility-1.4.zip \
-  ParameterKey=SNSEmailParameter,ParameterValue=test@email.com \
-  ParameterKey=VPC,ParameterValue=vpc-abcd1234 \
-  ParameterKey=SubnetIds,ParameterValue=subnet-abcd1234 \
-  ParameterKey=SecurityGroupIds,ParameterValue=sg-abcd1234 \
-  ParameterKey=RedshiftMonitoringUser,ParameterValue=monitoring_user \
-  ParameterKey=RedshiftClusterPort,ParameterValue=cluster_port \
-  ParameterKey=RedshiftClusterEndpoint,ParameterValue=examplecluster.abcd12340987.us-east-1.redshift.amazonaws.com \
-  ParameterKey=RedshiftClusterDatabase,ParameterValue=db_name \
-  ParameterKey=MonitoringDBPasswordCiphertext,ParameterValue= \
---capabilities CAPABILITY_IAM
+<h2 id="analyze">Analyze</h2>
+<p>This script runs Analyze in two phases:</p>
+<h3 id="phase-1_1">Phase 1:</h3>
+<p>Run ANALYZE based on the alerts recorded in <code>stl_explain</code> &amp; <code>stl_alert_event_log</code>. </p>
+<h3 id="phase-2_1">Phase 2:</h3>
+<p>Run ANALYZE based the <code>stats_off</code> metric in <code>svv_table_info</code>. If table has a <code>stats_off_pct</code> &gt; 10%, then the script runs ANALYZE command to update the statistics.</p>
+<h2 id="summary-of-parameters">Summary of Parameters:</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Parameter</th>
+<th align="center">Mandatory</th>
+<th align="left">Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">&ndash;db</td>
+<td align="center">Yes</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&ndash;db-user</td>
+<td align="center">Yes</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&ndash;db-pwd</td>
+<td align="center">Yes</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&ndash;db-host</td>
+<td align="center">Yes</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&ndash;db-port</td>
+<td align="center">No</td>
+<td align="left">5439</td>
+</tr>
+<tr>
+<td align="left">&ndash;db-conn-opts</td>
+<td align="center">No</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&ndash;schema-name</td>
+<td align="center">No</td>
+<td align="left">Public</td>
+</tr>
+<tr>
+<td align="left">&ndash;table-name</td>
+<td align="center">No</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&ndash;output-file</td>
+<td align="center">Yes</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&ndash;debug</td>
+<td align="center">No</td>
+<td align="left">False</td>
+</tr>
+<tr>
+<td align="left">&ndash;slot-count</td>
+<td align="center">No</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">&ndash;ignore-errors</td>
+<td align="center">No</td>
+<td align="left">False</td>
+</tr>
+<tr>
+<td align="left">&ndash;query_group</td>
+<td align="center">No</td>
+<td align="left">None</td>
+</tr>
+<tr>
+<td align="left">&ndash;analyze-flag</td>
+<td align="center">No</td>
+<td align="left">False</td>
+</tr>
+<tr>
+<td align="left">&ndash;vacuum-flag</td>
+<td align="center">No</td>
+<td align="left">False</td>
+</tr>
+<tr>
+<td align="left">&ndash;vacuum-parameter</td>
+<td align="center">No</td>
+<td align="left">FULL</td>
+</tr>
+<tr>
+<td align="left">&ndash;min-unsorted-pct</td>
+<td align="center">No</td>
+<td align="left">0.05</td>
+</tr>
+<tr>
+<td align="left">&ndash;max-unsorted-pct</td>
+<td align="center">No</td>
+<td align="left">0.5</td>
+</tr>
+<tr>
+<td align="left">&ndash;stats-off-pct</td>
+<td align="center">No</td>
+<td align="left">0.1</td>
+</tr>
+<tr>
+<td align="left">&ndash;stats-threshold</td>
+<td align="center">No</td>
+<td align="left">0.1</td>
+</tr>
+<tr>
+<td align="left">&ndash;max-table-size-mb</td>
+<td align="center">No</td>
+<td align="left">700*1024</td>
+</tr>
+<tr>
+<td align="left">&ndash;predicate-cols</td>
+<td align="center">No</td>
+<td align="left">False</td>
+</tr>
+</tbody>
+</table>
+<p>The above parameter values depend on the cluster type, table size, available system resources and available ‘Time window’ etc. The default values provided here are based on ds2.8xlarge, 8 node cluster. It may take some trial and error to come up with correct parameter values to vacuum and analyze your table(s). If table size is greater than certain size (<code>max_table_size_mb</code>) and has a large unsorted region (<code>max_unsorted_pct</code>), consider performing a deep copy, which will be much faster than a vacuum.</p>
+<p>As VACUUM &amp; ANALYZE operations are resource intensive, you should ensure that this will not adversely impact other database operations running on your cluster. AWS has thoroughly tested this software on a variety of systems, but cannot be responsible for the impact of running the utility against your database.</p>
+<h3 id="parameter-guidance">Parameter Guidance</h3>
+<h3 id="schema-name">Schema Name</h3>
+<p>The utility will accept a valid schema name, or alternative a regular expression pattern which will be used to match to all schemas in the database. This uses Posix regular expression syntax. You can use <code>(.*)</code> to match all schemas. </p>
+<h4 id="slot-count">Slot Count</h4>
+<p>Sets the number of query slots a query will use.</p>
+<p>Workload management (WLM) reserves slots in a service class according to the concurrency level set for the queue (for example, if concurrency level is set to 5, then the service class has 5 slots). WLM allocates the available memory for a service class equally to each slot. For more information, see Implementing Workload Management.</p>
+<p>For operations where performance is heavily affected by the amount of memory allocated, such as Vacuum, increasing the value of wlm_query_slot_count can improve performance. In particular, for slow Vacuum commands, inspect the corresponding record in the <code>SVV_VACUUM_SUMMARY</code> view. If you see high values (close to or higher than 100) for <code>sort_partitions</code> and <code>merge_increments</code> in the <code>SVV_VACUUM_SUMMARY</code> view, consider increasing the value for <code>wlm_query_slot_count</code> the next time you run Vacuum against that table.</p>
+<p>Increasing the value of wlm_query_slot_count limits the number of concurrent queries that can be run.</p>
+<p>Note:</p>
+<p>If the value of <code>wlm_query_slot_count</code> is larger than the number of available slots (concurrency level) for the queue targeted by the user, the utilty will fail. If you encounter an error, decrease <code>wlm_query_slot_count</code> to an allowable value.</p>
+<h4 id="analyze-flag">analyze-flag</h4>
+<p>Flag to turn ON/OFF ANALYZE functionality (True or False). If you want run the script to only perform ANALYZE on a schema or table, set this value ‘False’ : Default = ‘False’.</p>
+<h4 id="vacuum-flag">vacuum-flag</h4>
+<p>Flag to turn ON/OFF VACUUM functionality (True or False). If you want run the script to only perform VACUUM on a schema or table, set this value ‘False’ : Default = ‘False’.</p>
+<h4 id="vacuum-parameter">vacuum-parameter</h4>
+<p>Specify vacuum parameters [ <code>FULL | SORT ONLY | DELETE ONLY | REINDEX</code> ] Default = FULL</p>
+<h4 id="min-unsorted-pct">min-unsorted-pct</h4>
+<p>Minimum unsorted percentage (%) to consider a table for vacuum: Default = 5%.</p>
+<h4 id="max-unsorted-pct">max-unsorted-pct</h4>
+<p>Maximum unsorted percentage(%) to consider a table for vacuum : Default = 50%.</p>
+<h4 id="stats-off-pct">stats-off-pct</h4>
+<p>Minimum stats off percentage(%) to consider a table for analyze : Default = 10%</p>
+<h4 id="max-table-size-mb">max-table-size-mb</h4>
+<p>Maximum table size 700GB in MB : Default = 700*1024 MB</p>
+<h4 id="predicate-cols">predicate-cols</h4>
+<p>Analyze predicate columns only. Default = False</p>
+<h2 id="sample-usage">Sample Usage</h2>
+<pre><code>python analyze-vacuum-schema.py  --db &lt;&gt; --db-user &lt;&gt; --db-pwd &lt;&gt; --db-port 8192 --db-host aaa.us-west-2.redshift.amazonaws.com --schema-name public  --table-name customer_v6 --output-file /Users/test.log --debug True  --ignore-errors False --slot-count 2 --min-unsorted-pct 5 --max-unsorted-pct 50 --stats-off-pct 10 --max-table-size-mb 700*1024
 </code></pre>
 
-<h4 id="5-verify-creation-is-complete">5. Verify creation is complete</h4>
-<p>It may take a few mintues for the stack&rsquo;s resources to be provisioned, and is completed when the following command returns &ldquo;CREATE_COMPLETE&rdquo;:</p>
-<pre><code class="bash">aws cloudformation describe-stacks --stack-name qmr-action-notification-utility --query 'Stacks[0].StackStatus' --output text
+<h2 id="install-notes">Install Notes</h2>
+<pre><code>sudo easy_install pip  
+sudo pip install 
 </code></pre>
 
-<h4 id="6-add-an-encrypted-password">6. Add an encrypted password</h4>
-<p>From the completed stack creation, extract the KMS Key ID, and use that Key to process your plaintext database password to ciphertext:</p>
-<pre><code class="bash"># Extract KMS Key ID
-KMSKEYID=`aws cloudformation describe-stack-resource --stack-name qmr-action-notification-utility --logical-resource-id RedshiftKMSKey --query 'StackResourceDetail.PhysicalResourceId' --output text`
-# Generate a read restricted local file to store your plaintext password
-(umask 077; touch passwd.txt)
-# Insert your plaintext password into file. If using vi ensure binary mode and no automatic EOL
-vi -b -c 'set noeol' passwd.txt
-# Read plaintext password file contents into kms encrypt to generate ciphertext
-CIPHERTEXT=`aws kms encrypt --key-id $KMSKEYID --plaintext file://./passwd.txt --query 'CiphertextBlob' --output text`
-# Cleanup password file
-rm passwd.txt
-</code></pre>
-
-<h4 id="7-update-your-cloudformation-stack">7. Update your CloudFormation stack</h4>
-<p>Add the <code>MonitoringDBPasswordCiphertext</code> parameter with the ciphertext generated from the previous step, leaving all other parameters unchanged:</p>
-<pre><code class="bash">aws cloudformation update-stack \
---stack-name qmr-action-notification-utility \
---use-previous-template \
---parameters \
-  ParameterKey=MonitoringDBPasswordCiphertext,ParameterValue=$CIPHERTEXT \
-  ParameterKey=S3Bucket,UsePreviousValue=true \
-  ParameterKey=S3Key,UsePreviousValue=true \
-  ParameterKey=SNSEmailParameter,UsePreviousValue=true \ 
-  ParameterKey=VPC,UsePreviousValue=true \
-  ParameterKey=SubnetIds,UsePreviousValue=true \
-  ParameterKey=SecurityGroupIds,UsePreviousValue=true \
-  ParameterKey=RedshiftMonitoringUser,UsePreviousValue=true \
-  ParameterKey=RedshiftClusterPort,UsePreviousValue=true \
-  ParameterKey=RedshiftClusterEndpoint,UsePreviousValue=true \
-  ParameterKey=RedshiftClusterDatabase,UsePreviousValue=true \
---capabilities CAPABILITY_IAM
-</code></pre>
-
-<h4 id="8-verify-the-modification-is-complete">8. Verify the modification is complete</h4>
-<p>It may take a moment for the stack&rsquo;s resources to be updated, and is done when the following command returns &ldquo;UPDATE_COMPLETE&rdquo;:</p>
-<pre><code class="bash">aws cloudformation describe-stacks --stack-name qmr-action-notification-utility --query 'Stacks[0].StackStatus' --output text
-</code></pre>
-
-<h4 id="9-check-the-inbox-of-the-email-address-you-included-for-snsemailparameter">9. Check the inbox of the email address you included for SNSEmailParameter.</h4>
-<p>There should be an &ldquo;AWS Notification - Subscription Confirmation&rdquo; from no-reply@sns.amazonaws.com asking that you confirm your subscription. Click the link if you wish to receive updates on this email address.  </p>
-<h4 id="10-verify-the-email-address-receives-an-email-notification-within-5-minutes">10. Verify the email address receives an email notification within 5 minutes</h4>
-<p>By purposely triggering a QMR action by manually running SQL that is known to violate a rule defined in your active WLM configuration. Below is one example SNS notification email message:</p>
-<pre><code class="json">[
-  {
-     &quot;clusterid&quot;:&quot;examplecluster&quot;,
-     &quot;database&quot;:&quot;dev&quot;,
-     &quot;userid&quot;:100,
-     &quot;query&quot;:1186777,
-     &quot;service_class&quot;:6,
-     &quot;rule&quot;:&quot;Rule1_Nested_Loop&quot;,
-     &quot;action&quot;:&quot;abort&quot;,
-     &quot;recordtime&quot;:&quot;2017-06-12T06:51:57.167052&quot;
-  },
-  {
-      &quot;clusterid&quot;:&quot;examplecluster&quot;,
-      &quot;database&quot;:&quot;dev&quot;,
-      &quot;userid&quot;:100,
-      &quot;query&quot;:1186999,
-      &quot;service_class&quot;:6,
-      &quot;rule&quot;:&quot;Rule2_high_Return_Rows&quot;,
-      &quot;action&quot;:&quot;log&quot;,
-      &quot;recordtime&quot;:&quot;2017-06-12T06:53:48.935375&quot;
-   }
-]
-</code></pre>
-
-<h3 id="rebuilding-lambda-function">Rebuilding Lambda Function</h3>
-<p>If you wish to rebuild the Lambda function yourself, you can use <code>lambda/build.sh</code> to create a zipped Deployment Package to upload to your S3 bucket. This utility requires <code>pip</code> and <code>virtualenv</code> python dependencies. This script will initialize a transient virtual environment, download python dependencies from <code>requirements.txt</code>, and zip the lambda function source code with dependencies into a versioned archive for uploading to S3.</p>
+<h2 id="limitations">Limitations</h2>
+<ol>
+<li>Script runs all VACUUM commands sequentially. Currently in Redshift multiple concurrent vacuum operations are not supported. </li>
+<li>Script runs all ANALYZE commands sequentially not concurrently.</li>
+<li>Does not support column level ANALYZE. </li>
+<li>Multiple schemas are not supported.</li>
+<li>Skew factor is not considered.</li>
+</ol>
                 
                   
                 
