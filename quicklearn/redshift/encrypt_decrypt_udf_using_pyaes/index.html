@@ -44,14 +44,14 @@
 
     <!-- meta description -->
     
-     <meta name="description" content="date_diff Teradata UDF (SQL)">
+     <meta name="description" content="Encryption & Decryption UDF in Amazon Redshift">
     
 	
     <!-- meta author -->
     
     <!-- meta keywords -->
     
-     <meta name="keywords" content="utility, vacuum, analyze, data lake, datalake, formation, case study, shell, bash, sh, split, size, console, aws, files, tips, cheat, shell command, bash command, script, shell script, sql, teradata, redshift, vba, database, data warehouse, etl, custom, big data">
+     <meta name="keywords" content="encrypt, decryption, decrypt, encryption, udf, amazon, function, utility, vacuum, analyze, data lake, datalake, formation, case study, shell, bash, sh, split, size, console, aws, files, tips, cheat, shell command, bash command, script, shell script, sql, teradata, redshift, vba, database, data warehouse, etl, custom, big data">
     
 
     
@@ -59,7 +59,7 @@
 
 
       
-        <title>date_diff Teradata UDF (SQL)</title>
+        <title>Encryption & Decryption UDF in Amazon Redshift</title>
       
 
 <!-- END Kawish's Custom metadata block -->
@@ -68,7 +68,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="date_diff Teradata UDF (SQL)">
+        <meta name="description" content="Encryption & Decryption UDF in Amazon Redshift">
       
       
       
@@ -91,18 +91,18 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
     
     
       
-        <title>date_diff Teradata UDF (SQL)</title>
+        <title>Encryption & Decryption UDF in Amazon Redshift</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.0284f74d.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.01803549.css">
       
       
         
@@ -111,7 +111,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../../../assets/javascripts/modernizr.74668098.js"></script>
     
     
       
@@ -120,7 +120,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../../assets/fonts/material-icons.css">
     
     
     
@@ -168,7 +168,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#date_diff-teradata-udf-sql" tabindex="1" class="md-skip">
+      <a href="#encryption-decryption-udf-in-amazon-redshift" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -177,7 +177,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Kawish Siddiqui" class="md-header-nav__button md-logo">
+        <a href="../../.." title="Kawish Siddiqui" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -192,10 +192,10 @@
             <span class="md-header-nav__topic" id="sitename">
             <!--   Kawish Siddiqui -->
 				<script> document.getElementById("sitename").innerHTML = window.location.hostname.substr(0, window.location.hostname.indexOf('.')).toUpperCase(); </script></a>
-            </span>
+            </span>			
             <span class="md-header-nav__topic">
               
-                date_diff Teradata UDF (SQL)
+                Encryption & Decryption UDF in Amazon Redshift
               
             </span>
           
@@ -226,7 +226,7 @@
       </div>
     </div>
   </div>
-</div>
+</div>		  
         
       </div>
       
@@ -250,7 +250,7 @@
         
   <li class="md-tabs__item">
     
-      <a href="../.." title="About Me" class="md-tabs__link">
+      <a href="../../.." title="About Me" class="md-tabs__link">
         About Me
       </a>
     
@@ -266,8 +266,8 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../sh/split_datafile/" title="Quick Tips" class="md-tabs__link">
-          Quick Tips
+        <a href="../../sh/split_datafile/" title="Quick Learn" class="md-tabs__link">
+          Quick Learn
         </a>
       
     </li>
@@ -285,7 +285,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../cheetsheets/bigdata/hadoop_chtsht/" title="Cheat Sheets" class="md-tabs__link">
+        <a href="../../../cheetsheets/bigdata/hadoop_chtsht/" title="Cheat Sheets" class="md-tabs__link">
           Cheat Sheets
         </a>
       
@@ -298,13 +298,19 @@
         
   
   
+    
+    
+  
+  
     <li class="md-tabs__item">
       
-        <a href="../../tutorial/rs_aod/" title="Tutorials" class="md-tabs__link">
+        <a href="../../../tutorial/redshift/rsintrodwaws/" title="Tutorials" class="md-tabs__link">
           Tutorials
         </a>
       
     </li>
+  
+
   
 
       
@@ -317,7 +323,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../event/reinvent/awsri_2018.md" title="Events" class="md-tabs__link">
+        <a href="../../../event/reinvent/awsri_2018.md" title="Events" class="md-tabs__link">
           Events
         </a>
       
@@ -343,7 +349,7 @@
     <script async src='https://cse.google.com/cse.js?cx=partner-pub-5546856204176740:2677115170'></script><div class="gcse-searchbox-only"></div>
 	
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="Kawish Siddiqui" class="md-nav__button md-logo">
+    <a href="../../.." title="Kawish Siddiqui" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
@@ -359,7 +365,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="About Me" class="md-nav__link">
+    <a href="../../.." title="About Me" class="md-nav__link">
       About Me
     </a>
   </li>
@@ -377,11 +383,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
-      Quick Tips
+      Quick Learn
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        Quick Tips
+        Quick Learn
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -462,12 +468,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
     
     <label class="md-nav__link" for="nav-2-3">
       Teradata
@@ -483,77 +487,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Date Diff Function
-      </label>
-    
-    <a href="./" title="Date Diff Function" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../teradata/td_date_diff/" title="Date Diff Function" class="md-nav__link">
       Date Diff Function
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-
-      
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- kawishsiddiqui TOC -->
-            <ins class="adsbygoogle"
-                 style="border:none;display:inline-block;width:200px;height:100px"
-                 data-ad-client="ca-pub-5546856204176740"
-                 data-ad-slot="1250189729"
-			 > </ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-      
-
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#syntax-date_diff" title="Syntax date_diff():" class="md-nav__link">
-    Syntax date_diff():
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#function-code" title="Function Code" class="md-nav__link">
-    Function Code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testing-sql" title="Testing SQL" class="md-nav__link">
-    Testing SQL
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -563,7 +501,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../td_turnoff_fallback/" title="Turn off FallBackSetting in Teradata" class="md-nav__link">
+    <a href="../../teradata/td_turnoff_fallback/" title="Turn off FallBackSetting in Teradata" class="md-nav__link">
       Turn off FallBackSetting in Teradata
     </a>
   </li>
@@ -614,10 +552,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5" checked>
     
     <label class="md-nav__link" for="nav-2-5">
       Redshift
@@ -633,11 +573,78 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../redshift/encrypt_decrypt_udf_using_pyaes/" title="Redshift Encryption UDF" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Redshift Encryption UDF
+      </label>
+    
+    <a href="./" title="Redshift Encryption UDF" class="md-nav__link md-nav__link--active">
       Redshift Encryption UDF
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+
+
+   <div class="a2a_kit">
+       <a class="a2a_button_facebook_like" data-action="recommend" data-href="https://kawishsiddiqui.com/" data-layout="box_count" data-width="55"></a>
+   </div>
+   <script async src="https://static.addtoany.com/menu/page.js"></script>
+
+
+
+      
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- kawishsiddiqui TOC -->
+            <ins class="adsbygoogle"
+                 style="border:none;display:inline-block;width:200px;height:100px"
+                 data-ad-client="ca-pub-5546856204176740"
+                 data-ad-slot="1250189729"
+			 > </ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+      
+
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#amazon-redshift-udf-support" title="Amazon Redshift UDF Support" class="md-nav__link">
+    Amazon Redshift UDF Support
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encryption-and-decryption-udf" title="Encryption and Decryption UDF" class="md-nav__link">
+    Encryption and Decryption UDF
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -647,7 +654,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../redshift/RedshiftQMRActvtMon/" title="Redshift QMR Notification Utility" class="md-nav__link">
+    <a href="../RedshiftQMRActvtMon/" title="Redshift QMR Notification Utility" class="md-nav__link">
       Redshift QMR Notification Utility
     </a>
   </li>
@@ -659,7 +666,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../redshift/Vacclyze/" title="Redshift Vacuum Analyze" class="md-nav__link">
+    <a href="../Vacclyze/" title="Redshift Vacuum Analyze" class="md-nav__link">
       Redshift Vacuum Analyze
     </a>
   </li>
@@ -671,20 +678,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../redshift/awslabs_SystemTablePersistence/" title="System Table Persistence" class="md-nav__link">
+    <a href="../awslabs_SystemTablePersistence/" title="System Table Persistence" class="md-nav__link">
       System Table Persistence
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../second_level/" title="Second Level" class="md-nav__link">
-      Second Level
     </a>
   </li>
 
@@ -743,7 +738,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cheetsheets/bigdata/hadoop_chtsht/" title="Hadoop" class="md-nav__link">
+    <a href="../../../cheetsheets/bigdata/hadoop_chtsht/" title="Hadoop" class="md-nav__link">
       Hadoop
     </a>
   </li>
@@ -755,7 +750,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cheetsheets/bigdata/pig_chtsht/" title="PIG" class="md-nav__link">
+    <a href="../../../cheetsheets/bigdata/pig_chtsht/" title="PIG" class="md-nav__link">
       PIG
     </a>
   </li>
@@ -767,7 +762,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cheetsheets/bigdata/htrn_chtsht/" title="Hortron" class="md-nav__link">
+    <a href="../../../cheetsheets/bigdata/htrn_chtsht/" title="Hortron" class="md-nav__link">
       Hortron
     </a>
   </li>
@@ -779,7 +774,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cheetsheets/bigdata/casestudies/" title="Case Studies" class="md-nav__link">
+    <a href="../../../cheetsheets/bigdata/casestudies/" title="Case Studies" class="md-nav__link">
       Case Studies
     </a>
   </li>
@@ -819,10 +814,46 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../tutorial/rs_aod/" title="Redshift" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
       Redshift
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        Redshift
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tutorial/redshift/rsintrodwaws/" title="Introduction to Data Warehouse in AWS" class="md-nav__link">
+      Introduction to Data Warehouse in AWS
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tutorial/redshift/rsmoderndwaws/" title="Modernize Your Data Warehouse in AWS" class="md-nav__link">
+      Modernize Your Data Warehouse in AWS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -875,7 +906,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../event/reinvent/awsri_2018.md" title="re-Invent 2018" class="md-nav__link">
+    <a href="../../../event/reinvent/awsri_2018.md" title="re-Invent 2018" class="md-nav__link">
       re-Invent 2018
     </a>
   </li>
@@ -904,6 +935,14 @@
                     
 <nav class="md-nav md-nav--secondary">
 
+
+   <div class="a2a_kit">
+       <a class="a2a_button_facebook_like" data-action="recommend" data-href="https://kawishsiddiqui.com/" data-layout="box_count" data-width="55"></a>
+   </div>
+   <script async src="https://static.addtoany.com/menu/page.js"></script>
+
+
+
       
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <!-- kawishsiddiqui TOC -->
@@ -926,22 +965,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#syntax-date_diff" title="Syntax date_diff():" class="md-nav__link">
-    Syntax date_diff():
+  <a href="#amazon-redshift-udf-support" title="Amazon Redshift UDF Support" class="md-nav__link">
+    Amazon Redshift UDF Support
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#function-code" title="Function Code" class="md-nav__link">
-    Function Code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testing-sql" title="Testing SQL" class="md-nav__link">
-    Testing SQL
+  <a href="#encryption-and-decryption-udf" title="Encryption and Decryption UDF" class="md-nav__link">
+    Encryption and Decryption UDF
   </a>
   
 </li>
@@ -980,69 +1012,93 @@
 				
 				<!-- END Ad -->
 				
-                <h1 id="date_diff-teradata-udf-sql">date_diff Teradata UDF (SQL)</h1>
-<p>This function will return the difference between two timestamps.
-Input parameters are :
-Desire Difference (e.g. year, month, day, minute, hour, second)
-Start timestamp (e.g. ‘2000-10-18 22:03:07’)
-End timestamp(e.g. ‘2018-12-18 08:10:07’)</p>
-<h2 id="syntax-date_diff">Syntax date_diff():</h2>
-<pre><code class="sql">date_diff(‘year’, TIMESTAMP ‘2000-10-18 22:03:07’, TIMESTAMP ‘2018-12-18 08:10:07’)
-
+                <h1 id="encryption-decryption-udf-in-amazon-redshift">Encryption &amp; Decryption UDF in Amazon Redshift</h1>
+<h2 id="amazon-redshift-udf-support">Amazon Redshift UDF Support</h2>
+<p>Amazon Redshift supports <a href="https://docs.aws.amazon.com/redshift/latest/dg/user-defined-functions.html">User Defined Fuction</a> using SQL or Python.</p>
+<h2 id="encryption-and-decryption-udf">Encryption and Decryption UDF</h2>
+<p>This function uses <code>pyaes</code> module to encrypt data using AES <code>encrypt</code> and <code>decrypt</code> functions.<br />
+<strong>AED encryption needs atleast 16 character key to encrypt data, key length less than 16 characters may throw error.</strong></p>
+<h1 id="deployment">Deployment</h1>
+<h2 id="create-library">Create library</h2>
+<pre><code class="SQL">CREATE OR REPLACE LIBRARY pyaes  
+LANGUAGE plpythonu  
+FROM 'https://github.com/ksiddiqui79/redshift_udfs/blob/master/encrypt_decrypt_udf/using_pyaes/pyaes.zip?raw=true'  
+;  
 </code></pre>
 
-<h2 id="function-code">Function Code</h2>
-<pre><code class="sql">REPLACE FUNCTION syslib.date_diff(vDiff VARCHAR(255), StartTimestamp TIMESTAMP, EndTimeStamp TIMESTAMP)
-  RETURNS INT
-  LANGUAGE SQL
-  CONTAINS SQL
-  DETERMINISTIC
-  SQL SECURITY DEFINER
-  COLLATION INVOKER
-  INLINE TYPE 1
-  RETURN 
-      ROUND(
-      CASE WHEN UPPER(vDiff) = 'YEAR' THEN
-              (EXTRACT(DAY FROM (EndTimeStamp  - StartTimestamp DAY(4) TO SECOND)) / 365)
-          WHEN  UPPER(vDiff) = 'MONTH' THEN
-              (EXTRACT(DAY FROM (EndTimeStamp  - StartTimestamp DAY(4) TO SECOND)) / 365)*12
-          WHEN  UPPER(vDiff) = 'DAY' THEN
-              (EXTRACT(DAY FROM (EndTimeStamp  - StartTimestamp DAY(4) TO SECOND)))
-          WHEN  UPPER(vDiff) = 'HOUR' THEN
-              (EXTRACT(DAY FROM (EndTimeStamp  - StartTimestamp DAY(4) TO SECOND)) * (24))
-             + (EXTRACT(HOUR FROM (EndTimeStamp - StartTimestamp DAY(4) TO SECOND)))
-          WHEN  UPPER(vDiff) = 'MINUTE' THEN
-              (EXTRACT(DAY FROM (EndTimeStamp  - StartTimestamp DAY(4) TO SECOND)) * (24*60))
-             + (EXTRACT(HOUR FROM (EndTimeStamp - StartTimestamp DAY(4) TO SECOND)) * 60)
-             + (EXTRACT(MINUTE FROM (EndTimeStamp - StartTimestamp DAY(4) TO SECOND)) )
-          WHEN  UPPER(vDiff) = 'SECOND' THEN
-              (EXTRACT(DAY FROM (EndTimeStamp  - StartTimestamp DAY(4) TO SECOND)) * (246060))
-             + (EXTRACT(HOUR FROM (EndTimeStamp - StartTimestamp DAY(4) TO SECOND)) * (60*60))
-             + (EXTRACT(MINUTE FROM (EndTimeStamp - StartTimestamp DAY(4) TO SECOND)) * 60)
-             + EXTRACT(SECOND FROM (EndTimeStamp - StartTimestamp DAY(4) TO SECOND))
-      ELSE -1
-      END
-     )
-     ; 
+<h2 id="create-encrypt-function">Create encrypt function</h2>
+<pre><code class="SQL">CREATE OR REPLACE FUNCTION aes_encrypt(input VARCHAR(max), vKey VARCHAR(256))  
+RETURNS VARCHAR STABLE AS $$  
+  import pyaes  
+  import binascii  
+  if input is None:  
+    return None  
+  key = vKey # Your Key here  
+  aes=pyaes.AESModeOfOperationCTR(key)  
+  cipher_txt=aes.encrypt(input)  
+  cipher_txt2=binascii.hexlify(cipher_txt)  
+  return str(cipher_txt2.decode('utf-8'))  
+$$ LANGUAGE plpythonu  
+;  
 </code></pre>
 
-<h2 id="testing-sql">Testing SQL</h2>
-<pre><code class="sql">WITH tsval AS 
-   (
-      SELECT TIMESTAMP '2000-10-18 22:03:07' starttime
-           , TIMESTAMP '2018-12-18 22:03:07' endtime 
-   ),
-   dv AS
-   (
-      SELECT 'YEAR' (VARCHAR(255)) dval FROM (SELECT 1 a) a UNION
-      SELECT 'MONTH' (VARCHAR(255)) dval FROM (SELECT 1 a) a UNION
-      SELECT 'day' (VARCHAR(255)) dval FROM (SELECT 1 a) a UNION
-      SELECT 'hOuR' (VARCHAR(255)) dval FROM (SELECT 1 a) a UNION
-      SELECT 'SeCoNd' (VARCHAR(255)) dval FROM (SELECT 1 a) a UNION
-      SELECT 'MiNute' (VARCHAR(255)) dval FROM (SELECT 1 a) a  
-   )
-     SELECT dval , starttime, endtime, syslib.date_diff(dval, starttime, endtime) 
-     FROM tsval, dv ;
+<h2 id="create-decrypt-function">Create decrypt function</h2>
+<pre><code class="SQL">CREATE OR REPLACE FUNCTION aes_decrypt(encrypted_msg varchar(max), vKey VARCHAR(256))  
+RETURNS VARCHAR STABLE AS $$  
+  import pyaes  
+  import binascii  
+  if encrypted_msg is None or len(str(encrypted_msg)) == 0:  
+       return None  
+  key = vKey # Your decryption key here  
+  aes = pyaes.AESModeOfOperationCTR(key)  
+  encrypted_msg2=binascii.unhexlify(encrypted_msg)  
+  decrypted_msg2 = aes.decrypt(encrypted_msg2)  
+  return str(decrypted_msg2.decode('utf-8'))  
+$$ LANGUAGE plpythonu ;  
+</code></pre>
+
+<h2 id="test-function-with-same-key-for-encrypt-and-decrypt">Test function with same key for encrypt and decrypt</h2>
+<p><strong>SQL</strong>  </p>
+<pre><code class="SQL">SELECT aes_encrypt(myVal, myKey) encdata, aes_decrypt(enc_data, myKey) decdata  
+FROM (SELECT 'Kawish Siddiqui' myVal, LPAD(myVal, 16, 'z') myKey) a;  
+</code></pre>
+
+<p><strong>Result</strong>  </p>
+<table>
+<thead>
+<tr>
+<th>encdata</th>
+<th>decdata</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9a861c3fc1007a9b50f16ef7e1927d</td>
+<td>Kawish Siddiqui</td>
+</tr>
+</tbody>
+</table>
+<h2 id="test-function-with-same-key-for-encrypt-but-different-key-to-decrypt">Test function with same key for encrypt but different key to decrypt</h2>
+<pre><code class="SQL">SELECT aes_encrypt(myVal, myKey) encdata, aes_decrypt(enc_data, myKey||'x') decdata  
+FROM (SELECT 'Kawish Siddiqui' myVal, LPAD(myVal, 16, 'z') myKey) a;  
+</code></pre>
+
+<p><strong>Above SQL should throw an error similar to :</strong>  </p>
+<pre><code>[Amazon](500310) Invalid operation: ValueError: Invalid key size. Please look at svl_udf_log for more information  
+Details:   
+ -----------------------------------------------;  
+  error:  ValueError: Invalid key size. Please look at svl_udf_log for more information  
+  code:      10000  
+  context:   UDF  
+  query:     0  
+  location:  udf_client.cpp:369  
+  process:   padbmaster [pid=91425]  
+  -----------------------------------------------;  
+1 statement failed.  
+</code></pre>
+
+<h3 id="check-for-error-details-if-error-occured">Check for error details if error occured</h3>
+<pre><code class="SQL">SELECT * FROM svl_udf_log;  
 </code></pre>
                 
                   
@@ -1068,21 +1124,18 @@ End timestamp(e.g. ‘2018-12-18 08:10:07’)</p>
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+        [ &copy; <script> document.write("<a href='" + window.location.href +"'>" + window.location.hostname + "</a> ] "); </script>
+        
       </div>
       
   <div class="md-footer-social">
-    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    <link rel="stylesheet" href="../../../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/squidfunk" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/ksiddiqui79" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://twitter.com/squidfunk" class="md-footer-social__link fa fa-twitter"></a>
+      <a href="https://twitter.com/iamkawish" class="md-footer-social__link fa fa-twitter"></a>
     
-      <a href="https://linkedin.com/in/squidfunk" class="md-footer-social__link fa fa-linkedin"></a>
+      <a href="https://linkedin.com/in/kawish" class="md-footer-social__link fa fa-linkedin"></a>
     
   </div>
 
@@ -1092,13 +1145,13 @@ End timestamp(e.g. ‘2018-12-18 08:10:07’)</p>
       
     </div>
     
-      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      <script src="../../../assets/javascripts/application.245445c6.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       
     
 
-<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_default_style" style="right:20px; bottom:20px;">
+<div class="a2a_kit a2a_floating_style a2a_vertical_style" style="right:20px; bottom:20px;">
     <a class="a2a_button_facebook"></a>
     <a class="a2a_button_twitter"></a>
     <a class="a2a_button_linkedin"></a>
