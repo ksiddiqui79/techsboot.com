@@ -1,7 +1,10 @@
-<!DOCTYPE html>
-<html>
 
-<head>
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
     <!-- BEGIN Kawish's Custom metadata block -->
 <!-- Google AdSense -->
 
@@ -60,289 +63,500 @@
       
 
 <!-- END Kawish's Custom metadata block -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="shortcut icon" href="../..">
-    <link rel="../../img/favicon.png">
-
-
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
-    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="../../css/base.min.css" rel="stylesheet">
-    <link href="../../css/cinder.min.css" rel="stylesheet">
-    <link href="../../css/highlight.min.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-        <![endif]-->
-
-    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-    <script>
-    WebFont.load({
-        google: {
-            families: ['Open Sans', 'PT Sans']
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A Data lake contains all data, both raw sources over extended periods of time as well as any processed data.">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>DataLake Formation in AWS - Kawish Siddiqui</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-143819065-1", "kawishsiddiqui.com")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
         }
-    });
-    </script>
-
-
-     
-</head>
-
-<body>
-
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-
-        <!-- Collapsed navigation -->
-        <div class="navbar-header">
-            <!-- Expander button -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            
-
-            <!-- Main title -->
-
-            <!-- <a class="navbar-brand" href="../..">Kawish Siddiqui</a>   -->
-            <a class="navbar-brand" href="../.."><div id="sitename"></div>
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#datalake-formation-in-aws" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Kawish Siddiqui" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic" id="sitename">
+            <!--   Kawish Siddiqui -->
 				<script> document.getElementById("sitename").innerHTML = window.location.hostname.substr(0, window.location.hostname.indexOf('.')).toUpperCase(); </script></a>
+            </span>
+            <span class="md-header-nav__topic">
+              
+                DataLake Formation in AWS - Kawish Siddiqui
+              
+            </span>
+          
         </div>
-
-        <!-- Expanded navigation -->
-        <div class="navbar-collapse collapse">
-                <!-- Main navigation -->
-                <ul class="nav navbar-nav">
-                
-                
-                    <li >
-                        <a href="../..">About Me</a>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shell/Bash <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../../sh/split_datafile/">Split data file</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">VBA <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../../vba/vba_concatif/">ConcatIF Function</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teradata <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../../teradata/td_date_diff/">Date Diff Function</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../teradata/td_turnoff_fallback/">Turn off FallBackSetting in Teradata</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown active">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">AWS <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-                        
-                            
-<li class="active">
-    <a href="./">DataLake Formation in AWS</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Redshift <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../../redshift/encrypt_decrypt_udf_using_pyaes/">Redshift Encryption UDF</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../redshift/RedshiftQMRActvtMon/">Redshift QMR Notification Utility</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../redshift/Vacclyze/">Redshift Vacuum Analyze</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../redshift/awslabs_SystemTablePersistence/">System Table Persistence</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../../second_level/">Second Level</a>
-</li>
-
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cheat Sheets <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-                        
-                            
- 
-    <li class="dropdown-submenu"> 
-    <a tabindex="-1" href="">Big Data</a>
-
-<!--
-    <li class="dropdown">
-		<a tabindex="-1" href="" class="dropdown-toggle" data-toggle="dropdown">Big Data <b class="caret"></b></a>
--->
-    <ul class="dropdown-menu">
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
         
-            
-<li >
-    <a href="../../cheetsheets/bigdata/hadoop_chtsht/">Hadoop</a>
-</li>
-
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
         
-            
-<li >
-    <a href="../../cheetsheets/bigdata/pig_chtsht/">PIG</a>
-</li>
-
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
         
-            
-<li >
-    <a href="../../cheetsheets/bigdata/htrn_chtsht/">Hortron</a>
-</li>
-
+      
+      
         
-            
-<li >
-    <a href="../../cheetsheets/bigdata/casestudies/">Case Studies</a>
-</li>
 
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
         
-    </ul>
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="About Me" class="md-tabs__link">
+        About Me
+      </a>
+    
   </li>
 
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorials <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../../tutorial/rs_aod/">Redshift</a>
-</li>
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../sh/split_datafile/" title="Quick Tips" class="md-tabs__link">
+          Quick Tips
+        </a>
+      
+    </li>
+  
 
-                        
-                        </ul>
-                    </li>
-                
-                
-                
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-                        
-                            
-<li >
-    <a href="../../event/reinvent/awsri_2018.md">AWS re-Invent 2018</a>
-</li>
+  
 
-                        
-                        </ul>
-                    </li>
-                
-                
-                </ul>
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../cheetsheets/bigdata/hadoop_chtsht/" title="Cheat Sheets" class="md-tabs__link">
+          Cheat Sheets
+        </a>
+      
+    </li>
+  
 
-            <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                            <i class="fas fa-search"></i> Search
-                        </a>
-                    </li>
-                    
-					   
-					
-				<img class="navbar-brand" src="http://www.cutercounter.com/hit.php?id=gqfcck&nd=8&style=148" alt="free counter" border="0"> 
-				<!-- Start of CuterCounter Code -->
-				
-            </ul>
-        </div>
-    </div>
-</div>
-   <div class="container">
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../tutorial/rs_aod/" title="Tutorials" class="md-tabs__link">
+          Tutorials
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../event/reinvent/awsri_2018.md" title="Events" class="md-tabs__link">
+          Events
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+  
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+    <script async src='https://cse.google.com/cse.js?cx=partner-pub-5546856204176740:2677115170'></script><div class="gcse-searchbox-only"></div>
+	
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Kawish Siddiqui" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Kawish Siddiqui
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="About Me" class="md-nav__link">
+      About Me
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Quick Tips
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Quick Tips
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
         
         
-        <div class="col-md-3"><div id="toc" class="bs-sidebar hidden-print affix well" role="complementary" overflow="auto">
-<!-- BEGIN Ad -->
+          
+          
+          
 
-<script async src='https://cse.google.com/cse.js?cx=partner-pub-5546856204176740:2677115170'></script><div class="gcse-searchbox-only"></div>
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Shell/Bash
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Shell/Bash
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sh/split_datafile/" title="Split data file" class="md-nav__link">
+      Split data file
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      VBA
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        VBA
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vba/vba_concatif/" title="ConcatIF Function" class="md-nav__link">
+      ConcatIF Function
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Teradata
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        Teradata
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../teradata/td_date_diff/" title="Date Diff Function" class="md-nav__link">
+      Date Diff Function
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../teradata/td_turnoff_fallback/" title="Turn off FallBackSetting in Teradata" class="md-nav__link">
+      Turn off FallBackSetting in Teradata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" checked>
+    
+    <label class="md-nav__link" for="nav-2-4">
+      AWS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        AWS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        DataLake Formation in AWS
+      </label>
+    
+    <a href="./" title="DataLake Formation in AWS" class="md-nav__link md-nav__link--active">
+      DataLake Formation in AWS
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+
       
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <!-- kawishsiddiqui TOC -->
             <ins class="adsbygoogle"
-                 style="border:none;display:inline-block;width:250px;height:150px"
+                 style="border:none;display:inline-block;width:200px;height:100px"
                  data-ad-client="ca-pub-5546856204176740"
                  data-ad-slot="1250189729"
 			 > </ins>
@@ -351,34 +565,410 @@
             </script>
       
 
-<!-- END Ad -->
-    <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#datalake-formation-in-aws">DataLake Formation in AWS</a></li>
-            <li class="second-level"><a href="#high-level-data-lake-architecture">High Level Data Lake Architecture</a></li>
-                
-            <li class="second-level"><a href="#building-a-data-lake-from-a-relational-data-store">Building a Data Lake from a Relational Data Store</a></li>
-                
-            <li class="second-level"><a href="#hydrating-the-data-lake">Hydrating the Data Lake</a></li>
-                
-            <li class="second-level"><a href="#creating-glue-data-catalog-of-tier-1-bucket-for-processing">Creating Glue Data Catalog of Tier-1 Bucket for processing</a></li>
-                
-            <li class="second-level"><a href="#glue-etl-job-for-tier-2-data">Glue ETL Job for Tier-2 Data</a></li>
-                
-            <li class="second-level"><a href="#compaction-etl-job">Compaction ETL Job</a></li>
-                
-            <li class="second-level"><a href="#detailed-data-lake-formation-architecture">Detailed Data Lake Formation Architecture</a></li>
-                
-            <li class="second-level"><a href="#detailed-elt-pipeline">Detailed ELT Pipeline</a></li>
-                
-            <li class="second-level"><a href="#best-practices-and-performance-considerations">Best Practices and Performance Considerations</a></li>
-                
-            <li class="second-level"><a href="#assumptions-additional-considerations">Assumptions &amp; Additional Considerations</a></li>
-                
-                <li class="third-level"><a href="#consistency-and-ordering">Consistency and Ordering</a></li>
-                <li class="third-level"><a href="#idempotence">Idempotence</a></li>
-                <li class="third-level"><a href="#performance-tuning-the-dms">Performance Tuning the DMS</a></li>
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-data-lake-architecture" title="High Level Data Lake Architecture" class="md-nav__link">
+    High Level Data Lake Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-a-data-lake-from-a-relational-data-store" title="Building a Data Lake from a Relational Data Store" class="md-nav__link">
+    Building a Data Lake from a Relational Data Store
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hydrating-the-data-lake" title="Hydrating the Data Lake" class="md-nav__link">
+    Hydrating the Data Lake
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-glue-data-catalog-of-tier-1-bucket-for-processing" title="Creating Glue Data Catalog of Tier-1 Bucket for processing" class="md-nav__link">
+    Creating Glue Data Catalog of Tier-1 Bucket for processing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glue-etl-job-for-tier-2-data" title="Glue ETL Job for Tier-2 Data" class="md-nav__link">
+    Glue ETL Job for Tier-2 Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compaction-etl-job" title="Compaction ETL Job" class="md-nav__link">
+    Compaction ETL Job
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-data-lake-formation-architecture" title="Detailed Data Lake Formation Architecture" class="md-nav__link">
+    Detailed Data Lake Formation Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-elt-pipeline" title="Detailed ELT Pipeline" class="md-nav__link">
+    Detailed ELT Pipeline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-and-performance-considerations" title="Best Practices and Performance Considerations" class="md-nav__link">
+    Best Practices and Performance Considerations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assumptions-additional-considerations" title="Assumptions &amp; Additional Considerations" class="md-nav__link">
+    Assumptions &amp; Additional Considerations
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consistency-and-ordering" title="Consistency and Ordering" class="md-nav__link">
+    Consistency and Ordering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idempotence" title="Idempotence" class="md-nav__link">
+    Idempotence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-tuning-the-dms" title="Performance Tuning the DMS" class="md-nav__link">
+    Performance Tuning the DMS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
     </ul>
-</div>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      Redshift
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        Redshift
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../redshift/encrypt_decrypt_udf_using_pyaes/" title="Redshift Encryption UDF" class="md-nav__link">
+      Redshift Encryption UDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../redshift/RedshiftQMRActvtMon/" title="Redshift QMR Notification Utility" class="md-nav__link">
+      Redshift QMR Notification Utility
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../redshift/Vacclyze/" title="Redshift Vacuum Analyze" class="md-nav__link">
+      Redshift Vacuum Analyze
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../redshift/awslabs_SystemTablePersistence/" title="System Table Persistence" class="md-nav__link">
+      System Table Persistence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../second_level/" title="Second Level" class="md-nav__link">
+      Second Level
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Cheat Sheets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Cheat Sheets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      Big Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        Big Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cheetsheets/bigdata/hadoop_chtsht/" title="Hadoop" class="md-nav__link">
+      Hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cheetsheets/bigdata/pig_chtsht/" title="PIG" class="md-nav__link">
+      PIG
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cheetsheets/bigdata/htrn_chtsht/" title="Hortron" class="md-nav__link">
+      Hortron
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cheetsheets/bigdata/casestudies/" title="Case Studies" class="md-nav__link">
+      Case Studies
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Tutorials
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorial/rs_aod/" title="Redshift" class="md-nav__link">
+      Redshift
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Events
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Events
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      AWS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        AWS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../event/reinvent/awsri_2018.md" title="re-Invent 2018" class="md-nav__link">
+      re-Invent 2018
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
 
 <div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_default_style" style="right:20px; bottom:20px;">
     <a class="a2a_button_facebook"></a>
@@ -390,31 +980,170 @@
 </div>
 
 <script async src="https://static.addtoany.com/menu/page.js"></script>
-<script>
-	var toc_h = document.getElementById("toc").style.height; // $("#toc").height();
-	document.getElementById("share").style.top = toc_h + "px";
-</script></div>
-        <div class="col-md-9" role="main"><!-- BEGIN Ad -->
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
 
       
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block;height:150px"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-5546856204176740"
-     data-ad-slot="5536919095"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- kawishsiddiqui TOC -->
+            <ins class="adsbygoogle"
+                 style="border:none;display:inline-block;width:200px;height:100px"
+                 data-ad-client="ca-pub-5546856204176740"
+                 data-ad-slot="1250189729"
+			 > </ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
       
 
-<!-- END Ad -->
-
-
-
-
-<div class="admonition important">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#high-level-data-lake-architecture" title="High Level Data Lake Architecture" class="md-nav__link">
+    High Level Data Lake Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-a-data-lake-from-a-relational-data-store" title="Building a Data Lake from a Relational Data Store" class="md-nav__link">
+    Building a Data Lake from a Relational Data Store
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hydrating-the-data-lake" title="Hydrating the Data Lake" class="md-nav__link">
+    Hydrating the Data Lake
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-glue-data-catalog-of-tier-1-bucket-for-processing" title="Creating Glue Data Catalog of Tier-1 Bucket for processing" class="md-nav__link">
+    Creating Glue Data Catalog of Tier-1 Bucket for processing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glue-etl-job-for-tier-2-data" title="Glue ETL Job for Tier-2 Data" class="md-nav__link">
+    Glue ETL Job for Tier-2 Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compaction-etl-job" title="Compaction ETL Job" class="md-nav__link">
+    Compaction ETL Job
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-data-lake-formation-architecture" title="Detailed Data Lake Formation Architecture" class="md-nav__link">
+    Detailed Data Lake Formation Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detailed-elt-pipeline" title="Detailed ELT Pipeline" class="md-nav__link">
+    Detailed ELT Pipeline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-and-performance-considerations" title="Best Practices and Performance Considerations" class="md-nav__link">
+    Best Practices and Performance Considerations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assumptions-additional-considerations" title="Assumptions &amp; Additional Considerations" class="md-nav__link">
+    Assumptions &amp; Additional Considerations
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consistency-and-ordering" title="Consistency and Ordering" class="md-nav__link">
+    Consistency and Ordering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idempotence" title="Idempotence" class="md-nav__link">
+    Idempotence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-tuning-the-dms" title="Performance Tuning the DMS" class="md-nav__link">
+    Performance Tuning the DMS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+				<!-- BEGIN Ad -->
+				
+				      
+				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<ins class="adsbygoogle"
+				     style="display:block;height:100px"
+				     data-ad-layout="in-article"
+				     data-ad-format="fluid"
+				     data-ad-client="ca-pub-5546856204176740"
+				     data-ad-slot="5536919095"></ins>
+				<script>
+				     (adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+				      
+				
+				<!-- END Ad -->
+				
+                <div class="admonition important">
 <p class="admonition-title">Disclaimer:</p>
 <p><div id="disclaimer"> </div>
 <p id="credit"></p></p>
@@ -519,94 +1248,59 @@ The sample cdc log file is in repo folder - &ldquo;/data/Tier-1/Customer/CDC/YYY
     disc_line = disc_line + "or this article is true and accurate to the best of the authors' knowledge. ";
     disc_line = disc_line + "Information on this site should be verified and tested before usage at your own effort and risk and <b>should not be considered as Official sources by any mean through this website.<b></i>";
     document.getElementById("disclaimer").innerHTML = disc_line;    
- </script></div>
-        
-        
-    </div>
+ </script>
+                
+                  
+                
+              
+              
+                
 
-   <footer class="col-md-12 text-center">
- 
-        <hr>
-        <p>
-        <small>[ &copy; <script> document.write("<a href='" + window.location.href +"'>" + window.location.hostname + "</a> ] "); </script> <br></small>
-		
-        
 
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
         
+<footer class="md-footer">
+
+					   
+
+
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
         
-    </footer>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../../js/bootstrap-3.0.3.min.js"></script>
-    <script src="../../js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script>var base_url = "../.."</script>
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
-    <script src="../../js/base.js"></script>
-    <script src="../../search/main.js"></script>
+      <a href="https://github.com/squidfunk" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/squidfunk" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/squidfunk" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
 
-    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
+  </div>
+</footer>
+      
     </div>
-</div>
-    </body>
-
+    
+      <script src="../../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
 </html>
