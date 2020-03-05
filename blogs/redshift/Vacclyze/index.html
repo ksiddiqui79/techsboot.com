@@ -346,7 +346,6 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
-<img src="https://smallseotools.com/counterDisplay?code=ab8260dea84197452b9dfab712d575f6&style=0004&pad=8&type=page&initCount=620" alt="counter for traffic" border="0">
 		<!--
 		<img class="navbar-brand" src="http://www.cutercounter.com/hit.php?id=gqfcck&nd=8&style=148" alt="free counter" border="0"> 
         Start of CuterCounter Code 
@@ -553,10 +552,58 @@
           
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-2" type="checkbox" id="nav-2-4-2">
+    
+    <label class="md-nav__link" for="nav-2-4-2">
+      Serverless ETL for Amazon Redshift
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-2">
+        Serverless ETL for Amazon Redshift
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href="../../aws/s3lmbglueredshift/" title="Beginners - Automated Amazon Redshift Database Loader" class="md-nav__link">
-      Beginners - Automated Amazon Redshift Database Loader
+    <a href="../../aws/rssrvlessetl/begsrvlsglueredshift/" title="Beginners" class="md-nav__link">
+      Beginners
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aws/rssrvlessetl/intsrvlsglueredshift/" title="Intermediate" class="md-nav__link">
+      Intermediate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aws/rssrvlessetl/advsrvlsglueredshift/" title="Advance" class="md-nav__link">
+      Advance
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -1355,10 +1402,34 @@
 				
 				<!-- END Ad -->
 				
-                <h1 id="analyze-vacuum-schema-utility">Analyze &amp; Vacuum Schema Utility</h1>
+                <div class="admonition important">
+<p class="admonition-title">Disclaimer:</p>
+<p><div id="disclaimer"> </div>
+<p id="credit"></p></p>
+</div>
+<script>
+    var git_user = "awslabs";
+    var git_tree = ""
+    var git_repo_name = "AnalyzeVacuumUtility";
+    var git_repo_path = git_user + "/amazon-redshift-utils/tree/master/src/AnalyzeVacuumUtility";
+//
+// Disclaimer Code
+    var disc_line = "<i>Information on this page is based on the article published by ";
+    disc_line = disc_line + "<a href='https://github.com/" + git_user + "'>" + git_user + "</a>"
+    disc_line = disc_line + " at ";
+    disc_line = disc_line + " <a href='https://github.com/" + git_repo_path + "'>" + git_repo_name + "</a> ";
+    disc_line = disc_line + " and not owned or represented by [";
+    disc_line = disc_line + "<a href='https://" + window.location.hostname +"'>" + window.location.hostname + "</a> ] ";
+    disc_line = disc_line + "or this article is true and accurate to the best of the authors' knowledge. ";
+    disc_line = disc_line + "Information on this site should be verified and tested before usage at your own effort and risk and <b>should not be considered as Official sources by any mean through this website.<b></i>";
+    document.getElementById("disclaimer").innerHTML = disc_line;    
+ </script>
+
+<hr />
+<h1 id="analyze-vacuum-schema-utility">Analyze &amp; Vacuum Schema Utility</h1>
 <p>In order to get the best performance from your Redshift Database, you must ensure that database tables regularly analyzed and vacuumed. For more information , please read the below Redshift documentation,</p>
-<p>http://docs.aws.amazon.com/redshift/latest/dg/t_Reclaiming_storage_space202.html
-http://docs.aws.amazon.com/redshift/latest/dg/t_Analyzing_tables.html</p>
+<p><a href="http://docs.aws.amazon.com/redshift/latest/dg/t_Reclaiming_storage_space202.html">Vacuuming Tables</a></p>
+<p><a href="http://docs.aws.amazon.com/redshift/latest/dg/t_Analyzing_tables.html">Analyzing Tables</a></p>
 <p>Whenever you insert, delete, or update (In Redshift update = delete + insert) a significant number of rows, you should run a VACUUM command and then an ANALYZE command. 
 In Redshift, the data blocks are immutable, i.e. when rows are DELETED or UPDATED against a table they are simply logically deleted (flagged for deletion), but not physically removed from disk. This causes the rows to continue consuming disk space and those blocks are scanned when a query scans the table. The result of this, table storage space is increased and degraded performance due to otherwise avoidable disk IO during scans. A vacuum recovers the space from deleted rows and restores the sort order. </p>
 <p>To avoid resource intensive VACUUM operation, you can load the data in sort key order, or design your table maintain data for a rolling time period, using time series tables. </p>
@@ -1367,7 +1438,7 @@ In Redshift, the data blocks are immutable, i.e. when rows are DELETED or UPDATE
 <p>The Redshift ‘Analyze Vacuum Utility’ gives you the ability to automate VACUUM and ANALYZE operations. When run, it will VACUUM or ANALYZE an entire schema or individual tables. </p>
 <p>This Utility Analyzes and Vacuums table(s) in a Redshift Database schema, based on certain parameters like unsorted, stats off and size of the table and system alerts from <code>stl_explain</code> &amp; <code>stl_alert_event_log</code>. By turning on/off &lsquo;&ndash;analyze-flag’ and  &lsquo;&ndash;vacuum-flag&rsquo; parameters, you can run it as  &lsquo;vacuum-only&rsquo; or  &lsquo;analyze-only&rsquo; utility. This script can be scheduled to run VACUUM and ANALYZE as part of regular maintenance/housekeeping activities, when there are fewer database activities.</p>
 <h2 id="vacuum">Vacuum</h2>
-<p>This script runs vacuum in two phases,</p>
+<p><a href="https://github.com/awslabs/amazon-redshift-utils/blob/master/src/AnalyzeVacuumUtility/analyze-vacuum-schema.py">This script</a> runs vacuum in two phases,</p>
 <h3 id="phase-1">Phase 1:</h3>
 <p>Identify and run vacuum based on the alerts recorded in <code>stl_alert_event_log</code>. <code>stl_alert_event_log</code>, records an alert when the query optimizer identifies conditions that might indicate performance issues. We can use the <code>stl_alert_event_log</code> table to identify the top 25 tables that need vacuum. The script uses SQL to get the list of tables and number of alerts, which indicate that vacuum is required.</p>
 <p>Variables affecting this phase:</p>
@@ -1593,8 +1664,11 @@ sudo pip install
     
       <a href="https://linkedin.com/in/kawish" class="md-footer-social__link fa fa-linkedin"></a>
     
+  <img src="https://smallseotools.com/counterDisplay?code=ab8260dea84197452b9dfab712d575f6&style=0003&pad=8&type=page&initCount=620" alt="counter for traffic" width="100" height="15" border="0">
+	
   </div>
 
+	  
     </div>
   </div>
 </footer>

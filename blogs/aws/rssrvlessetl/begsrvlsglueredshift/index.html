@@ -1,0 +1,1622 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <!-- BEGIN Kawish's Custom metadata block -->
+<!-- Google AdSense -->
+
+      
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5546856204176740",
+    enable_page_level_ads: true
+  });
+</script>
+      
+
+<!-- Google Analytics -->
+
+	  
+        
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+   
+    ga('create', 'UA-143819065-1', 'kawishsiddiqui.com');
+    ga('send', 'pageview');
+    </script>
+	  
+
+<!-- Metadata -->
+
+    <!-- meta description -->
+    
+     <meta name="description" content="Beginners - Serverless ETL for Amazon Redshift">
+    
+	
+    <!-- meta author -->
+    
+    <!-- meta keywords -->
+    
+     <meta name="keywords" content="data lake, datalake, formation, case study, shell, bash, sh, split, size, console, aws, files, tips, cheat, shell command, bash command, script, shell script, sql, teradata, redshift, vba, database, data warehouse, etl, custom, big data, serverless, loader">
+    
+
+    
+    <meta name="robots" content="index, follow">	
+
+
+      
+        <title>Beginners - Serverless ETL for Amazon Redshift</title>
+      
+
+<!-- END Kawish's Custom metadata block -->
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Beginners - Serverless ETL for Amazon Redshift">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>Beginners - Serverless ETL for Amazon Redshift</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-143819065-1", "kawishsiddiqui.com")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#beginners-serverless-etl-for-amazon-redshift" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../.." title="Kawish Siddiqui" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic" id="sitename">
+            <!--   Kawish Siddiqui -->
+				<script> document.getElementById("sitename").innerHTML = window.location.hostname.substr(0, window.location.hostname.indexOf('.')).toUpperCase(); </script></a>
+            </span>			
+            <span class="md-header-nav__topic">
+              
+                Beginners - Serverless ETL for Amazon Redshift
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">		
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>		  
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../.." title="About Me" class="md-tabs__link">
+        About Me
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../sh/split_datafile/" title="Blogs" class="md-tabs__link">
+          Blogs
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../cheetsheets/bigdata/hadoop_chtsht/" title="Cheat Sheets" class="md-tabs__link">
+          Cheat Sheets
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../tutorial/redshift/rsintrodwaws/" title="Tutorials" class="md-tabs__link">
+          Tutorials
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../event/reinvent/awsri_2018.md" title="Events" class="md-tabs__link">
+          Events
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+  
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+		<!--
+		<img class="navbar-brand" src="http://www.cutercounter.com/hit.php?id=gqfcck&nd=8&style=148" alt="free counter" border="0"> 
+        Start of CuterCounter Code 
+		-->
+    <script async src='https://cse.google.com/cse.js?cx=partner-pub-5546856204176740:2677115170'></script><div class="gcse-searchbox-only"></div>
+	
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../.." title="Kawish Siddiqui" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Kawish Siddiqui
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="About Me" class="md-nav__link">
+      About Me
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Blogs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Blogs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      Shell/Bash
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        Shell/Bash
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../sh/split_datafile/" title="Split data file" class="md-nav__link">
+      Split data file
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
+      VBA
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        VBA
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../vba/vba_concatif/" title="ConcatIF Function" class="md-nav__link">
+      ConcatIF Function
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
+    
+    <label class="md-nav__link" for="nav-2-3">
+      Teradata
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-3">
+        Teradata
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../teradata/td_date_diff/" title="Date Diff Function" class="md-nav__link">
+      Date Diff Function
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../teradata/td_turnoff_fallback/" title="Turn off FallBackSetting in Teradata" class="md-nav__link">
+      Turn off FallBackSetting in Teradata
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4" checked>
+    
+    <label class="md-nav__link" for="nav-2-4">
+      AWS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        AWS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dl_form_aws/" title="DataLake Formation in AWS" class="md-nav__link">
+      DataLake Formation in AWS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4-2" type="checkbox" id="nav-2-4-2" checked>
+    
+    <label class="md-nav__link" for="nav-2-4-2">
+      Serverless ETL for Amazon Redshift
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-4-2">
+        Serverless ETL for Amazon Redshift
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Beginners
+      </label>
+    
+    <a href="./" title="Beginners" class="md-nav__link md-nav__link--active">
+      Beginners
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+
+
+   <div class="a2a_kit">
+       <a id="fblike" class="a2a_button_facebook_like" data-action="recommend" data-href="https://kawishsiddiqui.com/" data-layout="box_count" data-width="55"></a>
+   </div>
+   <script async src="https://static.addtoany.com/menu/page.js"></script>
+
+
+
+      
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- kawishsiddiqui TOC -->
+            <ins class="adsbygoogle"
+                 style="border:none;display:inline-block;width:200px;height:100px"
+                 data-ad-client="ca-pub-5546856204176740"
+                 data-ad-slot="1250189729"
+			 > </ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+      
+
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#services-used" title="Services Used" class="md-nav__link">
+    Services Used
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" title="Architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assumptions-and-basic-setup" title="Assumptions and Basic Setup" class="md-nav__link">
+    Assumptions and Basic Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-amazon-redshift-user-schema-and-table" title="Setup Amazon Redshift User, Schema and Table" class="md-nav__link">
+    Setup Amazon Redshift User, Schema and Table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-s3-bucket-and-hierarchy" title="Setup S3 bucket and hierarchy" class="md-nav__link">
+    Setup S3 bucket and hierarchy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-iam-role-for-aws-glue" title="Create IAM Role for AWS Glue" class="md-nav__link">
+    Create IAM Role for AWS Glue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-iam-role-for-aws-lambda" title="Create IAM Role for AWS Lambda" class="md-nav__link">
+    Create IAM Role for AWS Lambda
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-aws-glue-job" title="Create AWS Glue Job" class="md-nav__link">
+    Create AWS Glue Job
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-aws-lambda-function" title="Create AWS Lambda Function" class="md-nav__link">
+    Create AWS Lambda Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-load-testing" title="Pre-load testing" class="md-nav__link">
+    Pre-load testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-sample-data-into-s3" title="Upload sample data into S3" class="md-nav__link">
+    Upload sample data into S3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-data-in-amazon-redshift" title="Verify data in Amazon Redshift" class="md-nav__link">
+    Verify data in Amazon Redshift
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../intsrvlsglueredshift/" title="Intermediate" class="md-nav__link">
+      Intermediate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../advsrvlsglueredshift/" title="Advance" class="md-nav__link">
+      Advance
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      Redshift
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        Redshift
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../redshift/encrypt_decrypt_udf_using_pyaes/" title="Redshift Encryption UDF" class="md-nav__link">
+      Redshift Encryption UDF
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../redshift/RedshiftQMRActvtMon/" title="Redshift QMR Notification Utility" class="md-nav__link">
+      Redshift QMR Notification Utility
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../redshift/Vacclyze/" title="Redshift Vacuum Analyze" class="md-nav__link">
+      Redshift Vacuum Analyze
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../redshift/awslabs_SystemTablePersistence/" title="System Table Persistence" class="md-nav__link">
+      System Table Persistence
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../redshift/second_level/" title="Second Level" class="md-nav__link">
+      Second Level
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Cheat Sheets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Cheat Sheets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      Big Data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        Big Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../cheetsheets/bigdata/hadoop_chtsht/" title="Hadoop" class="md-nav__link">
+      Hadoop
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../cheetsheets/bigdata/pig_chtsht/" title="PIG" class="md-nav__link">
+      PIG
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../cheetsheets/bigdata/htrn_chtsht/" title="Hortron" class="md-nav__link">
+      Hortron
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../cheetsheets/bigdata/casestudies/" title="Case Studies" class="md-nav__link">
+      Case Studies
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Tutorials
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      Redshift
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        Redshift
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../tutorial/redshift/rsintrodwaws/" title="Introduction to Data Warehouse in AWS" class="md-nav__link">
+      Introduction to Data Warehouse in AWS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../tutorial/redshift/rsmoderndwaws/" title="Modernize Your Data Warehouse in AWS" class="md-nav__link">
+      Modernize Your Data Warehouse in AWS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Events
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Events
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+    
+    <label class="md-nav__link" for="nav-5-1">
+      AWS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        AWS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../event/reinvent/awsri_2018.md" title="re-Invent 2018" class="md-nav__link">
+      re-Invent 2018
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+
+
+   <div class="a2a_kit">
+       <a id="fblike" class="a2a_button_facebook_like" data-action="recommend" data-href="https://kawishsiddiqui.com/" data-layout="box_count" data-width="55"></a>
+   </div>
+   <script async src="https://static.addtoany.com/menu/page.js"></script>
+
+
+
+      
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- kawishsiddiqui TOC -->
+            <ins class="adsbygoogle"
+                 style="border:none;display:inline-block;width:200px;height:100px"
+                 data-ad-client="ca-pub-5546856204176740"
+                 data-ad-slot="1250189729"
+			 > </ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+      
+
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#services-used" title="Services Used" class="md-nav__link">
+    Services Used
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" title="Architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assumptions-and-basic-setup" title="Assumptions and Basic Setup" class="md-nav__link">
+    Assumptions and Basic Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-amazon-redshift-user-schema-and-table" title="Setup Amazon Redshift User, Schema and Table" class="md-nav__link">
+    Setup Amazon Redshift User, Schema and Table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-s3-bucket-and-hierarchy" title="Setup S3 bucket and hierarchy" class="md-nav__link">
+    Setup S3 bucket and hierarchy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-iam-role-for-aws-glue" title="Create IAM Role for AWS Glue" class="md-nav__link">
+    Create IAM Role for AWS Glue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-iam-role-for-aws-lambda" title="Create IAM Role for AWS Lambda" class="md-nav__link">
+    Create IAM Role for AWS Lambda
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-aws-glue-job" title="Create AWS Glue Job" class="md-nav__link">
+    Create AWS Glue Job
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-aws-lambda-function" title="Create AWS Lambda Function" class="md-nav__link">
+    Create AWS Lambda Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-load-testing" title="Pre-load testing" class="md-nav__link">
+    Pre-load testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-sample-data-into-s3" title="Upload sample data into S3" class="md-nav__link">
+    Upload sample data into S3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verify-data-in-amazon-redshift" title="Verify data in Amazon Redshift" class="md-nav__link">
+    Verify data in Amazon Redshift
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+				<!-- BEGIN Ad -->
+				
+				      
+				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<ins class="adsbygoogle"
+				     style="display:block;height:100px"
+				     data-ad-layout="in-article"
+				     data-ad-format="fluid"
+				     data-ad-client="ca-pub-5546856204176740"
+				     data-ad-slot="5536919095"></ins>
+				<script>
+				     (adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+				      
+				
+				<!-- END Ad -->
+				
+                <h1 id="beginners-serverless-etl-for-amazon-redshift">Beginners - Serverless ETL for Amazon Redshift</h1>
+<h2 id="overview">Overview</h2>
+<p>This blog post is the first (Beginners Level) postof Serverless ETL for Amazon Redshift series. </p>
+<ul>
+<li><a href="./">Beginners - Serverless ETL for Amazon Redshift</a>  </li>
+<li><a href="../intsrvlsglueredshift/">Intermediate - Serverless ETL for Amazon Redshift</a> </li>
+<li>Advance - Serverless ETL for Amazon Redshift (<a href="../advsrvlsglueredshift/">Coming Soon</a>)</li>
+</ul>
+<p>This blog post is to help Data Warehousing professionals who are starting learning AWS Services and intrested in basic serverless architecture for ETL/ELT process.<br />
+This post is to show very basic level (100 level) of automation without ETL metadata management and tracking etc. Our next post (Intermediate and Advance) will have details and best practices around Serverless ETL/ELT architecture and step and step guid along with code samples. </p>
+<h2 id="services-used">Services Used</h2>
+<ul>
+<li><a href="https://aws.amazon.com/s3/ target=" title="_blank">Amazon S3</a></li>
+<li><a href="https://aws.amazon.com/lambda/">AWS Lambda</a></li>
+<li><a href="https://aws.amazon.com/glue/">AWS Glue</a></li>
+<li><a href="https://aws.amazon.com/redshift/">Amazon Redshift</a></li>
+</ul>
+<h2 id="architecture">Architecture</h2>
+<p><img alt="Redshift Loader Architecture" src="../img/BegRSSrvLsETL.png" /></p>
+<h2 id="assumptions-and-basic-setup">Assumptions and Basic Setup</h2>
+<p>Following are assumption and Basic Setup</p>
+<ul>
+<li>Amazon Redshift cluster is already setup (see <a href="https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-launch-sample-cluster.html">Launch a Sample Amazon Redshift Cluster</a>)</li>
+<li>S3 Structure setup is <code>BucketName -&gt; Redshift Schema Name -&gt; Table Name -&gt; Data File(s)</code>
+   You can change the Lambda logic and functionality based on your S3 structure</li>
+</ul>
+<h2 id="setup-amazon-redshift-user-schema-and-table">Setup Amazon Redshift User, Schema and Table</h2>
+<pre><code class="sql">-- CREATE Group and User
+CREATE GROUP grp_rsloader;
+CREATE USER rsloader_user PASSWORD 'TechsBoot_2019' IN GROUP grp_rs_loader;
+
+-- Create Schema
+CREATE SCHEMA IF NOT EXISTS rsloader;
+-- Setup Access Rights on Schema for Group
+ALTER DEFAULT PRIVILEGES IN SCHEMA rsloader 
+      GRANT ALL ON TABLES TO GROUP grp_rs_loader;
+GRANT ALL ON SCHEMA  rsloader TO GROUP grp_rs_loader;
+GRANT ALL ON ALL TABLES IN  SCHEMA rsloader TO 
+      GROUP grp_rs_loader;
+-- Create Table
+CREATE TABLE IF NOT EXISTS rsloader.lineitem
+(
+    l_orderkey INTEGER NOT NULL  
+    ,l_partkey INTEGER NOT NULL  ENCODE lzo
+    ,l_suppkey INTEGER NOT NULL  ENCODE lzo
+    ,l_linenumber INTEGER NOT NULL  ENCODE lzo
+    ,l_quantity NUMERIC(15,2) NOT NULL  ENCODE lzo
+    ,l_extendedprice NUMERIC(15,2) NOT NULL  ENCODE lzo
+    ,l_discount NUMERIC(15,2) NOT NULL  ENCODE lzo
+    ,l_tax NUMERIC(15,2) NOT NULL  ENCODE lzo
+    ,l_returnflag VARCHAR(1) NOT NULL  ENCODE lzo
+    ,l_linestatus VARCHAR(1) NOT NULL  ENCODE lzo
+    ,l_shipdate DATE NOT NULL  ENCODE lzo
+    ,l_commitdate DATE NOT NULL  ENCODE lzo
+    ,l_receiptdate DATE NOT NULL  ENCODE lzo
+    ,l_shipinstruct VARCHAR(25) NOT NULL  ENCODE lzo
+    ,l_shipmode VARCHAR(10) NOT NULL  ENCODE lzo
+    ,l_comment VARCHAR(44) NOT NULL  ENCODE lzo
+)
+DISTSTYLE KEY
+DISTKEY (l_orderkey)
+SORTKEY (
+    l_orderkey
+    )
+;
+</code></pre>
+
+<h2 id="setup-s3-bucket-and-hierarchy">Setup S3 bucket and hierarchy</h2>
+<ul>
+<li>Create S3 Bucket (we will use <code>techsboot_rsloader</code> S3 bucket name in our examples)</li>
+<li>Create folder <code>rsloader</code>  in S3 Bucket</li>
+<li>Create a subfolder <code>lineitem</code>  in <code>rsloader</code> folder</li>
+<li>S3 structure will look like </li>
+</ul>
+<pre><code> techsboot_rsloader (or your bucket name)  
+    |__ rsloader  
+        |__ lineitem
+</code></pre>
+
+<h2 id="create-iam-role-for-aws-glue">Create IAM Role for AWS Glue</h2>
+<ol>
+<li>Go to <a href="https://console.aws.amazon.com/iam">https://console.aws.amazon.com/iam</a></li>
+<li>Click <strong>Roles</strong> in left panel and click <strong>Create role</strong> button</li>
+<li>Select <strong>AWS services</strong> in type of trusted entity and Select/Click <strong>Glue</strong> as the service that will use this role</li>
+<li>Click <strong>Next: Permissions</strong> button at the bottom</li>
+<li>Select <strong>AWSGlueServiceRole</strong> Policy from the list and click <strong>Next: Tags</strong></li>
+<li>Provide Tags&rsquo; Key-Values if you want and click <strong>Next: Review</strong></li>
+<li>Enter Role Name and Description and click <strong>Create role</strong></li>
+</ol>
+<h2 id="create-iam-role-for-aws-lambda">Create IAM Role for AWS Lambda</h2>
+<ol>
+<li>Go to <a href="https://console.aws.amazon.com/iam">https://console.aws.amazon.com/iam</a></li>
+<li>Click <strong>Roles</strong> in left panel and click <strong>Create role</strong> button</li>
+<li>Select <strong>AWS services</strong> in type of trusted entity and Select/Click <strong>Lambda</strong> as the service that will use this role</li>
+<li>Click <strong>Next: Permissions</strong> button at the bottom</li>
+<li>Select <strong>AWSLambdaFullAccess</strong> Policy from the list and click <strong>Next: Tags</strong></li>
+<li>Provide Tags&rsquo; Key-Values if you want and click <strong>Next: Review</strong></li>
+<li>Enter Role Name and Description and click <strong>Create role</strong></li>
+</ol>
+<h2 id="create-aws-glue-job">Create AWS Glue Job</h2>
+<ol>
+<li>Go to <a href="https://console.aws.amazon.com/glue">https://console.aws.amazon.com/glue</a></li>
+<li>Click on <strong>Jobs</strong> in left panel and click on <strong>Add job</strong> button on main panel</li>
+<li>Enter <strong>Name</strong> <code>glu_techsboot_rsloader</code></li>
+<li>Select IAM Role from list which was created in <a href="#create-iam-role-for-aws-glue">previous step</a></li>
+<li>Select <code>Python shell</code> in <strong>Type</strong></li>
+<li>Select <code>A new script to be authored by you</code> in <strong>This job runs</strong> section</li>
+<li>Enter <strong>Script file name</strong></li>
+<li>Select appropriate S3 path to store glue script in <strong>S3 path where the script is stored</strong> section</li>
+<li>Expand <strong>Security configuration, script libraries, and job parameters (optional)</strong> section</li>
+<li>In <strong>Python library path</strong> text box, enter <code>s3://techsboot/py-ref/pg8000.egg</code></li>
+<li>Set <strong>Max concurrency</strong> to <code>10</code> to handel 10 file uploads at the same time. Or you can set this number based on your implementation needs. </li>
+<li>Click <strong>Next</strong></li>
+<li>Click <strong>Save job and edit script</strong></li>
+<li>Copy and Paste following python custom code and Glue script editor<br />
+  see <a href="https://docs.aws.amazon.com/glue/latest/dg/add-job-python.html">Adding Python Shell Jobs in AWS Glue</a> for detailed step by step job creation guid.</li>
+<li>Replace correct values for all variables enclosed in &lt; &gt; within the script.</li>
+</ol>
+<pre><code class="python">import os
+import sys
+import boto3
+import json
+from awsglue.utils import getResolvedOptions
+
+import pg8000
+
+## @params: [JOB_NAME]
+args = getResolvedOptions(sys.argv, ['JOB_NAME', 'schema_name', 'table_name', 's3_file'])
+schema_name = args['schema_name']
+table_name = args['table_name']
+s3_file = args['s3_file']
+#
+REDSHIFT_DATABASE = &quot;&lt;Your_Redshift_Database&gt;&quot;
+REDSHIFT_USER = &quot;rsloader_user&quot;
+REDSHIFT_PASSWD = &quot;TechsBoot_2019&quot;
+REDSHIFT_PORT = &lt;Your_Redshift_Cluster_Port&gt;
+REDSHIFT_ENDPOINT = &quot;&lt;Your_Redshift_EndPoint&gt;&quot;
+if not schema_name:
+  REDSHIFT_SCHEMA = 'public'
+else:
+  REDSHIFT_SCHEMA = schema_name
+REDSHIFT_TABLE  = table_name
+IAM_ROLE  = &quot;arn:aws:iam::&lt;aws_account_number&gt;:role/&lt;Your_Redshift_IAM_Role&gt;&quot;
+
+REDSHIFT_COPY_STATEMENT = &quot;&quot;&quot;copy {}.{}
+          FROM  '{}'
+          iam_role '{}'
+          TIMEFORMAT AS 'MM/DD/YY HH:MI'
+          ; &quot;&quot;&quot;.format(REDSHIFT_SCHEMA, REDSHIFT_TABLE, s3_file, IAM_ROLE)
+
+try:
+    conn = pg8000.connect(
+        database=REDSHIFT_DATABASE, 
+        user=REDSHIFT_USER, 
+        password=REDSHIFT_PASSWD,
+        host=REDSHIFT_ENDPOINT,
+        port=REDSHIFT_PORT
+    )
+except Exception as ERROR:
+  print(&quot;Connection Issue: &quot; + str(ERROR))
+  sys.exit(1)
+
+try:
+  cursor = conn.cursor()
+  # print(REDSHIFT_COPY_STATEMENT)
+  cursor.execute(REDSHIFT_COPY_STATEMENT)
+  # result = cursor.fetchone()
+  cursor.close()
+  conn.commit()
+  conn.close()
+except Exception as ERROR:
+  print(&quot;Execution Issue: &quot; + str(ERROR))
+  sys.exit(1)
+
+</code></pre>
+
+<h2 id="create-aws-lambda-function">Create AWS Lambda Function</h2>
+<ol>
+<li>Go to <a href="https://console.aws.amazon.com/lambda">https://console.aws.amazon.com/lambda</a></li>
+<li>Click <strong>Create function</strong></li>
+<li>Select <strong>Author from scratch</strong></li>
+<li>Enter <code>techsboot-rsloader-lambda</code> in <strong>Function name</strong></li>
+<li>Select <code>Python 3.7</code> in <strong>Runtime</strong></li>
+<li>In <strong>Permissions</strong> section, select <code>Use an existing role</code> and then select the role you create in <a href="#create-iam-role-for-aws-lambda">previous step</a></li>
+<li>Click <strong>Create function</strong> button at the bottom</li>
+<li>Copy and Paste following lambda python code in code editor</li>
+<li>Click <strong>Save</strong> button</li>
+<li>Expand <strong>Designer</strong> section in the same window (section above to <code>Function code</code>)</li>
+<li>Click <strong>Add trigger</strong> button</li>
+<li>Select S3 in <strong>Trigger configuration</strong></li>
+<li>Select the S3 Bucket you created in <a href="#setup-s3-bucket-and-hierarchy">previous step</a></li>
+<li>Click <strong>Add</strong></li>
+</ol>
+<pre><code class="python">from datetime import datetime, timedelta
+import json
+import boto3
+client = boto3.client('glue')
+#
+def lambda_handler(event, context): 
+    for record in event['Records']:
+        # Getting S3 Bucket Name from event record
+        bucket = record['s3']['bucket']['name']
+        # Getting S3 Key from event record
+        key = record['s3']['object']['key'] 
+        # Generating complete S3 file path to pass to Glue Job
+        fullS3Path = &quot;s3://&quot; + bucket + &quot;/&quot; + key
+        # Splitting S3 Key into Schema Name, Table Name and File Name
+        tmp_key = key.split('/',2)
+        schema_name = tmp_key[0]
+        table_name = tmp_key[1]
+        filename = tmp_key[2]
+        glue_job_name = &quot;wfm-poc-copy-from-lambda&quot;
+        fullS3Message = &quot;This Lambda is triggered by - s3://&quot; + bucket + &quot;/&quot; + key
+        # Printing Debugging Message
+        print (fullS3Message)
+        print (&quot;fullS3Path = &quot; + fullS3Path)
+        print (&quot;Bucket = &quot; + bucket)
+        print (&quot;Key = &quot; + key)
+        print (&quot;schema_name = &quot; + schema_name)
+        print (&quot;table_name = &quot; + table_name)
+        print (&quot;filename = &quot; + filename)
+        # Triggering Glue Job
+        print (&quot;Triggering Job = &quot; + glue_job_name)
+        response = client.start_job_run(
+            JobName = glue_job_name,
+            Arguments = {
+                '--schema_name':   schema_name,
+                '--table_name':  table_name,
+                '--s3_file':  fullS3Path } )
+        # Converting &quot;response&quot; from Type dict to string
+        string_response = json.dumps(response)
+        # Parsing JSON response from Glue API
+        parsed_response = json.loads(string_response)
+        # Printing Job Metadata in Cloudwatch Log
+        print(&quot;    JOB Metadata           &quot;)        
+        print(&quot;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&quot;)        
+        print(&quot;    --&gt; JobRunID          = &quot; + parsed_response['JobRunId'])
+        print(&quot;    --&gt; RequestID         = &quot; + parsed_response['ResponseMetadata']['RequestId'])
+        print(&quot;    --&gt; HTTPStatusCode    = &quot; + str(parsed_response['ResponseMetadata']['HTTPStatusCode']))
+        print(&quot;    --&gt; Timestamp GMT     = &quot; + parsed_response['ResponseMetadata']['HTTPHeaders']['date'])
+        print(&quot;    --&gt; content-type      = &quot; + parsed_response['ResponseMetadata']['HTTPHeaders']['content-type'])
+        print(&quot;    --&gt; content-length    = &quot; + parsed_response['ResponseMetadata']['HTTPHeaders']['content-length'])
+        print(&quot;    --&gt; connection        = &quot; + parsed_response['ResponseMetadata']['HTTPHeaders']['connection'])
+        print(&quot;    --&gt; x-amzn-requestid  = &quot; + parsed_response['ResponseMetadata']['HTTPHeaders']['x-amzn-requestid'])
+        print(&quot;    --&gt; RetryAttempts     = &quot; + str(parsed_response['ResponseMetadata']['RetryAttempts']))
+        print(&quot;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&quot;)        
+        print(response)
+        print(&quot;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&quot;)        
+
+</code></pre>
+
+<h2 id="pre-load-testing">Pre-load testing</h2>
+<ol>
+<li>Connect to Redshift cluster using SQL Client (i.e. SQLWorkbench or DBeaver)</li>
+<li>
+<p>Run following SQL, result of this SQL should be <code>zero (0)</code>.</p>
+<p><code>sql
+SELECT COUNT(*) 
+FROM rsloader.lineitem 
+WHERE l_linestatus in ('C', 'R');</code> </p>
+</li>
+</ol>
+<h2 id="upload-sample-data-into-s3">Upload sample data into S3</h2>
+<ol>
+<li>Download sample data (2 files) from following links<ul>
+<li><a href="https://techsboot.s3-us-west-2.amazonaws.com/sample-data/tpch/lineitem/lineitem_200rec_C.csv">File 1</a></li>
+<li><a href="https://techsboot.s3-us-west-2.amazonaws.com/sample-data/tpch/lineitem/lineitem_200rec_R.csv">File 2</a>  </li>
+</ul>
+</li>
+<li>Go to <a href="https://console.aws.amazon.com/s3/">https://console.aws.amazon.com/s3/</a></li>
+<li>Click on bucket you created in <a href="#setup-s3-bucket-and-hierarchy">previous step</a></li>
+<li>Click on <code>rsloader</code> folder</li>
+<li>Click on <code>lineitem</code> subfolder</li>
+<li>Click on <strong>Upload</strong> button</li>
+<li>Click <strong>Add</strong> on displayed window</li>
+<li>In file selection dialog, select files you downloaded on step 1</li>
+<li>Click <strong>Next</strong>, and then <strong>Next</strong>, and then again <strong>Next</strong> (by keeping next 2 steps of displayed windows as default)</li>
+<li>Click <strong>Upload</strong></li>
+</ol>
+<h2 id="verify-data-in-amazon-redshift">Verify data in Amazon Redshift</h2>
+<ul>
+<li>Connect to Redshift cluster using SQL Client (i.e. SQLWorkbench or DBeaver)  </li>
+<li>Run following SQL</li>
+</ul>
+<pre><code class="sql">    SELECT COUNT(*)   
+    FROM rsloader.lineitem 
+    WHERE l_linestatus in ('C', 'R'); 
+</code></pre>
+
+<ul>
+<li>Result should be like below table</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>l_linestatus</th>
+<th>count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R</td>
+<td>200</td>
+</tr>
+<tr>
+<td>C</td>
+<td>200</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+
+					   
+
+
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        [ &copy; <script> document.write("<a href='" + window.location.href +"'>" + window.location.hostname + "</a> ] "); </script>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/ksiddiqui79" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/iamkawish" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/kawish" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  <img src="https://smallseotools.com/counterDisplay?code=ab8260dea84197452b9dfab712d575f6&style=0003&pad=8&type=page&initCount=620" alt="counter for traffic" width="100" height="15" border="0">
+	
+  </div>
+
+	  
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.245445c6.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
+      
+    
+
+<div class="a2a_kit a2a_floating_style a2a_vertical_style" style="right:20px; bottom:20px;">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_linkedin"></a>
+    <a class="a2a_button_whatsapp"></a>
+    <a class="a2a_button_email"></a>
+    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+</div>
+
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+  </body>
+</html>
