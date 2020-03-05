@@ -168,7 +168,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#encryption-decryption-udf-in-amazon-redshift" tabindex="1" class="md-skip">
+      <a href="#how-to-implement-aes-encryption-decryption-udf-in-amazon-redshift" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -647,67 +647,9 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Redshift Encryption UDF
-      </label>
-    
     <a href="./" title="Redshift Encryption UDF" class="md-nav__link md-nav__link--active">
       Redshift Encryption UDF
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-
-
-   <div class="a2a_kit">
-       <a id="fblike" class="a2a_button_facebook_like" data-action="recommend" data-href="https://kawishsiddiqui.com/" data-layout="box_count" data-width="55"></a>
-   </div>
-   <script async src="https://static.addtoany.com/menu/page.js"></script>
-
-
-
-      
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- kawishsiddiqui TOC -->
-            <ins class="adsbygoogle"
-                 style="border:none;display:inline-block;width:200px;height:100px"
-                 data-ad-client="ca-pub-5546856204176740"
-                 data-ad-slot="1250189729"
-			 > </ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-      
-
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#amazon-redshift-udf-support" title="Amazon Redshift UDF Support" class="md-nav__link">
-    Amazon Redshift UDF Support
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#encryption-and-decryption-udf" title="Encryption and Decryption UDF" class="md-nav__link">
-    Encryption and Decryption UDF
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -1037,29 +979,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#amazon-redshift-udf-support" title="Amazon Redshift UDF Support" class="md-nav__link">
-    Amazon Redshift UDF Support
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#encryption-and-decryption-udf" title="Encryption and Decryption UDF" class="md-nav__link">
-    Encryption and Decryption UDF
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1088,93 +1007,364 @@
 				
 				<!-- END Ad -->
 				
-                <h1 id="encryption-decryption-udf-in-amazon-redshift">Encryption &amp; Decryption UDF in Amazon Redshift</h1>
-<h2 id="amazon-redshift-udf-support">Amazon Redshift UDF Support</h2>
-<p>Amazon Redshift supports <a href="https://docs.aws.amazon.com/redshift/latest/dg/user-defined-functions.html">User Defined Fuction</a> using SQL or Python.</p>
-<h2 id="encryption-and-decryption-udf">Encryption and Decryption UDF</h2>
-<p>This function uses <code>pyaes</code> module to encrypt data using AES <code>encrypt</code> and <code>decrypt</code> functions.<br />
-<strong>AED encryption needs atleast 16 character key to encrypt data, key length less than 16 characters may throw error.</strong></p>
-<h1 id="deployment">Deployment</h1>
+                <script>
+ </script>
+
+<div class="admonition note">
+<p class="admonition-title">Important</p>
+<p>This post is to help customers who are looking for AES encryption and decryption UDF implementation in Amazon Redshift to answer &ldquo;How AES encryption and decryption UDF can be implemented in Amazon Redshift?&rdquo;.
+ This post should not be considered as &ldquo;Best Practice&rdquo; for such implementation.</p>
+</div>
+<h1 id="how-to-implement-aes-encryption-decryption-udf-in-amazon-redshift">How to implement AES Encryption &amp; Decryption UDF in Amazon Redshift</h1>
+<h1 id="what-is-this-post-about">What is this post about?</h1>
+<p>This post is to help customers who are looking for AES encryption and decryption UDF implementation in Amazon Redshift to answer &quot;How AES encryption and decryption UDF can be implemented in Amazon Redshift?&quot;.</p>
+<p>Beside Amazon Redshift cluster level encryption, from data governance and protection perspective often customers want to use <a href="https://www.nist.gov/publications/advanced-encryption-standard-aes?pub_id=901427">Advanced Encryption Standard (AES)</a>for their sensitive data to be stored in Redshift database columns. As data loading is part of ELT, this is often helpful for ELT developers and architects to simplify their ELT process for Amazon Redshift and reducing development efforts using User Defined Function where developers need to encrypt data. At the same time, authorized users and data scientist can also leverage the decrypted data using decryption UDF.</p>
+<h1 id="advanced-encryption-standard-aes">Advanced Encryption Standard (AES)</h1>
+<p>The <a href="https://www.nist.gov/publications/advanced-encryption-standard-aes?pub_id=901427">Advanced Encryption Standard (AES)</a> is a specification for the encryption of electronic data established by the U.S. National Institute of Standards and Technology (NIST) in 2001.</p>
+<h1 id="udf-deployment">UDF Deployment</h1>
+<p>These user defined functions use <a href="https://pypi.org/project/pyaes/">PyPI pyaes </a>module to encrypt and decrypt data using AES encrypt and decrypt methods.</p>
+<p>AES encryption supports 128 bits (16 bytes), 192 bits (24 bytes) or 256 bits (32 bytes), any key length other than supported will throw error during encryption and/or decryption.</p>
+<p>See for more details: <a href="https://github.com/ricmoo/pyaes">https://github.com/ricmoo/pyaes</a></p>
 <h2 id="create-library">Create library</h2>
-<pre><code class="SQL">CREATE OR REPLACE LIBRARY pyaes  
-LANGUAGE plpythonu  
-FROM 'https://github.com/ksiddiqui79/redshift_udfs/blob/master/encrypt_decrypt_udf/using_pyaes/pyaes.zip?raw=true'  
-;  
+<pre><code class="sql">CREATE OR REPLACE LIBRARY pyaes
+LANGUAGE plpythonu
+FROM 'https://tinyurl.com/redshift-udfs/pyaes.zip?raw=true';
+;
 </code></pre>
 
 <h2 id="create-encrypt-function">Create encrypt function</h2>
-<pre><code class="SQL">CREATE OR REPLACE FUNCTION aes_encrypt(input VARCHAR(max), vKey VARCHAR(256))  
-RETURNS VARCHAR STABLE AS $$  
-  import pyaes  
-  import binascii  
-  if input is None:  
-    return None  
-  key = vKey # Your Key here  
-  aes=pyaes.AESModeOfOperationCTR(key)  
-  cipher_txt=aes.encrypt(input)  
-  cipher_txt2=binascii.hexlify(cipher_txt)  
-  return str(cipher_txt2.decode('utf-8'))  
-$$ LANGUAGE plpythonu  
-;  
+<pre><code class="sql">--- Create a separate schema to deploy encryption UDF
+CREATE SCHEMA udf_enc;
+
+--- Create UDF
+CREATE OR REPLACE FUNCTION udf_enc.aes_encrypt(input VARCHAR(max), vKey VARCHAR(256))
+RETURNS VARCHAR STABLE AS $$
+  import pyaes
+  import binascii
+  if input is None:
+     return None
+  key = vKey # Your Key here
+  aes=pyaes.AESModeOfOperationCTR(key)
+  cipher_txt=aes.encrypt(input)
+  cipher_txt2=binascii.hexlify(cipher_txt)
+  return str(cipher_txt2.decode('utf-8'))
+$$ LANGUAGE plpythonu ;
 </code></pre>
 
 <h2 id="create-decrypt-function">Create decrypt function</h2>
-<pre><code class="SQL">CREATE OR REPLACE FUNCTION aes_decrypt(encrypted_msg varchar(max), vKey VARCHAR(256))  
-RETURNS VARCHAR STABLE AS $$  
-  import pyaes  
-  import binascii  
-  if encrypted_msg is None or len(str(encrypted_msg)) == 0:  
-       return None  
-  key = vKey # Your decryption key here  
-  aes = pyaes.AESModeOfOperationCTR(key)  
-  encrypted_msg2=binascii.unhexlify(encrypted_msg)  
-  decrypted_msg2 = aes.decrypt(encrypted_msg2)  
-  return str(decrypted_msg2.decode('utf-8'))  
-$$ LANGUAGE plpythonu ;  
+<pre><code class="sql">--- Create a separate schema to deploy Decryption UDF to control decryption access to only authorized users.
+CREATE SCHEMA udf_dec;
+
+--- Create UDF
+CREATE OR REPLACE FUNCTION 
+udf_dec.aes_decrypt(encrypted_msg varchar(max), vKey VARCHAR(256))
+RETURNS VARCHAR STABLE AS $$
+  import pyaes
+  import binascii
+  if encrypted_msg is None or len(str(encrypted_msg)) == 0:
+       return None
+  key = vKey # Your decryption key here
+  aes = pyaes.AESModeOfOperationCTR(key)
+  encrypted_msg2=binascii.unhexlify(encrypted_msg)
+  decrypted_msg2 = aes.decrypt(encrypted_msg2)
+  return str(decrypted_msg2.decode('utf-8'))
+$$ LANGUAGE plpythonu ;
 </code></pre>
 
-<h2 id="test-function-with-same-key-for-encrypt-and-decrypt">Test function with same key for encrypt and decrypt</h2>
-<p><strong>SQL</strong>  </p>
-<pre><code class="SQL">SELECT aes_encrypt(myVal, myKey) encdata, aes_decrypt(enc_data, myKey) decdata  
-FROM (SELECT 'Kawish Siddiqui' myVal, LPAD(myVal, 16, 'z') myKey) a;  
+<h2 id="test-functionality">Test functionality</h2>
+<h3 id="setup-test-environment-and-data">Setup Test Environment and Data</h3>
+<pre><code class="SQL">--- Create schema to contain sensitive data
+CREATE SCHEMA secure_edw_t;
+
+--- Create views schema
+CREATE SCHEMA edw_v;
+
+--- Create a sample user
+CREATE USER edw_v_read password 'B!@nK73x7';
+
+--- Grant USAGE privileges on schema to make object visible to user (this will NOT make data visible to user)
+GRANT USAGE ON SCHEMA secure_edw_t TO edw_v_read;
+GRANT USAGE ON SCHEMA edw_v TO edw_v_read;
+
+--- Create table
+CREATE TABLE secure_edw_t.emp_secure
+(
+   emp_id int,
+   emp_name VARCHAR(255),
+   emp_phone varchar(255),
+   emp_name_enc VARCHAR(255),
+   emp_phone_enc varchar(255)
+);
+
+--- Create view to project only encrypted values to the user
+CREATE VIEW edw_v.emp
+AS
+(
+SELECT emp_id
+     , emp_name_enc as emp_name
+     , emp_phone_enc as emp_phone
+FROM secure_edw_t.emp_secure );
+
+GRANT SELECT ON edw_v.emp TO edw_v_read;
+
+--- Populate test data in Table
+INSERT INTO secure_edw_t.emp_secure (emp_id, emp_name, emp_phone)
+Values (1, 'Azhar', '2341232345');
+INSERT INTO secure_edw_t.emp_secure (emp_id, emp_name, emp_phone)
+Values (2, 'Humayun',  '4323445676');
+INSERT INTO secure_edw_t.emp_secure (emp_id, emp_name, emp_phone)
+Values (3, 'Rawish', '2221233213');
+INSERT INTO secure_edw_t.emp_secure (emp_id, emp_name, emp_phone)
+Values (4, 'Khayyam', '9808987658');
+INSERT INTO secure_edw_t.emp_secure (emp_id, emp_name, emp_phone)
+Values (5, 'Kawish', '2342342456');
+INSERT INTO secure_edw_t.emp_secure (emp_id, emp_name, emp_phone)
+Values (6, 'Shariq', '6575768475');
+INSERT INTO secure_edw_t.emp_secure (emp_id, emp_name, emp_phone)
+Values (7, 'Qasim', '3213453234');
 </code></pre>
 
-<p><strong>Result</strong>  </p>
+<p>See <a href="https://docs.aws.amazon.com/redshift/latest/dg/r_GRANT.html">GRANT</a> for more details about granting appropriate permission in Amazon Redshift.</p>
+<h3 id="encrypting-data">Encrypting Data</h3>
+<p>In this simple test, we are using different keys for corresponding columns for encryption.</p>
+<ul>
+<li>emp_name is encrypted using key <code>empnameKey/fhci4=dnv73./xorb3f05</code></li>
+<li>emp_phone is encrypted using key <code>empphoneKey29s0vne03]jv023n=bn34</code></li>
+</ul>
+<p><strong>SQL</strong></p>
+<pre><code class="SQL">--- Encrypt data
+UPDATE secure_edw_t.emp_secure
+SET emp_name_enc = udf_enc.aes_encrypt(emp_name, LPAD('empnameKey/fhci4=dnv73./xorb3f05', 32, 'z')),
+emp_phone_enc = udf_enc.aes_encrypt(emp_phone, LPAD('empphoneKey29s0vne03]jv023n=bn34', 32, 'z'))
+;
+
+SELECT * FROM secure_edw_t.emp_secure;
+</code></pre>
+
+<p><strong>Result</strong></p>
+<p>Actual data in table will be like below:</p>
 <table>
 <thead>
 <tr>
-<th>encdata</th>
-<th>decdata</th>
+<th><strong>emp_id</strong></th>
+<th><strong>emp_name</strong></th>
+<th><strong>emp_phone</strong></th>
+<th><strong>emp_name_enc</strong></th>
+<th><strong>emp_phone_enc</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>9a861c3fc1007a9b50f16ef7e1927d</td>
-<td>Kawish Siddiqui</td>
+<td>1</td>
+<td>Azhar</td>
+<td>2341232345</td>
+<td>e8a769c636</td>
+<td>9345901d200893aeca19</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Humayun</td>
+<td>4323445676</td>
+<td>e1a86cc63d3194</td>
+<td>9545961f260f94abc91a</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Rawish</td>
+<td>2221233213</td>
+<td>fbbc76ce372c</td>
+<td>9344961d200892afcf1f</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Khayyam</td>
+<td>9808987658</td>
+<td>e2b560de3d2597</td>
+<td>984e94142b0396abcb14</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Kawish</td>
+<td>2342342456</td>
+<td>e2bc76ce372c</td>
+<td>9345901e210f93a9cb1a</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Shariq</td>
+<td>6575768475</td>
+<td>fab560d52d35</td>
+<td>97439319250d99a9c919</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Qasim</td>
+<td>3213453234</td>
+<td>f8bc72ce29</td>
+<td>9244951f260e92afcd18</td>
 </tr>
 </tbody>
 </table>
-<h2 id="test-function-with-same-key-for-encrypt-but-different-key-to-decrypt">Test function with same key for encrypt but different key to decrypt</h2>
-<pre><code class="SQL">SELECT aes_encrypt(myVal, myKey) encdata, aes_decrypt(enc_data, myKey||'x') decdata  
-FROM (SELECT 'Kawish Siddiqui' myVal, LPAD(myVal, 16, 'z') myKey) a;  
+<h3 id="test-decryption-and-user-data-visibility">Test decryption and user data visibility</h3>
+<h4 id="test-values-decryption">Test values decryption</h4>
+<h5 id="using-correct-key">Using correct key</h5>
+<p><strong>SQL</strong></p>
+<pre><code class="SQL">SELECT emp_id,
+       udf_dec.aes_decrypt(emp_name, LPAD('empnameKey/fhci4=dnv73./xorb3f05', 32, 'z')) emp_name,
+       udf_dec.aes_decrypt(emp_phone, LPAD('empphoneKey29s0vne03]jv023n=bn34', 32, 'z')) emp_phone
+FROM edw_v.emp;
 </code></pre>
 
-<p><strong>Above SQL should throw an error similar to :</strong>  </p>
-<pre><code>[Amazon](500310) Invalid operation: ValueError: Invalid key size. Please look at svl_udf_log for more information  
-Details:   
- -----------------------------------------------;  
-  error:  ValueError: Invalid key size. Please look at svl_udf_log for more information  
-  code:      10000  
-  context:   UDF  
-  query:     0  
-  location:  udf_client.cpp:369  
-  process:   padbmaster [pid=91425]  
-  -----------------------------------------------;  
-1 statement failed.  
+<p><strong>Result</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>emp_id</strong></th>
+<th><strong>emp_name</strong></th>
+<th><strong>emp_phone</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Azhar</td>
+<td>2341232345</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Humayun</td>
+<td>4323445676</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Rawish</td>
+<td>2221233213</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Khayyam</td>
+<td>9808987658</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Kawish</td>
+<td>2342342456</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Shariq</td>
+<td>6575768475</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Qasim</td>
+<td>3213453234</td>
+</tr>
+</tbody>
+</table>
+<h4 id="using-incorrect-key">Using incorrect key</h4>
+<p><strong>SQL</strong></p>
+<pre><code class="SQL">SELECT emp_id,
+       udf_dec.aes_decrypt(emp_name, LPAD('empWRONGKey/fhci4=dnv73./xorb3', 32, 'z')) emp_name,
+       aes_decrypt(emp_phone, LPAD('phoneWRONGKey29s0vne03]jv023n=', 32, 'z')) emp_phone
+FROM edw_v.emp;
 </code></pre>
 
-<h3 id="check-for-error-details-if-error-occured">Check for error details if error occured</h3>
-<pre><code class="SQL">SELECT * FROM svl_udf_log;  
+<p><strong>Result</strong></p>
+<pre><code>SQL Error [500310] [XX000]: [Amazon](500310) 
+Invalid operation: 
+    UnicodeDecodeError: 'utf8' codec can't decode 
+    byte 0xfb in position 0: invalid start byte. 
+Please look at svl_udf_log for more information
+Details:
+-----------------------------------------------
+
+  error:  UnicodeDecodeError: 'utf8' codec can't decode byte 0xfb in position 0: invalid start byte. Please look at svl_udf_log for more information
+  code:      10000
+  context:   UDF
+  query:     3405510
+  location:  udf_client.cpp:369
+  process:   query0_2002_3405510 [pid=43012]
+
+  -----------------------------------------------;
+</code></pre>
+
+<h3 id="check-for-error-details-if-error-occurred"><strong>Check for error details if error occurred</strong></h3>
+<pre><code class="SQL">SELECT * FROM svl_udf_log;
+</code></pre>
+
+<p>See <a href="https://docs.aws.amazon.com/redshift/latest/dg/r_SVL_UDF_LOG.html">svl_udf_log</a> for more details</p>
+<ul>
+<li>Test data visibility for user</li>
+</ul>
+<h4 id="change-session-user">Change session user</h4>
+<p>We are using <code>SET SESSION AUTHORIZATION</code> command to switch user session temporary to &ldquo;edw_v_read&rdquo;. If you are not running this test using superuser, then you have to logoff and login using the &ldquo;edw_v_read&rdquo; credentials to test.</p>
+<p>See <a href="https://docs.aws.amazon.com/redshift/latest/dg/r_SET_SESSION_AUTHORIZATION.html">SET SESSION AUTHORIZATION</a> for more details.</p>
+<pre><code class="SQL">SET SESSION AUTHORIZATION 'edw_v_read';
+</code></pre>
+
+<h4 id="read-data-from-view">Read data from view</h4>
+<p><strong>SQL</strong></p>
+<pre><code class="SQL">SELECT *
+FROM edw_v.emp;
+</code></pre>
+
+<p><strong>Result</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>emp_id</strong></th>
+<th><strong>emp_name</strong></th>
+<th><strong>emp_phone</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>e8a769c636</td>
+<td>9345901d200893aeca19</td>
+</tr>
+<tr>
+<td>2</td>
+<td>e1a86cc63d3194</td>
+<td>9545961f260f94abc91a</td>
+</tr>
+<tr>
+<td>3</td>
+<td>fbbc76ce372c</td>
+<td>9344961d200892afcf1f</td>
+</tr>
+<tr>
+<td>4</td>
+<td>e2b560de3d2597</td>
+<td>984e94142b0396abcb14</td>
+</tr>
+<tr>
+<td>5</td>
+<td>e2bc76ce372c</td>
+<td>9345901e210f93a9cb1a</td>
+</tr>
+<tr>
+<td>6</td>
+<td>fab560d52d35</td>
+<td>97439319250d99a9c919</td>
+</tr>
+<tr>
+<td>7</td>
+<td>f8bc72ce29</td>
+<td>9244951f260e92afcd18</td>
+</tr>
+</tbody>
+</table>
+<h4 id="attempt-to-read-data-from-table">Attempt to read data from table</h4>
+<p><strong>SQL</strong></p>
+<pre><code class="SQL">SELECT *
+FROM secure_edw_t.emp_secure;
+</code></pre>
+
+<p><strong>Result</strong></p>
+<pre><code>SQL Error [500310] [42501]: [Amazon](500310) 
+Invalid operation: permission denied for relation emp_secure;
 </code></pre>
                 
                   
