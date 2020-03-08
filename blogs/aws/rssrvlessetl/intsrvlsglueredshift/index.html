@@ -323,7 +323,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../../../event/reinvent/awsri_2018.md" title="Events" class="md-tabs__link">
+        <a href="../../../../event/reinvent/awsri_2018/" title="Events" class="md-tabs__link">
           Events
         </a>
       
@@ -658,29 +658,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setup-amazon-redshift-user-schema-and-table" title="Setup Amazon Redshift User, Schema and Table" class="md-nav__link">
-    Setup Amazon Redshift User, Schema and Table
+  <a href="#create-a-dynamodb-table-to-capture-job-log" title="Create a DynamoDB table to capture job log" class="md-nav__link">
+    Create a DynamoDB table to capture job log
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#setup-s3-bucket-and-hierarchy" title="Setup S3 bucket and hierarchy" class="md-nav__link">
-    Setup S3 bucket and hierarchy
+  <a href="#create-sns-topic" title="Create SNS topic" class="md-nav__link">
+    Create SNS topic
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-iam-role-for-aws-glue" title="Create IAM Role for AWS Glue" class="md-nav__link">
-    Create IAM Role for AWS Glue
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-iam-role-for-aws-lambda" title="Create IAM Role for AWS Lambda" class="md-nav__link">
-    Create IAM Role for AWS Lambda
+  <a href="#subscribe-to-sns-topic" title="Subscribe to SNS topic" class="md-nav__link">
+    Subscribe to SNS topic
   </a>
   
 </li>
@@ -693,29 +686,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-aws-lambda-function" title="Create AWS Lambda Function" class="md-nav__link">
-    Create AWS Lambda Function
+  <a href="#create-aws-lambda-function-to-invoke-glue-job" title="Create AWS Lambda Function to invoke Glue Job" class="md-nav__link">
+    Create AWS Lambda Function to invoke Glue Job
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pre-load-testing" title="Pre-load testing" class="md-nav__link">
-    Pre-load testing
+  <a href="#create-aws-lambda-function-for-glue-job-progress-and-status-logging" title="Create AWS Lambda Function for Glue job progress and status logging" class="md-nav__link">
+    Create AWS Lambda Function for Glue job progress and status logging
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#upload-sample-data-into-s3" title="Upload sample data into S3" class="md-nav__link">
-    Upload sample data into S3
+  <a href="#add-cloudwatch-event-rule-to-capture-glue-job-status" title="Add CloudWatch Event Rule to capture Glue job status" class="md-nav__link">
+    Add CloudWatch Event Rule to capture Glue job status
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#verify-data-in-amazon-redshift" title="Verify data in Amazon Redshift" class="md-nav__link">
-    Verify data in Amazon Redshift
+  <a href="#data-loading-and-validation" title="Data loading and validation" class="md-nav__link">
+    Data loading and validation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validate-loggin-in-dynamodb-table" title="Validate loggin in DynamoDB Table" class="md-nav__link">
+    Validate loggin in DynamoDB Table
   </a>
   
 </li>
@@ -1054,8 +1054,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../event/reinvent/awsri_2018.md" title="re-Invent 2018" class="md-nav__link">
+    <a href="../../../../event/reinvent/awsri_2018/" title="re-Invent 2018" class="md-nav__link">
       re-Invent 2018
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../event/reinvent/awsri_2019/" title="re-Invent 2019" class="md-nav__link">
+      re-Invent 2019
     </a>
   </li>
 
@@ -1134,29 +1146,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setup-amazon-redshift-user-schema-and-table" title="Setup Amazon Redshift User, Schema and Table" class="md-nav__link">
-    Setup Amazon Redshift User, Schema and Table
+  <a href="#create-a-dynamodb-table-to-capture-job-log" title="Create a DynamoDB table to capture job log" class="md-nav__link">
+    Create a DynamoDB table to capture job log
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#setup-s3-bucket-and-hierarchy" title="Setup S3 bucket and hierarchy" class="md-nav__link">
-    Setup S3 bucket and hierarchy
+  <a href="#create-sns-topic" title="Create SNS topic" class="md-nav__link">
+    Create SNS topic
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-iam-role-for-aws-glue" title="Create IAM Role for AWS Glue" class="md-nav__link">
-    Create IAM Role for AWS Glue
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-iam-role-for-aws-lambda" title="Create IAM Role for AWS Lambda" class="md-nav__link">
-    Create IAM Role for AWS Lambda
+  <a href="#subscribe-to-sns-topic" title="Subscribe to SNS topic" class="md-nav__link">
+    Subscribe to SNS topic
   </a>
   
 </li>
@@ -1169,29 +1174,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-aws-lambda-function" title="Create AWS Lambda Function" class="md-nav__link">
-    Create AWS Lambda Function
+  <a href="#create-aws-lambda-function-to-invoke-glue-job" title="Create AWS Lambda Function to invoke Glue Job" class="md-nav__link">
+    Create AWS Lambda Function to invoke Glue Job
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pre-load-testing" title="Pre-load testing" class="md-nav__link">
-    Pre-load testing
+  <a href="#create-aws-lambda-function-for-glue-job-progress-and-status-logging" title="Create AWS Lambda Function for Glue job progress and status logging" class="md-nav__link">
+    Create AWS Lambda Function for Glue job progress and status logging
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#upload-sample-data-into-s3" title="Upload sample data into S3" class="md-nav__link">
-    Upload sample data into S3
+  <a href="#add-cloudwatch-event-rule-to-capture-glue-job-status" title="Add CloudWatch Event Rule to capture Glue job status" class="md-nav__link">
+    Add CloudWatch Event Rule to capture Glue job status
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#verify-data-in-amazon-redshift" title="Verify data in Amazon Redshift" class="md-nav__link">
-    Verify data in Amazon Redshift
+  <a href="#data-loading-and-validation" title="Data loading and validation" class="md-nav__link">
+    Data loading and validation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validate-loggin-in-dynamodb-table" title="Validate loggin in DynamoDB Table" class="md-nav__link">
+    Validate loggin in DynamoDB Table
   </a>
   
 </li>
@@ -1249,80 +1261,49 @@
 <h2 id="architecture">Architecture</h2>
 <p><img alt="Intermediate - Serverless ETL for Amazon Redshift" src="../img/IntRSSrvLsETL.png" /></p>
 <h2 id="assumptions">Assumptions</h2>
-<p>Basic setup is already done using steps mentioned in <a href="../begsrvlsglueredshift/#assumptions-and-basic-setup">Assumptions and Basic Setup</a> in our previous blog post.</p>
-<h2 id="setup-amazon-redshift-user-schema-and-table">Setup Amazon Redshift User, Schema and Table</h2>
-<pre><code class="sql">-- CREATE Group and User
-CREATE GROUP grp_rsloader;
-CREATE USER rsloader_user PASSWORD 'TechsBoot_2019' IN GROUP grp_rs_loader;
-
--- Create Schema
-CREATE SCHEMA IF NOT EXISTS rsloader;
--- Setup Access Rights on Schema for Group
-ALTER DEFAULT PRIVILEGES IN SCHEMA rsloader 
-      GRANT ALL ON TABLES TO GROUP grp_rs_loader;
-GRANT ALL ON SCHEMA  rsloader TO GROUP grp_rs_loader;
-GRANT ALL ON ALL TABLES IN  SCHEMA rsloader TO 
-      GROUP grp_rs_loader;
--- Create Table
-CREATE TABLE IF NOT EXISTS rsloader.lineitem
-(
-    l_orderkey INTEGER NOT NULL  
-    ,l_partkey INTEGER NOT NULL  ENCODE lzo
-    ,l_suppkey INTEGER NOT NULL  ENCODE lzo
-    ,l_linenumber INTEGER NOT NULL  ENCODE lzo
-    ,l_quantity NUMERIC(15,2) NOT NULL  ENCODE lzo
-    ,l_extendedprice NUMERIC(15,2) NOT NULL  ENCODE lzo
-    ,l_discount NUMERIC(15,2) NOT NULL  ENCODE lzo
-    ,l_tax NUMERIC(15,2) NOT NULL  ENCODE lzo
-    ,l_returnflag VARCHAR(1) NOT NULL  ENCODE lzo
-    ,l_linestatus VARCHAR(1) NOT NULL  ENCODE lzo
-    ,l_shipdate DATE NOT NULL  ENCODE lzo
-    ,l_commitdate DATE NOT NULL  ENCODE lzo
-    ,l_receiptdate DATE NOT NULL  ENCODE lzo
-    ,l_shipinstruct VARCHAR(25) NOT NULL  ENCODE lzo
-    ,l_shipmode VARCHAR(10) NOT NULL  ENCODE lzo
-    ,l_comment VARCHAR(44) NOT NULL  ENCODE lzo
-)
-DISTSTYLE KEY
-DISTKEY (l_orderkey)
-SORTKEY (
-    l_orderkey
-    )
-;
-</code></pre>
-
-<h2 id="setup-s3-bucket-and-hierarchy">Setup S3 bucket and hierarchy</h2>
+<p>Assumption for this post is that following steps are already performed using our <a href="../begsrvlsglueredshift/">previous blog post</a>.</p>
 <ul>
-<li>Create S3 Bucket (we will use <code>techsboot_rsloader</code> S3 bucket name in our examples)</li>
-<li>Create folder <code>rsloader</code>  in S3 Bucket</li>
-<li>Create a subfolder <code>lineitem</code>  in <code>rsloader</code> folder</li>
-<li>S3 structure will look like </li>
+<li><a href="../begsrvlsglueredshift/#assumptions-and-basic-setup">Assumptions and Basic Setup</a> </li>
+<li><a href="../begsrvlsglueredshift/#setup-amazon-redshift-user-schema-and-table">Setup Amazon Redshift User, Schema and Table</a> </li>
+<li><a href="../begsrvlsglueredshift/#setup-s3-bucket-and-hierarchy">Setup S3 bucket and hierarchy</a></li>
+<li><a href="../begsrvlsglueredshift/#create-iam-role-for-aws-glue">Create IAM Role for AWS Glue</a></li>
+<li><a href="../begsrvlsglueredshift/#create-iam-role-for-aws-lambda">Create IAM Role for AWS Lambda</a></li>
 </ul>
-<pre><code> techsboot_rsloader (or your bucket name)  
-    |__ rsloader  
-        |__ lineitem
-</code></pre>
-
-<h2 id="create-iam-role-for-aws-glue">Create IAM Role for AWS Glue</h2>
+<h2 id="create-a-dynamodb-table-to-capture-job-log">Create a DynamoDB table to capture job log</h2>
 <ol>
-<li>Go to <a href="https://console.aws.amazon.com/iam">https://console.aws.amazon.com/iam</a></li>
-<li>Click <strong>Roles</strong> in left panel and click <strong>Create role</strong> button</li>
-<li>Select <strong>AWS services</strong> in type of trusted entity and Select/Click <strong>Glue</strong> as the service that will use this role</li>
-<li>Click <strong>Next: Permissions</strong> button at the bottom</li>
-<li>Select <strong>AWSGlueServiceRole</strong> Policy from the list and click <strong>Next: Tags</strong></li>
-<li>Provide Tags&rsquo; Key-Values if you want and click <strong>Next: Review</strong></li>
-<li>Enter Role Name and Description and click <strong>Create role</strong></li>
+<li>Go to <a href="https://console.aws.amazon.com/dynamodb">https://console.aws.amazon.com/dynamodb</a></li>
+<li>Click on <strong>Tables</strong> in left panel and click on <strong>Create table</strong> button.</li>
+<li>Enter following information in relevent text boxes:<ul>
+<li><strong>Table name</strong>: <code>DD_JobExecLog</code> </li>
+<li><strong>Primary partition key</strong>: <code>JobName</code> (with String data type)</li>
+<li>Check the checkbox <code>Add sort key</code></li>
+<li><strong>Primary sort key</strong>: <code>JobRunID</code> (with String data type)</li>
+</ul>
+</li>
+<li>Keep rest as default and click <code>Create</code> button at the bottom of the page.</li>
 </ol>
-<h2 id="create-iam-role-for-aws-lambda">Create IAM Role for AWS Lambda</h2>
+<h2 id="create-sns-topic">Create SNS topic</h2>
 <ol>
-<li>Go to <a href="https://console.aws.amazon.com/iam">https://console.aws.amazon.com/iam</a></li>
-<li>Click <strong>Roles</strong> in left panel and click <strong>Create role</strong> button</li>
-<li>Select <strong>AWS services</strong> in type of trusted entity and Select/Click <strong>Lambda</strong> as the service that will use this role</li>
-<li>Click <strong>Next: Permissions</strong> button at the bottom</li>
-<li>Select <strong>AWSLambdaFullAccess</strong> Policy from the list and click <strong>Next: Tags</strong></li>
-<li>Provide Tags&rsquo; Key-Values if you want and click <strong>Next: Review</strong></li>
-<li>Enter Role Name and Description and click <strong>Create role</strong></li>
+<li>Go to <a href="https://console.aws.amazon.com/sns">https://console.aws.amazon.com/sns</a></li>
+<li>Click on <strong>Topics</strong> in left panel and click on <strong>Create topic</strong> button.</li>
+<li>Enter <strong>Name</strong> <code>techsboot-rsloader-notification</code></li>
+<li>Enter <strong>Display name</strong> <code>techsbootSNS</code></li>
+<li>Click <strong>Create topic</strong> button at the bottom of the page</li>
 </ol>
+<h2 id="subscribe-to-sns-topic">Subscribe to SNS topic</h2>
+<ol>
+<li>Go to <a href="https://console.aws.amazon.com/sns">https://console.aws.amazon.com/sns</a></li>
+<li>Click on <strong>Topics</strong> in left panel and click on the topic <code>techsboot-rsloader-notification</code>.</li>
+<li>Click <strong>Create subscription</strong></li>
+<li>Leave <strong>Topic ARN</strong> as default</li>
+<li>Select <code>Email</code> from <strong>Protocol</strong> dropdown</li>
+<li>In <strong>Endpoint</strong>, enter an email address where notification email should be sent.</li>
+<li>Click on <strong>Create subscription</strong> button at the bottom of the page.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Amazon SNS service will send a varification email to the provided email address before enabling this subscription. So don&rsquo;t forget to check email and confirm subscription in order to receive notifications from this SNS topic.</p>
+</div>
 <h2 id="create-aws-glue-job">Create AWS Glue Job</h2>
 <ol>
 <li>Go to <a href="https://console.aws.amazon.com/glue">https://console.aws.amazon.com/glue</a></li>
@@ -1343,6 +1324,7 @@ SORTKEY (
 <li>Replace correct values for all variables enclosed in &lt; &gt; within the script.</li>
 </ol>
 <pre><code class="python">import os
+
 import sys
 import boto3
 import json
@@ -1355,12 +1337,14 @@ args = getResolvedOptions(sys.argv, ['JOB_NAME', 'schema_name', 'table_name', 's
 schema_name = args['schema_name']
 table_name = args['table_name']
 s3_file = args['s3_file']
+
 #
 REDSHIFT_DATABASE = &quot;&lt;Your_Redshift_Database&gt;&quot;
 REDSHIFT_USER = &quot;rsloader_user&quot;
 REDSHIFT_PASSWD = &quot;TechsBoot_2019&quot;
 REDSHIFT_PORT = &lt;Your_Redshift_Cluster_Port&gt;
 REDSHIFT_ENDPOINT = &quot;&lt;Your_Redshift_EndPoint&gt;&quot;
+
 if not schema_name:
   REDSHIFT_SCHEMA = 'public'
 else:
@@ -1368,6 +1352,7 @@ else:
 REDSHIFT_TABLE  = table_name
 IAM_ROLE  = &quot;arn:aws:iam::&lt;aws_account_number&gt;:role/&lt;Your_Redshift_IAM_Role&gt;&quot;
 
+# REDSHIFT_QUERY = &quot;SELECT DISTINCT tablename FROM pg_table_def WHERE schemaname = 'public' ORDER BY tablename&quot;
 REDSHIFT_COPY_STATEMENT = &quot;&quot;&quot;copy {}.{}
           FROM  '{}'
           iam_role '{}'
@@ -1388,9 +1373,7 @@ except Exception as ERROR:
 
 try:
   cursor = conn.cursor()
-  # print(REDSHIFT_COPY_STATEMENT)
   cursor.execute(REDSHIFT_COPY_STATEMENT)
-  # result = cursor.fetchone()
   cursor.close()
   conn.commit()
   conn.close()
@@ -1400,29 +1383,32 @@ except Exception as ERROR:
 
 </code></pre>
 
-<h2 id="create-aws-lambda-function">Create AWS Lambda Function</h2>
+<h2 id="create-aws-lambda-function-to-invoke-glue-job">Create AWS Lambda Function to invoke Glue Job</h2>
 <ol>
 <li>Go to <a href="https://console.aws.amazon.com/lambda">https://console.aws.amazon.com/lambda</a></li>
 <li>Click <strong>Create function</strong></li>
 <li>Select <strong>Author from scratch</strong></li>
-<li>Enter <code>techsboot-rsloader-lambda</code> in <strong>Function name</strong></li>
+<li>Enter <code>techsboot-rsloader-trigger-lambda</code> in <strong>Function name</strong></li>
 <li>Select <code>Python 3.7</code> in <strong>Runtime</strong></li>
-<li>In <strong>Permissions</strong> section, select <code>Use an existing role</code> and then select the role you create in <a href="#create-iam-role-for-aws-lambda">previous step</a></li>
+<li>In <strong>Permissions</strong> section, select <code>Use an existing role</code> and then select the role you created in <a href="../begsrvlsglueredshift/#create-iam-role-for-aws-lambda">Create IAM Role for AWS Lambda</a> section</li>
 <li>Click <strong>Create function</strong> button at the bottom</li>
 <li>Copy and Paste following lambda python code in code editor</li>
 <li>Click <strong>Save</strong> button</li>
 <li>Expand <strong>Designer</strong> section in the same window (section above to <code>Function code</code>)</li>
 <li>Click <strong>Add trigger</strong> button</li>
 <li>Select S3 in <strong>Trigger configuration</strong></li>
-<li>Select the S3 Bucket you created in <a href="#setup-s3-bucket-and-hierarchy">previous step</a></li>
+<li>Select the S3 Bucket you created in <a href="../begsrvlsglueredshift/#setup-s3-bucket-and-hierarchy">Setup S3 bucket and hierarchy</a> section</li>
 <li>Click <strong>Add</strong></li>
 </ol>
 <pre><code class="python">from datetime import datetime, timedelta
 import json
 import boto3
 client = boto3.client('glue')
-#
+dd = boto3.resource('dynamodb')
+table = dd.Table('DD_JobExecLog')
+
 def lambda_handler(event, context): 
+    start_timestamp = str(datetime.now())
     for record in event['Records']:
         # Getting S3 Bucket Name from event record
         bucket = record['s3']['bucket']['name']
@@ -1435,16 +1421,8 @@ def lambda_handler(event, context):
         schema_name = tmp_key[0]
         table_name = tmp_key[1]
         filename = tmp_key[2]
-        glue_job_name = &quot;wfm-poc-copy-from-lambda&quot;
+        glue_job_name = &quot;glu_techsboot_rsloader&quot;
         fullS3Message = &quot;This Lambda is triggered by - s3://&quot; + bucket + &quot;/&quot; + key
-        # Printing Debugging Message
-        print (fullS3Message)
-        print (&quot;fullS3Path = &quot; + fullS3Path)
-        print (&quot;Bucket = &quot; + bucket)
-        print (&quot;Key = &quot; + key)
-        print (&quot;schema_name = &quot; + schema_name)
-        print (&quot;table_name = &quot; + table_name)
-        print (&quot;filename = &quot; + filename)
         # Triggering Glue Job
         print (&quot;Triggering Job = &quot; + glue_job_name)
         response = client.start_job_run(
@@ -1457,6 +1435,25 @@ def lambda_handler(event, context):
         string_response = json.dumps(response)
         # Parsing JSON response from Glue API
         parsed_response = json.loads(string_response)
+        ###########################
+        #
+        #  
+        table.put_item(
+           Item={
+                'JobName': glue_job_name,
+                'JobRunID': parsed_response['JobRunId'],
+                'job_state': 'STARTED (Lambda)',
+                'start_timestamp': start_timestamp,
+                'update_timestamp': 'null',
+                'job_message': 'Job Triggered by Lambda',
+                'job_severity': 'null',
+                's3_file_key': fullS3Path,
+                'job_region': 'null',
+                'job_time': 'null',
+                'job_account': 'null',
+                'glue_metadata': parsed_response
+            }
+        )
         # Printing Job Metadata in Cloudwatch Log
         print(&quot;    JOB Metadata           &quot;)        
         print(&quot;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&quot;)        
@@ -1471,69 +1468,113 @@ def lambda_handler(event, context):
         print(&quot;    --&gt; RetryAttempts     = &quot; + str(parsed_response['ResponseMetadata']['RetryAttempts']))
         print(&quot;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&quot;)        
         print(response)
-        print(&quot;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&quot;)        
+        print(&quot;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&quot;)              
 
 </code></pre>
 
-<h2 id="pre-load-testing">Pre-load testing</h2>
+<h2 id="create-aws-lambda-function-for-glue-job-progress-and-status-logging">Create AWS Lambda Function for Glue job progress and status logging</h2>
 <ol>
-<li>Connect to Redshift cluster using SQL Client (i.e. SQLWorkbench or DBeaver)</li>
-<li>
-<p>Run following SQL, result of this SQL should be <code>zero (0)</code>.</p>
-<p><code>sql
-SELECT COUNT(*) 
-FROM rsloader.lineitem 
-WHERE l_linestatus in ('C', 'R');</code> </p>
-</li>
+<li>Go to <a href="https://console.aws.amazon.com/lambda">https://console.aws.amazon.com/lambda</a></li>
+<li>Click <strong>Create function</strong></li>
+<li>Select <strong>Author from scratch</strong></li>
+<li>Enter <code>techsboot-rsloader-gluelogger-lambda</code> in <strong>Function name</strong></li>
+<li>Select <code>Python 3.7</code> in <strong>Runtime</strong></li>
+<li>In <strong>Permissions</strong> section, select <code>Use an existing role</code> and then select the role you create in <a href="../begsrvlsglueredshift/#create-iam-role-for-aws-lambda">Create IAM Role for AWS Lambda</a> section</li>
+<li>Click <strong>Create function</strong> button at the bottom</li>
+<li>Copy and Paste following lambda python code in code editor</li>
+<li>Click <strong>Save</strong> button</li>
 </ol>
-<h2 id="upload-sample-data-into-s3">Upload sample data into S3</h2>
-<ol>
-<li>Download sample data (2 files) from following links<ul>
-<li><a href="https://techsboot.s3-us-west-2.amazonaws.com/sample-data/tpch/lineitem/lineitem_200rec_C.csv">File 1</a></li>
-<li><a href="https://techsboot.s3-us-west-2.amazonaws.com/sample-data/tpch/lineitem/lineitem_200rec_R.csv">File 2</a>  </li>
-</ul>
-</li>
-<li>Go to <a href="https://console.aws.amazon.com/s3/">https://console.aws.amazon.com/s3/</a></li>
-<li>Click on bucket you created in <a href="#setup-s3-bucket-and-hierarchy">previous step</a></li>
-<li>Click on <code>rsloader</code> folder</li>
-<li>Click on <code>lineitem</code> subfolder</li>
-<li>Click on <strong>Upload</strong> button</li>
-<li>Click <strong>Add</strong> on displayed window</li>
-<li>In file selection dialog, select files you downloaded on step 1</li>
-<li>Click <strong>Next</strong>, and then <strong>Next</strong>, and then again <strong>Next</strong> (by keeping next 2 steps of displayed windows as default)</li>
-<li>Click <strong>Upload</strong></li>
-</ol>
-<h2 id="verify-data-in-amazon-redshift">Verify data in Amazon Redshift</h2>
-<ul>
-<li>Connect to Redshift cluster using SQL Client (i.e. SQLWorkbench or DBeaver)  </li>
-<li>Run following SQL</li>
-</ul>
-<pre><code class="sql">    SELECT COUNT(*)   
-    FROM rsloader.lineitem 
-    WHERE l_linestatus in ('C', 'R'); 
+<pre><code class="python">from datetime import datetime, timedelta
+import json
+import boto3
+dd = boto3.resource('dynamodb')
+table = dd.Table('DD_JobExecLog')
+
+def lambda_handler(event, context):
+    #print(&quot;Received event: &quot; + json.dumps(event, indent=2))
+    jobName = event['detail']['jobName']
+    jobRunId = event['detail']['jobRunId']
+    job_time = event['time']
+    j_account = event['account']
+    j_region = event['region']
+    j_severity = event['detail']['severity']
+    j_state = event['detail']['state']
+    j_message = event['detail']['message']
+    update_timestamp = str(datetime.now())
+#
+    if jobName == &quot;glu_techsboot_rsloader&quot;: 
+        table.update_item(
+            Key={
+                'JobName': jobName,
+                'JobRunID': jobRunId
+            },
+            UpdateExpression='SET job_message= :msg, job_severity= :sev, update_timestamp = :upd_ts, job_time= :jb_tm, job_region= :j_region, job_state= :v_state, job_account= :acc ',
+            ExpressionAttributeValues={
+                ':upd_ts': update_timestamp,
+                ':jb_tm': job_time,
+                ':j_region': j_region,
+                ':sev':  j_severity,
+                ':v_state': j_state,
+                ':msg': j_message,
+                ':acc': j_account
+            }
+        )
+#
+        print(&quot;current_timestamp: &quot; + str(datetime.now()))
+        print(&quot;account: &quot; + j_account)
+        print(&quot;time: &quot; + job_time)
+        print(&quot;region: &quot; + j_region)
+        print(&quot;jobName: &quot; + jobName)
+        print(&quot;severity: &quot; + j_severity)
+        print(&quot;state: &quot; + j_state)
+        print(&quot;jobRunId: &quot; + jobRunId)
+        print(&quot;message: &quot; + j_message)
+        print(&quot;-----------------------------&quot;)
+        print(&quot;From Glue Job Event : &quot; + json.dumps(event))
+
 </code></pre>
 
+<h2 id="add-cloudwatch-event-rule-to-capture-glue-job-status">Add CloudWatch Event Rule to capture Glue job status</h2>
+<ol>
+<li>Go to <a href="https://console.aws.amazon.com/cloudwatch">https://console.aws.amazon.com/cloudwatch</a></li>
+<li>Click <strong>Rules</strong> in left panel under <strong>Events</strong> section and click <strong>Create rule</strong> button</li>
+<li>In <strong>Event Srouce</strong> section, click on <strong>Event Pattern</strong> radio button.</li>
+<li>From <strong>Event Pattern</strong> dropdown, select <strong>Build custom event pattern</strong> and copy/paste follwoing JSON</li>
+</ol>
+<pre><code class="JSON">{
+   &quot;source&quot;: [&quot;aws.glue&quot;],
+   &quot;detail-type&quot;: 
+    [
+        &quot;Glue Job State Change&quot;,
+        &quot;Glue Job Run Status&quot;
+    ]
+}
+</code></pre>
+
+<ol>
+<li>In <strong>Targets</strong> (<em>right side</em>) section,  click <strong>Add target</strong></li>
+<li>Select <code>Lambda function</code> in first dropdown</li>
+<li>Select <code>techsboot-rsloader-gluelogger-lambda</code> lambda fuction created in previous steps in <strong>Function</strong> dropdown.</li>
+<li>Click <strong>Add target</strong> again to add another target</li>
+<li>Select <code>SNS Topic</code> in first dropdown</li>
+<li>Select <code>techsboot-rsloader-notification</code> SNS topic (<em>created in previous steps</em>) in <strong>Topic</strong> dropdown.</li>
+<li>Click <strong>Configure details</strong> button at the bottom</li>
+<li>In <strong>Name</strong> text box, enter <code>techsboot-rsloader-gluestatus-rule</code> and provide a <strong>Description</strong> text.</li>
+<li>Click <strong>Create rule</strong> button</li>
+</ol>
+<h2 id="data-loading-and-validation">Data loading and validation</h2>
+<p>We are using the following steps for Data loading and validation same as we performed for our <a href="../begsrvlsglueredshift/">Beginner post</a></p>
 <ul>
-<li>Result should be like below table</li>
+<li><a href="../begsrvlsglueredshift/#pre-load-testing">Pre-load testing</a></li>
+<li><a href="../begsrvlsglueredshift/#upload-sample-data-into-s3">Upload sample data into S3</a> </li>
+<li><a href="../begsrvlsglueredshift/#verify-data-in-amazon-redshift">Verify data in Amazon Redshift</a> </li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>l_linestatus</th>
-<th>count</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>R</td>
-<td>200</td>
-</tr>
-<tr>
-<td>C</td>
-<td>200</td>
-</tr>
-</tbody>
-</table>
+<h2 id="validate-loggin-in-dynamodb-table">Validate loggin in DynamoDB Table</h2>
+<ol>
+<li>Go to <a href="https://console.aws.amazon.com/dynamodb">https://console.aws.amazon.com/dynamodb</a></li>
+<li>Click on <strong>Tables</strong> in left panel and click on <strong><em>DD_JobExecLog</em></strong> to open table.</li>
+<li>Click on <strong>Items</strong> tab to see the job status records in DynamoDB table</li>
+</ol>
                 
                   
                 
